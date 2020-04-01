@@ -1,0 +1,152 @@
+{ "version": "1.0", "header": {    "vpsHost": "localhost",    "projectDbName": "0d76e544-6b13-4153-a00d-13c14e07a290",    "projectCode": "" },
+"messages": {
+"infos": [
+],
+"warnings": [
+],
+"errors": [
+],
+"authenticationErrors": [
+],
+"authorizationErrors": [
+]
+},
+"views": [
+{  "viewType": "LBS",  "guid": "CB83242B-672E-4914-A48B-92A2810E08E8",  "records": [
+{  "rid": "0",  "prid": "",  "loid": "1000.0.4126",  "type": "PROJECTHEADER",  "isDeleted": "0",  "isExpandable": "1"
+},
+{  "rid": "1",  "prid": "0",  "loid": "1000.0.4228",  "type": "LOCATIONSYSTEMHEADER",  "isDeleted": "0",  "isExpandable": "1"
+},
+{  "rid": "2",  "prid": "0",  "loid": "1000.0.4228",  "type": "LOCATIONHEADER",  "isDeleted": "0",  "isExpandable": "1"
+},
+{  "rid": "3",  "prid": "2",  "loid": "1000.0.4232",  "ploid": "0.0.0",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "1",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Project"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "1"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_ROOT"
+		}
+]},
+{  "rid": "4",  "prid": "3",  "loid": "1000.0.191842",  "ploid": "1000.0.4232",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "1",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Level 1"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "2"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_STOREY"
+		}
+]},
+{  "rid": "9",  "prid": "4",  "loid": "13675.0.43456",  "ploid": "1000.0.191842",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "0",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Location AC (W)"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "3"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_ZONE"
+		}
+]},
+{  "rid": "10",  "prid": "4",  "loid": "13675.0.43470",  "ploid": "1000.0.191842",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "0",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Location BD (E)"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "3"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_ZONE"
+		}
+]},
+{  "rid": "5",  "prid": "3",  "loid": "1000.0.191859",  "ploid": "1000.0.4232",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "1",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Level 2"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "2"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_STOREY"
+		}
+]},
+{  "rid": "11",  "prid": "5",  "loid": "13675.0.43316",  "ploid": "1000.0.191859",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "0",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Location AC (W)"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "3"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_ZONE"
+		}
+]},
+{  "rid": "12",  "prid": "5",  "loid": "13675.0.43330",  "ploid": "1000.0.191859",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "0",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Location BD (E)"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "3"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_ZONE"
+		}
+]},
+{  "rid": "6",  "prid": "3",  "loid": "1000.0.191876",  "ploid": "1000.0.4232",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "1",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Level 3"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "2"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_STOREY"
+		}
+]},
+{  "rid": "13",  "prid": "6",  "loid": "1000.0.298125",  "ploid": "1000.0.191876",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "0",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Location AC (W)"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "3"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_ZONE"
+		}
+]},
+{  "rid": "14",  "prid": "6",  "loid": "1000.0.298138",  "ploid": "1000.0.191876",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "0",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Location BD (E)"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "3"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_ZONE"
+		}
+]},
+{  "rid": "7",  "prid": "3",  "loid": "1000.0.193296",  "ploid": "1000.0.4232",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "1",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Level 0"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "2"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_STOREY"
+		}
+]},
+{  "rid": "15",  "prid": "7",  "loid": "1000.0.294819",  "ploid": "1000.0.193296",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "0",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Location A (SW)"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "3"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_ZONE"
+		}
+]},
+{  "rid": "16",  "prid": "7",  "loid": "1000.0.294833",  "ploid": "1000.0.193296",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "0",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Location B (SE)"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "3"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_ZONE"
+		}
+]},
+{  "rid": "17",  "prid": "7",  "loid": "1000.0.294846",  "ploid": "1000.0.193296",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "0",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Location C (NW)"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "3"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_ZONE"
+		}
+]},
+{  "rid": "18",  "prid": "7",  "loid": "1000.0.294859",  "ploid": "1000.0.193296",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "0",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Location D (NE)"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "3"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_ZONE"
+		}
+]},
+{  "rid": "8",  "prid": "3",  "loid": "1000.0.296635",  "ploid": "1000.0.4232",  "type": "LOCATION",  "isDeleted": "0",  "isExpandable": "0",  "properties": [
+		{  "pid": "20",  "name": "name",  "dataType": "String",  "value": "Roof"
+		},
+		{  "pid": "22",  "name": "level",  "dataType": "Int",  "value": "2"
+		},
+		{  "pid": "24",  "name": "nodeType",  "dataType": "String",  "value": "NT_STOREY"
+		}
+]}
+]}
+]
+}
