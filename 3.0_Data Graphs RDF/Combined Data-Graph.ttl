@@ -1,0 +1,1158 @@
+@prefix product: <https://w3id.org/product#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix wallinst: <http://test/walls/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix opm:   <https://w3id.org/opm#> .
+@prefix props: <https://w3id.org/props#> .
+@prefix cdt:   <http://w3id.org/lindt/custom_datatypes#> .
+@prefix ont:   <http://test/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix inst:  <http://test/VICO/> .
+@prefix peri:  <http://test/peri/> .
+@prefix tci:   <http://test/tci/> .
+@prefix lev:   <http://test/levels/> .
+@prefix lbs:   <http://test/lbs/> .
+
+tci:Producer  a  owl:Class .
+
+tci:ProductCatalogue  a  owl:Class .
+
+tci:PCI  a               owl:Class ;
+        rdfs:comment     "Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.\"@en" ;
+        rdfs:subClassOf  bot:Element , product:Product .
+
+tci:ConfirmedProduct  a   owl:Class ;
+        rdfs:subClassOf   tci:TCI ;
+        owl:disjointWith  tci:DefaultProduct .
+
+tci:TCI  a               owl:Class ;
+        rdfs:subClassOf  bot:Element , product:Product .
+
+tci:DefaultProduct  a    owl:Class ;
+        rdfs:subClassOf  tci:TCI .
+
+peri:PERIProduct  a      owl:Class ;
+        rdfs:subClassOf  tci:ConfirmedProduct .
+
+tci:PrimaryTCI  a         owl:Class ;
+        rdfs:subClassOf   tci:TCI ;
+        owl:disjointWith  tci:SecondaryTCI .
+
+tci:SecondaryTCI  a      owl:Class ;
+        rdfs:subClassOf  tci:TCI .
+
+tci:DefaultPanel330x120
+        a             owl:NamedIndividual , tci:DefaultFormwork , tci:FormworkVertical , tci:Panel ;
+        rdf:label     "Default Panel 330x120" ;
+        props:area    3.96 ;
+        props:height  3.30 ;
+        props:length  1.2 , 1.20 ;
+        props:weight  226.0 ;
+        props:width   0.12 .
+
+props:length  a      owl:DatatypeProperty ;
+        rdfs:domain  bot:Element ;
+        rdfs:range   xsd:decimal .
+
+props:height  a      owl:DatatypeProperty ;
+        rdfs:domain  bot:Element ;
+        rdfs:range   xsd:decimal .
+
+tci:DefaultPanel330x240
+        a             owl:NamedIndividual , tci:DefaultFormwork , tci:FormworkVertical , tci:Panel ;
+        rdf:label     "Default Panel 330x240" ;
+        props:area    7.29 ;
+        props:height  3.30 ;
+        props:length  2.4 , 2.40 ;
+        props:weight  408.0 ;
+        props:width   0.12 .
+
+tci:DefaultCoupler  a  tci:SecondaryTCI , owl:NamedIndividual , tci:DefaultFormwork , tci:Coupler ;
+        rdf:label     "Default Coupler" ;
+        props:weight  4.58 .
+
+props:weight  a      owl:DatatypeProperty ;
+        rdfs:domain  bot:Element ;
+        rdfs:range   xsd:decimal .
+
+wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.2.E" ;
+        tci:countDefaultCoupler       8 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  6 ;
+        tci:countDefaultPushPullProp  10 ;
+        tci:countDefaultTieRod        12 ;
+        tci:countDefaultWingnut       12 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTimberFillinglength    "0"^^xsd:decimal ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.146034 ;
+        bot:adjacentElement           wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d , wallinst:29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59 ;
+        props:Element_ID              "641019" ;
+        props:Revit_GUID              "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb" ;
+        props:angle                   90.0 ;
+        props:area                    24.0 ;
+        props:height                  3.0 ;
+        props:length                  8.4 ;
+        props:level_simple            "Level2" .
+
+wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.1.N1" ;
+        tci:countDefaultCoupler       4 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  4 ;
+        tci:countDefaultPushPullProp  8 ;
+        tci:countDefaultTieRod        8 ;
+        tci:countDefaultWingnut       8 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTimberFillinglength    0.2 ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.145958 ;
+        bot:adjacentElement           wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f , wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 ;
+        props:Element_ID              "645092" ;
+        props:Revit_GUID              "c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4" ;
+        props:angle                   180.0 ;
+        props:area                    19.2 ;
+        props:height                  3.0 ;
+        props:length                  6.2 ;
+        props:level_simple            "Level1" .
+
+tci:TimberFilling  a     owl:Class ;
+        rdfs:subClassOf  tci:PrimaryTCI , tci:FormworkParts .
+
+wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.1.S1" ;
+        tci:countDefaultCoupler       4 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  4 ;
+        tci:countDefaultPushPullProp  8 ;
+        tci:countDefaultTieRod        8 ;
+        tci:countDefaultWingnut       8 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTimberFillinglength    0.2 ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.145882 ;
+        bot:adjacentElement           wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e ;
+        props:Element_ID              "585914" ;
+        props:Revit_GUID              "450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba" ;
+        props:angle                   0.0 ;
+        props:area                    19.2 ;
+        props:height                  3.0 ;
+        props:length                  6.2 ;
+        props:level_simple            "Level1" .
+
+tci:DefaultPanel330x240_0
+        a       tci:DefaultPanel330x240 .
+
+tci:DefaultPanel330x240_1
+        a       tci:DefaultPanel330x240 .
+
+tci:DefaultPanel330x120_0
+        a       tci:DefaultPanel330x120 .
+
+tci:DefaultTieRod  a  tci:SecondaryTCI , owl:NamedIndividual , tci:DefaultFormwork , tci:FormworkVertical , tci:TieRod ;
+        rdf:label     "Default Tie Rod" ;
+        props:weight  4.43 .
+
+tci:DefaultWingnut  a  tci:SecondaryTCI , owl:NamedIndividual , tci:DefaultFormwork , tci:FormworkVertical , tci:Wingnut ;
+        rdf:label     "Default Wingnut" ;
+        props:weight  2.58 .
+
+tci:DefaultPushPullProp
+        a             tci:SecondaryTCI , owl:NamedIndividual , tci:DefaultFormwork , tci:PushPullProp ;
+        rdf:label     "Default PushPull Prop" ;
+        props:length  "2.80-4.50"^^xsd:decimal ;
+        props:weight  22.8 ;
+        props:width   0.073 .
+
+tci:countDefaultPanel330x240
+        a               owl:DatatypeProperty ;
+        rdfs:range      xsd:nonNegativeInteger ;
+        tci:iscounting  tci:DefaultPanel330x240 .
+
+tci:countDefaultPanel330x120
+        a               owl:DatatypeProperty ;
+        rdfs:range      xsd:nonNegativeInteger ;
+        tci:iscounting  tci:DefaultPanel330x120 .
+
+tci:countDefaultCoupler
+        a               owl:DatatypeProperty ;
+        rdfs:range      xsd:nonNegativeInteger ;
+        tci:iscounting  tci:DefaultCoupler .
+
+tci:countDefaultTieRod
+        a               owl:DatatypeProperty ;
+        rdfs:range      xsd:nonNegativeInteger ;
+        tci:iscounting  tci:DefaultTieRod .
+
+tci:countDefaultWingnut
+        a               owl:DatatypeProperty ;
+        rdfs:range      xsd:nonNegativeInteger ;
+        tci:iscounting  tci:DefaultWingnut .
+
+tci:countDefaultPushPullProp
+        a               owl:DatatypeProperty ;
+        rdfs:range      xsd:nonNegativeInteger ;
+        tci:iscounting  tci:DefaultPushPullProp .
+
+wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.1.E" ;
+        tci:countDefaultCoupler       8 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  6 ;
+        tci:countDefaultPushPullProp  10 ;
+        tci:countDefaultTieRod        12 ;
+        tci:countDefaultWingnut       12 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTimberFillinglength    "0"^^xsd:decimal ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.145920 ;
+        bot:adjacentElement           wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e ;
+        props:Element_ID              "585968" ;
+        props:Revit_GUID              "450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0" ;
+        props:angle                   90.0 ;
+        props:area                    24.0 ;
+        props:height                  3.0 ;
+        props:length                  8.4 ;
+        props:level_simple            "Level1" .
+
+tci:DefaultPanel330x240_2
+        a       tci:DefaultPanel330x240 .
+
+tci:countTimberFilling
+        a               owl:DatatypeProperty ;
+        rdfs:range      xsd:nonNegativeInteger ;
+        tci:iscounting  tci:TimberFilling .
+
+wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.1.N2" ;
+        tci:countDefaultCoupler       4 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  4 ;
+        tci:countDefaultPushPullProp  8 ;
+        tci:countDefaultTieRod        8 ;
+        tci:countDefaultWingnut       8 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTimberFillinglength    0.2 ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.145939 ;
+        bot:adjacentElement           wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 ;
+        props:Element_ID              "586063" ;
+        props:Revit_GUID              "450d31df-4383-4692-9be4-9c0935e083ef-0008f14f" ;
+        props:angle                   180.0 ;
+        props:area                    19.2 ;
+        props:height                  3.0 ;
+        props:length                  6.2 ;
+        props:level_simple            "Level1" .
+
+wallinst:f929e5c5-f013-495e-9ce1-7921920b4337-0009b513
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.3.W" ;
+        tci:countDefaultCoupler       8 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  6 ;
+        tci:countDefaultPushPullProp  10 ;
+        tci:countDefaultTieRod        12 ;
+        tci:countDefaultWingnut       12 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTimberFillinglength    0.4 ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.356394 ;
+        props:Element_ID              "636179" ;
+        props:Revit_GUID              "f929e5c5-f013-495e-9ce1-7921920b4337-0009b513" ;
+        props:angle                   90.0 ;
+        props:area                    11.1775012115 ;
+        props:height                  1.0 ;
+        props:length                  8.8 ;
+        props:level_simple            "Level3" .
+
+wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.1.W" ;
+        tci:countDefaultCoupler       8 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  6 ;
+        tci:countDefaultPushPullProp  10 ;
+        tci:countDefaultTieRod        12 ;
+        tci:countDefaultWingnut       12 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTimberFillinglength    "0"^^xsd:decimal ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.145977 ;
+        bot:adjacentElement           wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba ;
+        props:Element_ID              "640260" ;
+        props:Revit_GUID              "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504" ;
+        props:angle                   90.0 ;
+        props:area                    24.0 ;
+        props:height                  3.0 ;
+        props:length                  8.4 ;
+        props:level_simple            "Level1" .
+
+wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.2.2S" ;
+        tci:countDefaultCoupler       4 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  4 ;
+        tci:countDefaultPushPullProp  8 ;
+        tci:countDefaultTieRod        8 ;
+        tci:countDefaultWingnut       8 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTimberFillinglength    0.2 ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.146015 ;
+        bot:adjacentElement           wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d236 ;
+        props:Element_ID              "640605" ;
+        props:Revit_GUID              "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d" ;
+        props:angle                   180.0 ;
+        props:area                    19.2 ;
+        props:height                  3.0 ;
+        props:length                  6.2 ;
+        props:level_simple            "Level2" .
+
+wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.2.W" ;
+        tci:countDefaultCoupler       8 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  6 ;
+        tci:countDefaultPushPullProp  10 ;
+        tci:countDefaultTieRod        12 ;
+        tci:countDefaultWingnut       12 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTimberFillinglength    "0"^^xsd:decimal ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.356369 ;
+        bot:adjacentElement           wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d236 , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d764 ;
+        props:Element_ID              "640666" ;
+        props:Revit_GUID              "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a" ;
+        props:angle                   90.0 ;
+        props:area                    24.0 ;
+        props:height                  3.0 ;
+        props:length                  8.4 ;
+        props:level_simple            "Level2" .
+
+wallinst:2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.3.E" ;
+        tci:countDefaultCoupler       8 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  6 ;
+        tci:countDefaultPushPullProp  10 ;
+        tci:countDefaultTieRod        12 ;
+        tci:countDefaultWingnut       12 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 , tci:DefaultPanel330x240_2 ;
+        tci:hasTimberFillinglength    0.4 ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.356344 ;
+        props:Element_ID              "641779" ;
+        props:Revit_GUID              "2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3" ;
+        props:angle                   90.0 ;
+        props:area                    11.1775012115 ;
+        props:height                  1.0 ;
+        props:length                  8.8 ;
+        props:level_simple            "Level3" .
+
+wallinst:29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.2.N2" ;
+        tci:countDefaultCoupler       4 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  4 ;
+        tci:countDefaultPushPullProp  8 ;
+        tci:countDefaultTieRod        8 ;
+        tci:countDefaultWingnut       8 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTimberFillinglength    0.2 ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.146053 ;
+        bot:adjacentElement           wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d764 ;
+        props:Element_ID              "642905" ;
+        props:Revit_GUID              "29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59" ;
+        props:angle                   180.0 ;
+        props:area                    19.2 ;
+        props:height                  3.0 ;
+        props:length                  6.2 ;
+        props:level_simple            "Level2" .
+
+wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d236
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.2.2S1" ;
+        tci:countDefaultCoupler       4 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  4 ;
+        tci:countDefaultPushPullProp  8 ;
+        tci:countDefaultTieRod        8 ;
+        tci:countDefaultWingnut       8 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTimberFillinglength    0.2 ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.145996 ;
+        bot:adjacentElement           wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d , wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a ;
+        props:Element_ID              "643638" ;
+        props:Revit_GUID              "c1037085-1aff-4644-8770-66dc41edbf0b-0009d236" ;
+        props:angle                   180.0 ;
+        props:area                    19.2 ;
+        props:height                  3.0 ;
+        props:length                  6.2 ;
+        props:level_simple            "Level2" .
+
+wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.1.S2" ;
+        tci:countDefaultCoupler       4 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  4 ;
+        tci:countDefaultPushPullProp  8 ;
+        tci:countDefaultTieRod        8 ;
+        tci:countDefaultWingnut       8 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTimberFillinglength    0.2 ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.145901 ;
+        bot:adjacentElement           wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 ;
+        props:Element_ID              "644734" ;
+        props:Revit_GUID              "c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e" ;
+        props:angle                   0.0 ;
+        props:area                    19.2 ;
+        props:height                  3.0 ;
+        props:length                  6.2 ;
+        props:level_simple            "Level1" .
+
+wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d764
+        a                             product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label                     "(12)11.15,05.2.N1" ;
+        tci:countDefaultCoupler       4 ;
+        tci:countDefaultPanel330x120  2 ;
+        tci:countDefaultPanel330x240  4 ;
+        tci:countDefaultPushPullProp  8 ;
+        tci:countDefaultTieRod        8 ;
+        tci:countDefaultWingnut       8 ;
+        tci:countTimberFilling        2 ;
+        tci:hasTCIs                   tci:DefaultPanel330x120 , tci:DefaultPanel330x240 ;
+        tci:hasTCIsIn                 tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTCIsOut                tci:DefaultPanel330x240_0 , tci:DefaultPanel330x240_1 , tci:DefaultPanel330x120_0 ;
+        tci:hasTimberFillinglength    0.2 ;
+        tci:hassecTCIs                tci:DefaultCoupler , tci:DefaultTieRod , tci:DefaultWingnut , tci:DefaultPushPullProp ;
+        owl:sameAs                    inst:1000.0.356319 ;
+        bot:adjacentElement           wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a , wallinst:29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59 ;
+        props:Element_ID              "644964" ;
+        props:Revit_GUID              "c1037085-1aff-4644-8770-66dc41edbf0b-0009d764" ;
+        props:angle                   180.0 ;
+        props:area                    19.2 ;
+        props:height                  3.0 ;
+        props:length                  6.2 ;
+        props:level_simple            "Level2" .
+
+lbs:CompLoid  a          owl:Class ;
+        rdfs:subClassOf  bot:Element .
+
+lbs:hasCompLoid  a   owl:DatatypeProperty ;
+        rdfs:domain  bot:Element ;
+        rdfs:range   xsd:string .
+
+lbs:Location  a       owl:Class ;
+        rdfs:comment  "Location with level information from locName." ;
+        owl:sameAs    lbs:LocLoid .
+
+lbs:LocLoid  a        owl:Class ;
+        rdfs:comment  "Location with level information from locName." .
+
+lbs:hasLocation  a   owl:DatatypeProperty ;
+        rdfs:domain  lbs:CompLoid ;
+        rdfs:range   xsd:string .
+
+lbs:adjacentLocation  a  owl:ObjectProperty .
+
+lbs:containsElement  a  owl:ObjectProperty .
+
+lbs:haslocLoid  a    owl:DatatypeProperty ;
+        rdfs:domain  lbs:CompLoid ;
+        rdfs:range   xsd:string .
+
+lbs:SchedLoid  a  owl:Class .
+
+lbs:hasschedLoid  a  owl:DatatypeProperty ;
+        rdfs:domain  lbs:CompLoid ;
+        rdfs:range   xsd:string .
+
+lbs:TaskLoid  a  owl:Class .
+
+lbs:hastaskLoid  a   owl:DatatypeProperty ;
+        rdfs:domain  lbs:CompLoid ;
+        rdfs:range   xsd:string .
+
+lbs:taskPlannedStartDate
+        a            owl:DatatypeProperty ;
+        rdfs:domain  lbs:TaskLoid ;
+        rdfs:range   xsd:dateTime .
+
+lbs:taskPlannedEndDate
+        a            owl:DatatypeProperty ;
+        rdfs:domain  lbs:TaskLoid ;
+        rdfs:range   xsd:dateTime .
+
+lbs:taskProgressDate  a  owl:DatatypeProperty ;
+        rdfs:domain  lbs:TaskLoid ;
+        rdfs:range   xsd:dateTime .
+
+lbs:taskProgressCompletion
+        a            owl:DatatypeProperty ;
+        rdfs:domain  lbs:TaskLoid ;
+        rdfs:range   xsd:nonNegativeInteger .
+
+lbs:taskActualStartDate
+        a            owl:DatatypeProperty ;
+        rdfs:domain  lbs:TaskLoid ;
+        rdfs:range   xsd:dateTime .
+
+lbs:taskActualEndDate
+        a            owl:DatatypeProperty ;
+        rdfs:domain  lbs:TaskLoid ;
+        rdfs:range   xsd:dateTime .
+
+inst:1000.0.145882  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.145882" ;
+        lbs:hasLocation             "Lev1_loca(w)" ;
+        lbs:haslocLoid              "1000.0.355001" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358588" ;
+        lbs:taskActualEndDate       "NULL"^^xsd:dateTime ;
+        lbs:taskActualStartDate     "NULL"^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-08 07:28:48.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-04 11:00:00.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        "NULL"^^xsd:dateTime ;
+        props:Element_ID            "585914" ;
+        props:Revit_GUID            "450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba" .
+
+product:Wall  a           owl:Class ;
+        rdfs:subClassOf   tci:PCI , bot:Element ;
+        owl:disjointWith  product:Floor , product:Slab .
+
+inst:1000.0.145920  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.145920" ;
+        lbs:hasLocation             "Lev1_locb(e)" ;
+        lbs:haslocLoid              "1000.0.355015" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358593" ;
+        lbs:taskActualEndDate       "NULL"^^xsd:dateTime ;
+        lbs:taskActualStartDate     "NULL"^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-09 11:57:36.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-08 07:28:48.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        "NULL"^^xsd:dateTime ;
+        props:Element_ID            "585968" ;
+        props:Revit_GUID            "450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0" .
+
+inst:1000.0.145939  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.145939" ;
+        lbs:hasLocation             "Lev1_locb(e)" ;
+        lbs:haslocLoid              "1000.0.355015" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358593" ;
+        lbs:taskActualEndDate       "NULL"^^xsd:dateTime ;
+        lbs:taskActualStartDate     "NULL"^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-09 11:57:36.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-08 07:28:48.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        "NULL"^^xsd:dateTime ;
+        props:Element_ID            "586063" ;
+        props:Revit_GUID            "450d31df-4383-4692-9be4-9c0935e083ef-0008f14f" .
+
+inst:1000.0.356394  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.356394" ;
+        lbs:hasLocation             "Lev3_loca(w)" ;
+        lbs:haslocLoid              "1000.0.298125" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358582" ;
+        lbs:taskActualEndDate       "NULL"^^xsd:dateTime ;
+        lbs:taskActualStartDate     "NULL"^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-17 10:21:20.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-17 08:07:12.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        "NULL"^^xsd:dateTime ;
+        props:Element_ID            "636179" ;
+        props:Revit_GUID            "f929e5c5-f013-495e-9ce1-7921920b4337-0009b513" .
+
+inst:1000.0.145977  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.145977" ;
+        lbs:hasLocation             "Lev1_loca(w)" ;
+        lbs:haslocLoid              "1000.0.355001" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358588" ;
+        lbs:taskActualEndDate       "NULL"^^xsd:dateTime ;
+        lbs:taskActualStartDate     "NULL"^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-08 07:28:48.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-04 11:00:00.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        "NULL"^^xsd:dateTime ;
+        props:Element_ID            "640260" ;
+        props:Revit_GUID            "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504" .
+
+inst:1000.0.146015  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.146015" ;
+        lbs:hasLocation             "Lev2_locb(e)" ;
+        lbs:haslocLoid              "1000.0.354874" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358596" ;
+        lbs:taskActualEndDate       "NULL"^^xsd:dateTime ;
+        lbs:taskActualStartDate     "NULL"^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-17 08:07:12.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-15 11:38:24.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        "NULL"^^xsd:dateTime ;
+        props:Element_ID            "640605" ;
+        props:Revit_GUID            "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d" .
+
+inst:1000.0.356369  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.356369" ;
+        lbs:hasLocation             "Lev2_loca(w)" ;
+        lbs:haslocLoid              "1000.0.354860" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358591" ;
+        lbs:taskActualEndDate       "NULL"^^xsd:dateTime ;
+        lbs:taskActualStartDate     "NULL"^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-15 11:38:24.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-12 07:09:36.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        "NULL"^^xsd:dateTime ;
+        props:Element_ID            "640666" ;
+        props:Revit_GUID            "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a" .
+
+inst:1000.0.146034  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.146034" ;
+        lbs:hasLocation             "Lev2_locb(e)" ;
+        lbs:haslocLoid              "1000.0.354874" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358596" ;
+        lbs:taskActualEndDate       "NULL"^^xsd:dateTime ;
+        lbs:taskActualStartDate     "NULL"^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-17 08:07:12.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-15 11:38:24.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        "NULL"^^xsd:dateTime ;
+        props:Element_ID            "641019" ;
+        props:Revit_GUID            "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb" .
+
+inst:1000.0.356344  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.356344" ;
+        lbs:hasLocation             "Lev3_locb(e)" ;
+        lbs:haslocLoid              "1000.0.298138" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358585" ;
+        lbs:taskActualEndDate       "NULL"^^xsd:dateTime ;
+        lbs:taskActualStartDate     "NULL"^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-17 12:35:28.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-17 10:21:20.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        "NULL"^^xsd:dateTime ;
+        props:Element_ID            "641779" ;
+        props:Revit_GUID            "2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3" .
+
+inst:1000.0.146053  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.146053" ;
+        lbs:hasLocation             "Lev2_locb(e)" ;
+        lbs:haslocLoid              "1000.0.354874" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358596" ;
+        lbs:taskActualEndDate       "NULL"^^xsd:dateTime ;
+        lbs:taskActualStartDate     "NULL"^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-17 08:07:12.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-15 11:38:24.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        "NULL"^^xsd:dateTime ;
+        props:Element_ID            "642905" ;
+        props:Revit_GUID            "29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59" .
+
+inst:1000.0.145996  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.145996" ;
+        lbs:hasLocation             "Lev2_loca(w)" ;
+        lbs:haslocLoid              "1000.0.354860" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358591" ;
+        lbs:taskActualEndDate       "NULL"^^xsd:dateTime ;
+        lbs:taskActualStartDate     "NULL"^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-15 11:38:24.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-12 07:09:36.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        "NULL"^^xsd:dateTime ;
+        props:Element_ID            "643638" ;
+        props:Revit_GUID            "c1037085-1aff-4644-8770-66dc41edbf0b-0009d236" .
+
+inst:1000.0.145901  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.145901" ;
+        lbs:hasLocation             "Lev1_locb(e)" ;
+        lbs:haslocLoid              "1000.0.355015" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358593" ;
+        lbs:taskActualEndDate       ""^^xsd:dateTime ;
+        lbs:taskActualStartDate     ""^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-09 11:57:36.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-08 07:28:48.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        ""^^xsd:dateTime ;
+        props:Element_ID            "644734" ;
+        props:Revit_GUID            "c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e" .
+
+inst:1000.0.356319  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.356319" ;
+        lbs:hasLocation             "Lev2_loca(w)" ;
+        lbs:haslocLoid              "1000.0.354860" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358591" ;
+        lbs:taskActualEndDate       ""^^xsd:dateTime ;
+        lbs:taskActualStartDate     ""^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-15 11:38:24.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-12 07:09:36.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        ""^^xsd:dateTime ;
+        props:Element_ID            "644964" ;
+        props:Revit_GUID            "c1037085-1aff-4644-8770-66dc41edbf0b-0009d764" .
+
+inst:1000.0.145958  a               lbs:CompLoid , product:Wall ;
+        lbs:hasCompLoid             "1000.0.145958" ;
+        lbs:hasLocation             "Lev1_loca(w)" ;
+        lbs:haslocLoid              "1000.0.355001" ;
+        lbs:hasschedLoid            "1000.0.321768" ;
+        lbs:hastaskLoid             "1000.0.358588" ;
+        lbs:taskActualEndDate       ""^^xsd:dateTime ;
+        lbs:taskActualStartDate     ""^^xsd:dateTime ;
+        lbs:taskPlannedEndDate      "2019-04-08 07:28:48.000"^^xsd:dateTime ;
+        lbs:taskPlannedStartDate    "2019-04-04 11:00:00.000"^^xsd:dateTime ;
+        lbs:taskProgressCompletion  "0.0"^^xsd:nonNegativeInteger ;
+        lbs:taskProgressDate        ""^^xsd:dateTime ;
+        props:Element_ID            "645092" ;
+        props:Revit_GUID            "c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4" .
+
+product:Floor  a          owl:Class ;
+        rdfs:subClassOf   tci:PCI ;
+        owl:disjointWith  product:Wall .
+
+product:Slab  a           owl:Class ;
+        rdfs:subClassOf   tci:PCI ;
+        owl:disjointWith  product:Wall .
+
+tci:DefaultFormwork  a   owl:Class ;
+        rdfs:subClassOf  tci:DefaultProduct .
+
+tci:Scaffolding  a       owl:Class ;
+        rdfs:subClassOf  tci:TCI .
+
+tci:ScaffoldingParts  a  owl:Class ;
+        rdfs:subClassOf  tci:Scaffolding .
+
+tci:Formwork  a           owl:Class ;
+        rdfs:subClassOf   tci:TCI ;
+        owl:disjointWith  tci:Scaffolding .
+
+tci:FormworkVertical  a      owl:Class ;
+        rdfs:subClassOf      tci:Formwork ;
+        tci:supportsPCIType  product:Wall ;
+        owl:disjointWith     tci:FormworkHorizontal .
+
+tci:supportsPCIType  a  owl:ObjectProperty ;
+        rdfs:domain  tci:TCI ;
+        rdfs:range   bot:Element , product:Product .
+
+tci:FormworkHorizontal
+        a                    owl:Class ;
+        rdfs:subClassOf      tci:Formwork ;
+        tci:supportsPCIType  product:Floor , product:Slab ;
+        owl:disjointWith     tci:FormworkVertical .
+
+tci:FormworkParts  a     owl:Class ;
+        rdfs:subClassOf  tci:Formwork .
+
+tci:Panel  a             owl:Class ;
+        rdfs:subClassOf  tci:PrimaryTCI , tci:FormworkParts .
+
+tci:OutsideCorner  a     owl:Class ;
+        rdfs:subClassOf  tci:PrimaryTCI , tci:FormworkParts .
+
+tci:InsideCorner  a      owl:Class ;
+        rdfs:subClassOf  tci:PrimaryTCI , tci:FormworkParts .
+
+tci:Coupler  a           owl:Class ;
+        rdfs:subClassOf  tci:SecondaryTCI , tci:FormworkParts .
+
+tci:Wingnut  a           owl:Class ;
+        rdfs:subClassOf  tci:SecondaryTCI , tci:FormworkParts .
+
+tci:Waler  a             owl:Class ;
+        rdfs:subClassOf  tci:SecondaryTCI , tci:FormworkParts .
+
+tci:TieRod  a            owl:Class ;
+        rdfs:subClassOf  tci:SecondaryTCI , tci:FormworkParts .
+
+tci:PushPullProp  a      owl:Class ;
+        rdfs:subClassOf  tci:SecondaryTCI , tci:FormworkParts .
+
+peri:WallThicknessCompensation
+        a                owl:Class ;
+        rdfs:subClassOf  tci:SecondaryTCI , tci:FormworkParts .
+
+tci:consistsOf  a    owl:ObjectProperty ;
+        rdfs:domain  tci:TCI ;
+        rdfs:range   tci:FormworkParts , product:ScaffoldingParts .
+
+tci:hasFormworkParts  a     owl:ObjectProperty ;
+        rdfs:domain         tci:Formwork ;
+        rdfs:range          tci:FormworkParts ;
+        rdfs:subPropertyOf  tci:consistsOf .
+
+product:hasScaffoldingParts
+        a                   owl:ObjectProperty ;
+        rdfs:domain         tci:Scaffolding ;
+        rdfs:range          product:ScaffoldingParts ;
+        rdfs:subPropertyOf  tci:consistsOf .
+
+tci:hasProducer  a     owl:ObjectProperty ;
+        rdfs:domain    tci:ConfirmedProduct ;
+        rdfs:range     tci:Producer ;
+        owl:inverseOf  tci:hasProduct .
+
+tci:hasProduct  a    owl:ObjectProperty ;
+        rdfs:domain  tci:Producer ;
+        rdfs:range   tci:ConfirmedProduct .
+
+tci:hasProductCatalogue
+        a            owl:ObjectProperty ;
+        rdfs:domain  tci:ConfirmedProduct ;
+        rdfs:range   tci:Producer .
+
+props:width  a       owl:DatatypeProperty ;
+        rdfs:domain  bot:Element ;
+        rdfs:range   xsd:decimal .
+
+tci:DefaultPanel330x90
+        a             owl:NamedIndividual , tci:DefaultFormwork , tci:FormworkVertical , tci:Panel ;
+        rdf:label     "Default Panel 330x90" ;
+        props:area    2.97 ;
+        props:height  3.30 ;
+        props:length  0.90 ;
+        props:weight  171.0 ;
+        props:width   0.12 .
+
+tci:DefaultPanel330x60
+        a             owl:NamedIndividual , tci:DefaultFormwork , tci:FormworkVertical , tci:Panel ;
+        rdf:label     "Default Panel 330x60" ;
+        props:area    1.98 ;
+        props:height  3.30 ;
+        props:length  0.60 ;
+        props:weight  118.0 ;
+        props:width   0.12 .
+
+tci:DefaultPanel330x45
+        a             owl:NamedIndividual , tci:DefaultFormwork , tci:FormworkVertical , tci:Panel ;
+        rdf:label     "Default Panel 330x45" ;
+        props:area    1.485 ;
+        props:height  3.30 ;
+        props:length  0.45 ;
+        props:weight  99.8 ;
+        props:width   0.12 .
+
+tci:DefaultWaler  a   tci:SecondaryTCI , owl:NamedIndividual , tci:DefaultFormwork , tci:FormworkVertical , tci:Waler ;
+        rdf:label     "Default Waler" ;
+        props:height  0.105 ;
+        props:length  0.85 ;
+        props:weight  8.52 ;
+        props:width   0.08 .
+
+peri:DUO135  a           peri:PERIProduct , tci:FormworkVertical ;
+        rdf:label        "DUO 135 Panel Formwork" ;
+        tci:hasProducer  "PERI GmbH" .
+
+peri:MAXIMO_MX15  a              peri:PERIProduct , tci:FormworkVertical ;
+        rdf:label                "MAXIMO MX15 Panel Formwork" ;
+        tci:consistsof           peri:PERI_MXM330x60 , peri:PERI_MXI330x60 , peri:PERI_MXI330x50x20 , peri:PERI_MXA330x45 , peri:PERI_MX330x90 , peri:PERI_MX330x60 , peri:PERI_MX330x45 , peri:PERI_MX330x30 , peri:PERI_MX330x240 , peri:PERI_MX330x120 , peri:PERI_MXA330x35 , peri:WDAMX330x10 , peri:PERI_WingnutMX15 , peri:PERI_WingnutDW15_Pivot , peri:PERI_WalerMAR853 , peri:PERI_Waler85 , peri:PERI_TieTS_TrioBulkhead , peri:PERI_TieMX15_3040 , peri:PERI_AlignmentCouplerBFD ;
+        tci:hasProducer          "PERI GmbH" ;
+        tci:hasProductCatalogue  "MAXIMO MX 15, 270 _ 330 Instructions for Assembly and Use" .
+
+peri:PERI_MXM330x60  a  owl:NamedIndividual , tci:Panel , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI MXM 330x60" ;
+        tci:hasArtNo  "114464" ;
+        props:area    1.98 ;
+        props:height  3.30 ;
+        props:length  0.60 ;
+        props:weight  "141,0"^^xsd:decimal ;
+        props:width   0.12 .
+
+peri:PERI_MXI330x60  a  owl:NamedIndividual , tci:InsideCorner , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI MXI 330x60" ;
+        tci:hasArtNo  "114470" ;
+        props:area    3.96 ;
+        props:height  3.30 ;
+        props:length  0.60 ;
+        props:weight  199.0 ;
+        props:width   0.12 .
+
+peri:PERI_MXI330x50x20
+        a             owl:NamedIndividual , tci:InsideCorner , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI MXI 330x50x20" ;
+        tci:hasArtNo  "115338" ;
+        props:area    2.31 ;
+        props:height  3.30 ;
+        props:length  0.20 , 0.50 ;
+        props:weight  136.0 ;
+        props:width   0.12 .
+
+peri:PERI_MXA330x45  a  owl:NamedIndividual , tci:OutsideCorner , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI MXA 330x45" ;
+        tci:hasArtNo  "114478" ;
+        props:area    2.97 ;
+        props:height  3.30 ;
+        props:length  0.45 ;
+        props:weight  190.0 ;
+        props:width   0.12 .
+
+peri:PERI_MX330x90  a  owl:NamedIndividual , tci:Panel , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI MX 330x90" ;
+        tci:hasArtNo  "114258" ;
+        props:area    2.97 ;
+        props:height  3.30 ;
+        props:length  0.90 ;
+        props:weight  171.0 ;
+        props:width   0.12 .
+
+peri:PERI_MX330x60  a  owl:NamedIndividual , tci:Panel , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI MX 330x60" ;
+        tci:hasArtNo  "114445" ;
+        props:area    1.98 ;
+        props:height  3.30 ;
+        props:length  0.60 ;
+        props:weight  118.0 ;
+        props:width   0.12 .
+
+peri:PERI_MX330x45  a  owl:NamedIndividual , tci:Panel , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI MX 330x45" ;
+        tci:hasArtNo  "114452" ;
+        props:area    1.485 ;
+        props:height  3.30 ;
+        props:length  0.45 ;
+        props:weight  99.8 ;
+        props:width   0.12 .
+
+peri:PERI_MX330x30  a  owl:NamedIndividual , tci:Panel , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI MX 330x30" ;
+        tci:hasArtNo  "114457" ;
+        props:area    0.99 ;
+        props:height  3.30 ;
+        props:length  0.30 ;
+        props:weight  78.6 ;
+        props:width   0.12 .
+
+peri:PERI_MX330x240  a  owl:NamedIndividual , tci:Panel , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI MX 330x240" ;
+        tci:hasArtNo  "114426" ;
+        props:area    7.29 ;
+        props:height  3.30 ;
+        props:length  2.40 ;
+        props:weight  408.0 ;
+        props:width   0.12 .
+
+peri:PERI_MX330x120  a  owl:NamedIndividual , tci:Panel , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI MX 330x120" ;
+        tci:hasArtNo  "114248" ;
+        props:area    3.96 ;
+        props:height  3.30 ;
+        props:length  1.20 ;
+        props:weight  226.0 ;
+        props:width   0.12 .
+
+peri:PERI_MXA330x35  a  owl:NamedIndividual , tci:OutsideCorner , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI MXA 330x35" ;
+        tci:hasArtNo  "114486" ;
+        props:area    2.31 ;
+        props:height  3.30 ;
+        props:length  0.35 ;
+        props:weight  168.0 ;
+        props:width   0.12 .
+
+peri:WDAMX330x10  a   owl:NamedIndividual , peri:WallThicknessCompensation , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI WDA MX 330x10" ;
+        rdfs:comment  "To adjust the thickness of the wall\"@en" ;
+        tci:hasArtNo  "114394" ;
+        props:height  0.12 ;
+        props:length  3.30 ;
+        props:weight  12.1 ;
+        props:width   0.10 .
+
+peri:PERI_WingnutMX15
+        a             owl:NamedIndividual , tci:Wingnut , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI Wingnut MX15" ;
+        tci:hasArtNo  "112386" ;
+        props:height  0.196 ;
+        props:weight  2.58 ;
+        props:width   0.13 .
+
+peri:PERI_WingnutDW15_Pivot
+        a             peri:PERIProduct , owl:NamedIndividual , tci:Wingnut ;
+        rdf:label     "PERI Wingnut Pivot Plate DW15" ;
+        tci:hasArtNo  "030370" ;
+        props:height  0.117 ;
+        props:weight  1.66 ;
+        props:width   0.117 .
+
+peri:PERI_WalerMAR853
+        a             peri:PERIProduct , owl:NamedIndividual , tci:Waler ;
+        rdf:label     "PERI Waler MAR 85-3" ;
+        tci:hasArtNo  "12494" ;
+        props:height  0.115 ;
+        props:length  0.85 ;
+        props:weight  14.10 ;
+        props:width   0.126 .
+
+peri:PERI_Waler85  a  peri:PERIProduct , owl:NamedIndividual , tci:Waler ;
+        rdf:label     "PERI Waler 85" ;
+        tci:hasArtNo  "023551" ;
+        props:height  0.105 ;
+        props:length  0.85 ;
+        props:weight  8.58 ;
+        props:width   0.08 .
+
+peri:PERI_TieTS_TrioBulkhead
+        a             peri:PERIProduct , owl:NamedIndividual , tci:TieRod ;
+        rdf:label     "PERI TRIO Bulkhead Tie TS" ;
+        tci:hasArtNo  "023640" ;
+        props:length  0.44 ;
+        props:weight  1.14 .
+
+peri:PERI_TieMX15_3040
+        a             owl:NamedIndividual , tci:TieRod , peri:MAXIMO_MX15 ;
+        rdf:label     "PERI Tie MX15 30-40" ;
+        tci:hasArtNo  "112464" ;
+        props:length  0.838 ;
+        props:weight  4.43 .
+
+peri:PERI_AlignmentCouplerBFD
+        a             peri:PERIProduct , owl:NamedIndividual , tci:Coupler ;
+        rdf:label     "PERI Alignment Coupler BFD" ;
+        tci:hasArtNo  "023500" ;
+        props:weight  "4,58"^^xsd:decimal .
+
+tci:DefaultInsideCorner330x20
+        a             owl:NamedIndividual , tci:DefaultFormwork , tci:FormworkVertical , tci:InsideCorner ;
+        rdf:label     "Default Inside Corner 330x20" ;
+        props:area    2.31 ;
+        props:height  3.30 ;
+        props:length  0.20 ;
+        props:weight  136.0 ;
+        props:width   0.12 .
+
+tci:countDefaultPanel330x30
+        a           owl:DatatypeProperty ;
+        rdfs:range  xsd:nonNegativeInteger .
+
+tci:countDefaultPanel330x45
+        a           owl:DatatypeProperty ;
+        rdfs:range  xsd:nonNegativeInteger .
+
+tci:countDefaultPanel330x60
+        a           owl:DatatypeProperty ;
+        rdfs:range  xsd:nonNegativeInteger .
+
+tci:countDefaultPanel330x90
+        a           owl:DatatypeProperty ;
+        rdfs:range  xsd:nonNegativeInteger .
+
+tci:countDefaultWaler
+        a           owl:DatatypeProperty ;
+        rdfs:range  xsd:nonNegativeInteger .
+
+tci:DefaultOutsideCorner330x60
+        a             owl:NamedIndividual , tci:DefaultFormwork , tci:FormworkVertical , tci:OutsideCorner ;
+        rdf:label     "Default Outside Corner 330x45" ;
+        props:area    2.97 ;
+        props:height  3.30 ;
+        props:length  0.60 ;
+        props:weight  190.0 ;
+        props:width   0.12 .
+
+bot:Storey  a   owl:Class .
+
+lev:f7282f63-3a72-4e86-90b1-7a09d671a722-00000153
+        a                 bot:Storey ;
+        rdf:label         "Level1" ;
+        bot:hasElement    wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f , wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e ;
+        props:Revit_GUID  "f7282f63-3a72-4e86-90b1-7a09d671a722-00000153" .
+
+lev:8c210d04-c017-40ad-9f62-83d848d110ba-00039ad7
+        a                 bot:Storey ;
+        rdf:label         "Level2" ;
+        bot:hasElement    wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb , wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d , wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a , wallinst:29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59 , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d236 , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d764 ;
+        props:Revit_GUID  "8c210d04-c017-40ad-9f62-83d848d110ba-00039ad7" .
+
+lev:db8348b9-46f2-46a6-ae2f-2dd3011c2a71-0006904f
+        a                 bot:Storey ;
+        rdf:label         "Roof" ;
+        props:Revit_GUID  "db8348b9-46f2-46a6-ae2f-2dd3011c2a71-0006904f" .
+
+lev:a0fbbf56-1183-43ae-82d0-0cdfdae47b69-0008ffd4
+        a                 bot:Storey ;
+        rdf:label         "Level0" ;
+        props:Revit_GUID  "a0fbbf56-1183-43ae-82d0-0cdfdae47b69-0008ffd4" .
+
+lev:ad5beca6-a82d-4c2d-b7ea-a671a766dd15-00091c69
+        a                 bot:Storey ;
+        rdf:label         "Level3" ;
+        bot:hasElement    wallinst:f929e5c5-f013-495e-9ce1-7921920b4337-0009b513 , wallinst:2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3 ;
+        props:Revit_GUID  "ad5beca6-a82d-4c2d-b7ea-a671a766dd15-00091c69" .
+
+lev:ad5beca6-a82d-4c2d-b7ea-a671a766dd15-00091eec
+        a                 bot:Storey ;
+        rdf:label         "Level4" ;
+        props:Revit_GUID  "ad5beca6-a82d-4c2d-b7ea-a671a766dd15-00091eec" .
+
+ont:Concrete400MmCastInPlace
+        a                owl:Class ;
+        rdf:label        "Basic Wall: Concrete - 400mm (Cast-in-Place)" ;
+        rdfs:subClassOf  product:Wall ;
+        props:material   "Concrete, Cast-in-Place, Gray" ;
+        props:width      0.4 .

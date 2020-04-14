@@ -1,27 +1,195 @@
-@prefix cdt:   <http://w3id.org/lindt/custom_datatypes#> .
 @prefix product: <https://w3id.org/product#> .
 @prefix ont:   <http://test/ontology/> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix bot:   <https://w3id.org/bot#> .
-@prefix inst:  <http://test/walls/> .
+@prefix wallinst: <http://test/walls/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix lev:   <http://test/levels/> .
 @prefix props: <https://w3id.org/props#> .
+
+wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.2.E" ;
+        bot:adjacentElement  wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d , wallinst:29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59 ;
+        props:Element_ID     "641019" ;
+        props:Revit_GUID     "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb" ;
+        props:angle          90.0 ;
+        props:area           24.0 ;
+        props:height         3.0 ;
+        props:length         8.4 ;
+        props:level_simple   "Level2" .
+
+wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.1.N1" ;
+        bot:adjacentElement  wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f , wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 ;
+        props:Element_ID     "645092" ;
+        props:Revit_GUID     "c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4" ;
+        props:angle          180.0 ;
+        props:area           19.2 ;
+        props:height         3.0 ;
+        props:length         6.2 ;
+        props:level_simple   "Level1" .
+
+wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.1.S1" ;
+        bot:adjacentElement  wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e ;
+        props:Element_ID     "585914" ;
+        props:Revit_GUID     "450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba" ;
+        props:angle          0.0 ;
+        props:area           19.2 ;
+        props:height         3.0 ;
+        props:length         6.2 ;
+        props:level_simple   "Level1" .
+
+wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.1.E" ;
+        bot:adjacentElement  wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e ;
+        props:Element_ID     "585968" ;
+        props:Revit_GUID     "450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0" ;
+        props:angle          90.0 ;
+        props:area           24.0 ;
+        props:height         3.0 ;
+        props:length         8.4 ;
+        props:level_simple   "Level1" .
+
+wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.1.N2" ;
+        bot:adjacentElement  wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 ;
+        props:Element_ID     "586063" ;
+        props:Revit_GUID     "450d31df-4383-4692-9be4-9c0935e083ef-0008f14f" ;
+        props:angle          180.0 ;
+        props:area           19.2 ;
+        props:height         3.0 ;
+        props:length         6.2 ;
+        props:level_simple   "Level1" .
+
+wallinst:f929e5c5-f013-495e-9ce1-7921920b4337-0009b513
+        a                   product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label           "(12)11.15,05.3.W" ;
+        props:Element_ID    "636179" ;
+        props:Revit_GUID    "f929e5c5-f013-495e-9ce1-7921920b4337-0009b513" ;
+        props:angle         90.0 ;
+        props:area          11.1775012115 ;
+        props:height        1.0 ;
+        props:length        8.8 ;
+        props:level_simple  "Level3" .
+
+wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.1.W" ;
+        bot:adjacentElement  wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba ;
+        props:Element_ID     "640260" ;
+        props:Revit_GUID     "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504" ;
+        props:angle          90.0 ;
+        props:area           24.0 ;
+        props:height         3.0 ;
+        props:length         8.4 ;
+        props:level_simple   "Level1" .
+
+wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.2.2S" ;
+        bot:adjacentElement  wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d236 ;
+        props:Element_ID     "640605" ;
+        props:Revit_GUID     "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d" ;
+        props:angle          180.0 ;
+        props:area           19.2 ;
+        props:height         3.0 ;
+        props:length         6.2 ;
+        props:level_simple   "Level2" .
+
+wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.2.W" ;
+        bot:adjacentElement  wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d236 , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d764 ;
+        props:Element_ID     "640666" ;
+        props:Revit_GUID     "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a" ;
+        props:angle          90.0 ;
+        props:area           24.0 ;
+        props:height         3.0 ;
+        props:length         8.4 ;
+        props:level_simple   "Level2" .
+
+wallinst:2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3
+        a                   product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label           "(12)11.15,05.3.E" ;
+        props:Element_ID    "641779" ;
+        props:Revit_GUID    "2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3" ;
+        props:angle         90.0 ;
+        props:area          11.1775012115 ;
+        props:height        1.0 ;
+        props:length        8.8 ;
+        props:level_simple  "Level3" .
+
+wallinst:29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.2.N2" ;
+        bot:adjacentElement  wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d764 ;
+        props:Element_ID     "642905" ;
+        props:Revit_GUID     "29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59" ;
+        props:angle          180.0 ;
+        props:area           19.2 ;
+        props:height         3.0 ;
+        props:length         6.2 ;
+        props:level_simple   "Level2" .
+
+wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d236
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.2.2S1" ;
+        bot:adjacentElement  wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d , wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a ;
+        props:Element_ID     "643638" ;
+        props:Revit_GUID     "c1037085-1aff-4644-8770-66dc41edbf0b-0009d236" ;
+        props:angle          180.0 ;
+        props:area           19.2 ;
+        props:height         3.0 ;
+        props:length         6.2 ;
+        props:level_simple   "Level2" .
+
+wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.1.S2" ;
+        bot:adjacentElement  wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 ;
+        props:Element_ID     "644734" ;
+        props:Revit_GUID     "c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e" ;
+        props:angle          0.0 ;
+        props:area           19.2 ;
+        props:height         3.0 ;
+        props:length         6.2 ;
+        props:level_simple   "Level1" .
+
+wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d764
+        a                    product:Wall , ont:Concrete400MmCastInPlace ;
+        rdf:label            "(12)11.15,05.2.N1" ;
+        bot:adjacentElement  wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a , wallinst:29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59 ;
+        props:Element_ID     "644964" ;
+        props:Revit_GUID     "c1037085-1aff-4644-8770-66dc41edbf0b-0009d764" ;
+        props:angle          180.0 ;
+        props:area           19.2 ;
+        props:height         3.0 ;
+        props:length         6.2 ;
+        props:level_simple   "Level2" .
+
+product:Wall  a          owl:Class ;
+        rdfs:subClassOf  bot:Element .
 
 bot:Storey  a   owl:Class .
 
 lev:f7282f63-3a72-4e86-90b1-7a09d671a722-00000153
         a                 bot:Storey ;
         rdf:label         "Level1" ;
-        bot:hasElement    inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba , inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 , inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f , inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 , inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e , inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 ;
+        bot:hasElement    wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 , wallinst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f , wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e ;
         props:Revit_GUID  "f7282f63-3a72-4e86-90b1-7a09d671a722-00000153" .
 
 lev:8c210d04-c017-40ad-9f62-83d848d110ba-00039ad7
         a                 bot:Storey ;
         rdf:label         "Level2" ;
-        bot:hasElement    inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d , inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a , inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb , inst:29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59 , inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d236 , inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d764 ;
+        bot:hasElement    wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb , wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d , wallinst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a , wallinst:29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59 , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d236 , wallinst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d764 ;
         props:Revit_GUID  "8c210d04-c017-40ad-9f62-83d848d110ba-00039ad7" .
 
 lev:db8348b9-46f2-46a6-ae2f-2dd3011c2a71-0006904f
@@ -37,7 +205,7 @@ lev:a0fbbf56-1183-43ae-82d0-0cdfdae47b69-0008ffd4
 lev:ad5beca6-a82d-4c2d-b7ea-a671a766dd15-00091c69
         a                 bot:Storey ;
         rdf:label         "Level3" ;
-        bot:hasElement    inst:f929e5c5-f013-495e-9ce1-7921920b4337-0009b513 , inst:2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3 ;
+        bot:hasElement    wallinst:f929e5c5-f013-495e-9ce1-7921920b4337-0009b513 , wallinst:2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3 ;
         props:Revit_GUID  "ad5beca6-a82d-4c2d-b7ea-a671a766dd15-00091c69" .
 
 lev:ad5beca6-a82d-4c2d-b7ea-a671a766dd15-00091eec
@@ -45,152 +213,9 @@ lev:ad5beca6-a82d-4c2d-b7ea-a671a766dd15-00091eec
         rdf:label         "Level4" ;
         props:Revit_GUID  "ad5beca6-a82d-4c2d-b7ea-a671a766dd15-00091eec" .
 
-product:Wall  a          owl:Class ;
-        rdfs:subClassOf  bot:Element .
-
-inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.1.S1" ;
-        props:Element_ID    "585914" ;
-        props:Revit_GUID    "450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba" ;
-        props:area          "19.2"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "6.2"^^cdt:length ;
-        props:level_simple  "Level1" .
-
-inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.1.E" ;
-        props:Element_ID    "585968" ;
-        props:Revit_GUID    "450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0" ;
-        props:area          "24.0"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "8.4"^^cdt:length ;
-        props:level_simple  "Level1" .
-
-inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.1.N2" ;
-        props:Element_ID    "586063" ;
-        props:Revit_GUID    "450d31df-4383-4692-9be4-9c0935e083ef-0008f14f" ;
-        props:area          "19.2"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "6.2"^^cdt:length ;
-        props:level_simple  "Level1" .
-
-inst:f929e5c5-f013-495e-9ce1-7921920b4337-0009b513
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.3.W" ;
-        props:Element_ID    "636179" ;
-        props:Revit_GUID    "f929e5c5-f013-495e-9ce1-7921920b4337-0009b513" ;
-        props:area          "11.1775012115"^^cdt:area ;
-        props:height        "1.0"^^cdt:length ;
-        props:length        "8.8"^^cdt:length ;
-        props:level_simple  "Level3" .
-
-inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.1.W" ;
-        props:Element_ID    "640260" ;
-        props:Revit_GUID    "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504" ;
-        props:area          "24.0"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "8.4"^^cdt:length ;
-        props:level_simple  "Level1" .
-
-inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.2.2S" ;
-        props:Element_ID    "640605" ;
-        props:Revit_GUID    "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d" ;
-        props:area          "19.2"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "6.2"^^cdt:length ;
-        props:level_simple  "Level2" .
-
-inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.2.W" ;
-        props:Element_ID    "640666" ;
-        props:Revit_GUID    "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a" ;
-        props:area          "24.0"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "8.4"^^cdt:length ;
-        props:level_simple  "Level2" .
-
-inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.2.E" ;
-        props:Element_ID    "641019" ;
-        props:Revit_GUID    "40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb" ;
-        props:area          "24.0"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "8.4"^^cdt:length ;
-        props:level_simple  "Level2" .
-
-inst:2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.3.E" ;
-        props:Element_ID    "641779" ;
-        props:Revit_GUID    "2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3" ;
-        props:area          "11.1775012115"^^cdt:area ;
-        props:height        "1.0"^^cdt:length ;
-        props:length        "8.8"^^cdt:length ;
-        props:level_simple  "Level3" .
-
-inst:29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.2.N2" ;
-        props:Element_ID    "642905" ;
-        props:Revit_GUID    "29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59" ;
-        props:area          "19.2"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "6.2"^^cdt:length ;
-        props:level_simple  "Level2" .
-
-inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d236
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.2.2S1" ;
-        props:Element_ID    "643638" ;
-        props:Revit_GUID    "c1037085-1aff-4644-8770-66dc41edbf0b-0009d236" ;
-        props:area          "19.2"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "6.2"^^cdt:length ;
-        props:level_simple  "Level2" .
-
-inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.1.S2" ;
-        props:Element_ID    "644734" ;
-        props:Revit_GUID    "c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e" ;
-        props:area          "19.2"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "6.2"^^cdt:length ;
-        props:level_simple  "Level1" .
-
-inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d764
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.2.N1" ;
-        props:Element_ID    "644964" ;
-        props:Revit_GUID    "c1037085-1aff-4644-8770-66dc41edbf0b-0009d764" ;
-        props:area          "19.2"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "6.2"^^cdt:length ;
-        props:level_simple  "Level2" .
-
-inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4
-        a                   product:Wall , ont:Concrete400MmCastInPlace ;
-        rdf:label           "(12)11.15,05.1.N1" ;
-        props:Element_ID    "645092" ;
-        props:Revit_GUID    "c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4" ;
-        props:area          "19.2"^^cdt:area ;
-        props:height        "3.0"^^cdt:length ;
-        props:length        "6.2"^^cdt:length ;
-        props:level_simple  "Level1" .
-
 ont:Concrete400MmCastInPlace
         a                owl:Class ;
         rdf:label        "Basic Wall: Concrete - 400mm (Cast-in-Place)" ;
         rdfs:subClassOf  product:Wall ;
         props:material   "Concrete, Cast-in-Place, Gray" ;
-        props:width      "0.4"^^cdt:length .
+        props:width      0.4 .
