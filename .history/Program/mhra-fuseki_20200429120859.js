@@ -30,8 +30,6 @@ const main = async () => {
             console.log("Stream read finished");
             console.log(resultArray);
 
-            // NB! for some reason it doesn't seem to ever end!
-
         });
 
     }catch(err){

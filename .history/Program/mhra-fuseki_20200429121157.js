@@ -28,9 +28,7 @@ const main = async () => {
         
             // Log the full result array
             console.log("Stream read finished");
-            console.log(resultArray);
-
-            // NB! for some reason it doesn't seem to ever end!
+            // console.log(resultArray);
 
         });
 

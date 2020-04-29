@@ -24,13 +24,11 @@ const main = async () => {
         });
 
         // This is when the stream finishes
-        result.bindingsStream.on('end', () => {
+        result.bindingsStream.on('end', (data) => {
         
             // Log the full result array
             console.log("Stream read finished");
             console.log(resultArray);
-
-            // NB! for some reason it doesn't seem to ever end!
 
         });
 
