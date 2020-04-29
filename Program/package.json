@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@comunica/actor-init-sparql": "^1.12.1",
+    "@comunica/actor-init-sparql-file": "^1.12.1",
     "express": "^4.17.1",
     "mssql": "^6.2.0",
     "request": "^2.88.2",
