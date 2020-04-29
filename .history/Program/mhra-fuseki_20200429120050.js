@@ -4,8 +4,8 @@ const engine = newEngine();
 // COMUNICA 
 const main = async () => {
 
-    const q = `SELECT * WHERE { <http://web-bim/people/MHRA> ?p ?o } LIMIT 50`;
-    const options = { sources: ['http://localhost:3031/PEOPLE/data', 'http://localhost:3031/10401762/data'] };
+    const q = `SELECT * WHERE { ?s ?p ?o } LIMIT 50`;
+    const options = { sources: ['http://localhost:3031/PEOPLE/data'] };
 
     try{
         const result = await engine.query(q, options)
