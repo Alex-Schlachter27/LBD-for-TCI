@@ -66,6 +66,7 @@ const main = async () => {
     var str = `PREFIX ${wallinstPFX}\nPREFIX ${instPFX}\n`
     str+= `PREFIX ${tciPFX}\nPREFIX ${propPFX}\nPREFIX ${rdfPFX}\nPREFIX ${owlPFX}\nPREFIX ${botPFX}\nPREFIX ${rdfsPFX}\nPREFIX ${productPFX}\nPREFIX ${opmPFX}\nPREFIX ${periPFX}\nPREFIX ${lbsPFX}\n\n`
     str+= "INSERT DATA{\n"
+    str+= "GRAPH <http://localhost:3030/TCI-Demo/data/RevitLBS> {\n";
 
     // CLASSES + INSTANCES
 
@@ -77,12 +78,13 @@ const main = async () => {
         const VICOinst = insturl2.split("/").splice(4,1)[0];
 
         str+= `wallinst:${Revitinst} owl:sameAs inst:${VICOinst}.\n`
+        str+= `inst:${VICOinst} owl:sameAs wallinst:${Revitinst}.\n`
 
     })
 
-    str+= "}";
+    str+= "}}";
 
-    console.log(str)
+    // console.log(str)
 
 
     // (2) Get all wall elements in the datagraph and their required parameters

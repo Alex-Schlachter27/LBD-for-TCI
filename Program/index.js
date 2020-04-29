@@ -12,15 +12,16 @@ const getWalls = async () => {
     const q = `
         PREFIX product: <https://w3id.org/product#>
         PREFIX props: <https://w3id.org/props#>
+        PREFIX tci:   <http://test/tci/>
 
         SELECT *
         WHERE{
-        ?s ?p product:Wall ;
+        ?s  tci:pciType product:Wall ;
             props:Element_ID ?ID;
             props:length ?length
             
         }
-        ORDER BY ?ID LIMIT 15`;
+        ORDER BY ?ID`;
 
 // (1.2) Return the wall data as a readable JSON object with key + value
 return (await fuseki.getQuery(endpoint, q))
@@ -282,9 +283,9 @@ const main = async () => {
     // (12) Return new wall list with primary and secondary TCIs for each wall element
     // walls.forEach(wall => {
     //     console.log(wall);
-    //     // console.log(wall.secTCIs);
+    // //     console.log(wall.secTCIs);
     // });
-    // //     // console.log(walls[0]);
+    //     // console.log(walls[0]);
 
 
     // var fs = require("fs");
@@ -350,7 +351,7 @@ const main = async () => {
             const insturl = wall.TCIsIn[i].TCIinst;
             const TCIinst = insturl.split("/").splice(4,1)[0];
             const TCIclass = TCIinst.split("_").splice(0,1)[0];
-            const TCIlength = wall.TCIsIn[i].length;
+            const TCIlength = wall.TCIsIn[i].length.toFixed(2);
             // const TCIheight = wall.TCIsIn[i].height;
             // const TCIarea = wall.TCIsIn[i].area;
             // const TCIwidth = wall.TCIsIn[i].width;
@@ -366,7 +367,7 @@ const main = async () => {
             const insturl = wall.TCIsOut[i].TCIinst;
             const TCIinst = insturl.split("/").splice(4,1)[0];
             const TCIclass = TCIinst.split("_").splice(0,1)[0];
-            const TCIlength = wall.TCIsOut[i].length;
+            const TCIlength = wall.TCIsOut[i].length.toFixed(2);
             // const TCIheight = wall.TCIsOut[i].height;
             // const TCIarea = wall.TCIsOut[i].area;
             // const TCIwidth = wall.TCIsOut[i].width;
@@ -379,9 +380,13 @@ const main = async () => {
             // console.log(TCIclass, TCIinst, TCIlength)
         };
         for (i in wall.TimberFilling) {
+            const insturl = wall.TimberFilling[i].TCIinst;
+            const TCIclass = insturl.split("/").splice(4,1)[0];
             const TimberFillinglength = wall.TimberFilling[0].Length
 
             str+= `wallinst:${wallinst} tci:${hasTimberFillinglength} "${TimberFillinglength}"^^${dtdec}.\n`
+            str+= `wallinst:${wallinst} tci:${hasTCIs} tci:${TCIclass}.\n`
+            // console.log(TCIclass, TimberFillinglength)
 
         };
         for (i in wall.secTCIs) {
