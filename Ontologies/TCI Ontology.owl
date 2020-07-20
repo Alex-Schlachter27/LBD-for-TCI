@@ -1,0 +1,1218 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://test/tci/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://test/tci/">
+    <Prefix name="" IRI="http://test/tci/"/>
+    <Prefix name="bot" IRI="https://w3id.org/bot#"/>
+    <Prefix name="opm" IRI="https://w3id.org/opm#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="tci" IRI="http://test/tci/"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="peri" IRI="http://test/peri/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="props" IRI="https://w3id.org/props#"/>
+    <Prefix name="product" IRI="https://w3id.org/product#"/>
+    <Declaration>
+        <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="peri:PERIProduct"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="peri:WallThicknessCompensation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ConfirmedProduct"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CornerPanel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Coupler"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DefaultFormwork"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DefaultPrimTCI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DefaultProduct"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DefaultSecTCI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Formwork"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FormworkHorizontal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FormworkParts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FormworkVertical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InsideCorner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OutsideCorner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PCI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Panel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PrimaryTCI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Producer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ProductCatalogue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PushPullProp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Scaffolding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SecondaryTCI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TCI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TieRod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TimberFilling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Waler"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Wingnut"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://test/tci/ScaffoldingParts"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="bot:Element"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="product:Floor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="product:Product"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="product:Slab"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="product:Wall"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="adjacentWall1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="adjacentWall2"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="consistsOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="cornerType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="countedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasFormworkParts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasProducer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasProduct"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasProductCatalogue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSupportedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="iscounting"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="pciType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="supportsPCIType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="supportsTCI"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tciType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://w3id.org/lindt/custom_datatypes#hasTCIsIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://w3id.org/lindt/custom_datatypes#hasTCIsOut"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://w3id.org/lindt/custom_datatypes#hassecTCIs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="product:hasScaffoldingParts"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="connectionType1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="connectionType2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="cornerAngle1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="cornerAngle2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultCoupler"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultInsideCorner330x20"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultOutsideCorner330x60"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultPanel330x120"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultPanel330x240"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultPanel330x30"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultPanel330x45"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultPanel330x60"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultPanel330x90"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultPushPullProp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultTieRod"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultWaler"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countDefaultWingnut"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countTCIs"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="countTimberFilling"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasTimberFillinglength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="props:height"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="props:length"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="props:weight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="props:width"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_AlignmentCouplerBFD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x120"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x240"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x30"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x45"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x60"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x90"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MXA330x35"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MXA330x45"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MXI330x50x20"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MXI330x60"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MXM330x60"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_TieMX15_30-40"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_TieTS_TrioBulkhead"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_Waler85"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_WalerMAR853"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_WingnutDW15_Pivot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:PERI_WingnutMX15"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="peri:WDAMX330x10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultCoupler"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultInsideCorner330x50x20"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultOutsideCorner270x45"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultPanel330x120"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultPanel330x240"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultPanel330x45"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultPanel330x60"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultPanel330x90"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultPushPullProp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultTieRod"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultWaler"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DefaultWingnut"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://w3id.org/lindt/custom_datatypes#cdt:area"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://w3id.org/lindt/custom_datatypes#cdt:length"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://w3id.org/lindt/custom_datatypes#cdt:mass"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="bot:Element"/>
+        <Class abbreviatedIRI="product:Product"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+        <Class abbreviatedIRI="peri:PERIProduct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="peri:PERIProduct"/>
+        <Class IRI="ConfirmedProduct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="peri:WallThicknessCompensation"/>
+        <Class IRI="FormworkParts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ConfirmedProduct"/>
+        <Class IRI="TCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CornerPanel"/>
+        <ObjectIntersectionOf>
+            <Class IRI="FormworkParts"/>
+            <Class IRI="PrimaryTCI"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Coupler"/>
+        <ObjectIntersectionOf>
+            <Class IRI="FormworkParts"/>
+            <Class IRI="SecondaryTCI"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DefaultFormwork"/>
+        <Class IRI="DefaultProduct"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DefaultPrimTCI"/>
+        <Class IRI="DefaultFormwork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DefaultPrimTCI"/>
+        <Class IRI="PrimaryTCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DefaultProduct"/>
+        <Class IRI="TCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DefaultSecTCI"/>
+        <Class IRI="DefaultFormwork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DefaultSecTCI"/>
+        <Class IRI="SecondaryTCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Formwork"/>
+        <Class IRI="TCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FormworkHorizontal"/>
+        <Class IRI="Formwork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FormworkParts"/>
+        <Class IRI="Formwork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FormworkVertical"/>
+        <Class IRI="Formwork"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InsideCorner"/>
+        <Class IRI="CornerPanel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OutsideCorner"/>
+        <Class IRI="CornerPanel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PCI"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="bot:Element"/>
+            <Class abbreviatedIRI="product:Product"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Panel"/>
+        <ObjectIntersectionOf>
+            <Class IRI="FormworkParts"/>
+            <Class IRI="PrimaryTCI"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PrimaryTCI"/>
+        <Class IRI="TCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PushPullProp"/>
+        <ObjectIntersectionOf>
+            <Class IRI="FormworkParts"/>
+            <Class IRI="SecondaryTCI"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Scaffolding"/>
+        <Class IRI="SecondaryTCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SecondaryTCI"/>
+        <Class IRI="TCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TCI"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="bot:Element"/>
+            <Class abbreviatedIRI="product:Product"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TieRod"/>
+        <ObjectIntersectionOf>
+            <Class IRI="FormworkParts"/>
+            <Class IRI="SecondaryTCI"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimberFilling"/>
+        <ObjectIntersectionOf>
+            <Class IRI="FormworkParts"/>
+            <Class IRI="PrimaryTCI"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Waler"/>
+        <ObjectIntersectionOf>
+            <Class IRI="FormworkParts"/>
+            <Class IRI="SecondaryTCI"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Wingnut"/>
+        <ObjectIntersectionOf>
+            <Class IRI="FormworkParts"/>
+            <Class IRI="SecondaryTCI"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://test/tci/ScaffoldingParts"/>
+        <Class IRI="Scaffolding"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="product:Floor"/>
+        <Class IRI="PCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="product:Slab"/>
+        <Class IRI="PCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="product:Wall"/>
+        <Class IRI="PCI"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="ConfirmedProduct"/>
+        <Class IRI="DefaultProduct"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Coupler"/>
+        <Class IRI="InsideCorner"/>
+        <Class IRI="OutsideCorner"/>
+        <Class IRI="Panel"/>
+        <Class IRI="PushPullProp"/>
+        <Class IRI="TieRod"/>
+        <Class IRI="TimberFilling"/>
+        <Class IRI="Waler"/>
+        <Class IRI="Wingnut"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Formwork"/>
+        <Class IRI="Scaffolding"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="FormworkHorizontal"/>
+        <Class IRI="FormworkVertical"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="PrimaryTCI"/>
+        <Class IRI="SecondaryTCI"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="product:Floor"/>
+        <Class abbreviatedIRI="product:Wall"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="product:Slab"/>
+        <Class abbreviatedIRI="product:Wall"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:PERIProduct"/>
+            <Class IRI="Coupler"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_AlignmentCouplerBFD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="Panel"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x120"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="Panel"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x240"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="Panel"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x30"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="Panel"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="Panel"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x60"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="Panel"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MX330x90"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="OutsideCorner"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MXA330x35"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="OutsideCorner"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MXA330x45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="InsideCorner"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MXI330x50x20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="InsideCorner"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MXI330x60"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="Panel"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_MXM330x60"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="TieRod"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_TieMX15_30-40"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:PERIProduct"/>
+            <Class IRI="TieRod"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_TieTS_TrioBulkhead"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:PERIProduct"/>
+            <Class IRI="Waler"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_Waler85"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:PERIProduct"/>
+            <Class IRI="Waler"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_WalerMAR853"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:PERIProduct"/>
+            <Class IRI="Wingnut"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_WingnutDW15_Pivot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class IRI="Wingnut"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:PERI_WingnutMX15"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="peri:MAXIMO_MX15"/>
+            <Class abbreviatedIRI="peri:WallThicknessCompensation"/>
+        </ObjectIntersectionOf>
+        <NamedIndividual abbreviatedIRI="peri:WDAMX330x10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Coupler"/>
+        <NamedIndividual IRI="DefaultCoupler"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultCoupler"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultSecTCI"/>
+        <NamedIndividual IRI="DefaultCoupler"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="CornerPanel"/>
+        <NamedIndividual IRI="DefaultInsideCorner330x50x20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultInsideCorner330x50x20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultPrimTCI"/>
+        <NamedIndividual IRI="DefaultInsideCorner330x50x20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="InsideCorner"/>
+        <NamedIndividual IRI="DefaultInsideCorner330x50x20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="CornerPanel"/>
+        <NamedIndividual IRI="DefaultOutsideCorner270x45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultOutsideCorner270x45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultPrimTCI"/>
+        <NamedIndividual IRI="DefaultOutsideCorner270x45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="OutsideCorner"/>
+        <NamedIndividual IRI="DefaultOutsideCorner270x45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultPanel330x120"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultPrimTCI"/>
+        <NamedIndividual IRI="DefaultPanel330x120"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Panel"/>
+        <NamedIndividual IRI="DefaultPanel330x120"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultPanel330x240"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultPrimTCI"/>
+        <NamedIndividual IRI="DefaultPanel330x240"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Panel"/>
+        <NamedIndividual IRI="DefaultPanel330x240"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultPanel330x45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultPrimTCI"/>
+        <NamedIndividual IRI="DefaultPanel330x45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Panel"/>
+        <NamedIndividual IRI="DefaultPanel330x45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultPanel330x60"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultPrimTCI"/>
+        <NamedIndividual IRI="DefaultPanel330x60"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Panel"/>
+        <NamedIndividual IRI="DefaultPanel330x60"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultPanel330x90"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultPrimTCI"/>
+        <NamedIndividual IRI="DefaultPanel330x90"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Panel"/>
+        <NamedIndividual IRI="DefaultPanel330x90"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultPushPullProp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultSecTCI"/>
+        <NamedIndividual IRI="DefaultPushPullProp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="PushPullProp"/>
+        <NamedIndividual IRI="DefaultPushPullProp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultTieRod"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultSecTCI"/>
+        <NamedIndividual IRI="DefaultTieRod"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="TieRod"/>
+        <NamedIndividual IRI="DefaultTieRod"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultWaler"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultSecTCI"/>
+        <NamedIndividual IRI="DefaultWaler"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Waler"/>
+        <NamedIndividual IRI="DefaultWaler"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultFormwork"/>
+        <NamedIndividual IRI="DefaultWingnut"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="DefaultSecTCI"/>
+        <NamedIndividual IRI="DefaultWingnut"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Wingnut"/>
+        <NamedIndividual IRI="DefaultWingnut"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="countedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasFormworkParts"/>
+        <ObjectProperty IRI="consistsOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="product:hasScaffoldingParts"/>
+        <ObjectProperty IRI="consistsOf"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="countedBy"/>
+        <ObjectProperty IRI="iscounting"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasProducer"/>
+        <ObjectProperty IRI="hasProduct"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="adjacentWall1"/>
+        <Class abbreviatedIRI="product:Wall"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="adjacentWall2"/>
+        <Class abbreviatedIRI="product:Wall"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="consistsOf"/>
+        <Class IRI="TCI"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="cornerType"/>
+        <Class IRI="CornerPanel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="countedBy"/>
+        <Class IRI="TCI"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasFormworkParts"/>
+        <Class IRI="Formwork"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasProducer"/>
+        <Class IRI="ConfirmedProduct"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasProduct"/>
+        <Class IRI="Producer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasProductCatalogue"/>
+        <Class IRI="ConfirmedProduct"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isSupportedBy"/>
+        <Class IRI="DefaultPrimTCI"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isSupportedBy"/>
+        <Class IRI="PrimaryTCI"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="pciType"/>
+        <Class abbreviatedIRI="bot:Element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="pciType"/>
+        <Class abbreviatedIRI="product:Product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="supportsPCIType"/>
+        <Class IRI="TCI"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="supportsTCI"/>
+        <Class IRI="DefaultSecTCI"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="supportsTCI"/>
+        <Class IRI="SecondaryTCI"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="tciType"/>
+        <Class abbreviatedIRI="bot:Element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="tciType"/>
+        <Class abbreviatedIRI="product:Product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="product:hasScaffoldingParts"/>
+        <Class IRI="Scaffolding"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="adjacentWall1"/>
+        <Class abbreviatedIRI="product:Wall"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="adjacentWall2"/>
+        <Class abbreviatedIRI="product:Wall"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="consistsOf"/>
+        <Class IRI="FormworkParts"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="consistsOf"/>
+        <Class IRI="https://test/tci/ScaffoldingParts"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="cornerType"/>
+        <Class IRI="InsideCorner"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="cornerType"/>
+        <Class IRI="OutsideCorner"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasFormworkParts"/>
+        <Class IRI="FormworkParts"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasProducer"/>
+        <Class IRI="Producer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasProduct"/>
+        <Class IRI="ConfirmedProduct"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasProductCatalogue"/>
+        <Class IRI="Producer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isSupportedBy"/>
+        <Class IRI="DefaultSecTCI"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isSupportedBy"/>
+        <Class IRI="SecondaryTCI"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="iscounting"/>
+        <Class IRI="TCI"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="pciType"/>
+        <Class IRI="PCI"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="supportsPCIType"/>
+        <Class abbreviatedIRI="bot:Element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="supportsPCIType"/>
+        <Class abbreviatedIRI="product:Product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="supportsTCI"/>
+        <Class IRI="DefaultPrimTCI"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="supportsTCI"/>
+        <Class IRI="PrimaryTCI"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="tciType"/>
+        <Class IRI="TCI"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://w3id.org/lindt/custom_datatypes#hasTCIsIn"/>
+        <Class IRI="FormworkVertical"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://w3id.org/lindt/custom_datatypes#hasTCIsOut"/>
+        <Class IRI="FormworkVertical"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://w3id.org/lindt/custom_datatypes#hassecTCIs"/>
+        <Class IRI="SecondaryTCI"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="product:hasScaffoldingParts"/>
+        <Class IRI="https://test/tci/ScaffoldingParts"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultCoupler"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultInsideCorner330x20"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultOutsideCorner330x60"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultPanel330x120"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultPanel330x240"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultPanel330x30"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultPanel330x45"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultPanel330x60"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultPanel330x90"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultPushPullProp"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultTieRod"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultWaler"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countDefaultWingnut"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="countTimberFilling"/>
+        <DataProperty IRI="countTCIs"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="connectionType1"/>
+        <Class abbreviatedIRI="product:Wall"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="connectionType2"/>
+        <Class abbreviatedIRI="product:Wall"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="cornerAngle1"/>
+        <Class abbreviatedIRI="product:Wall"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="cornerAngle2"/>
+        <Class abbreviatedIRI="product:Wall"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="props:height"/>
+        <Class abbreviatedIRI="bot:Element"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="props:length"/>
+        <Class abbreviatedIRI="bot:Element"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="props:weight"/>
+        <Class abbreviatedIRI="bot:Element"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="props:width"/>
+        <Class abbreviatedIRI="bot:Element"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="cornerAngle1"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="cornerAngle2"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultCoupler"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultInsideCorner330x20"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultOutsideCorner330x60"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultPanel330x120"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultPanel330x240"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultPanel330x30"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultPanel330x45"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultPanel330x60"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultPanel330x90"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultPushPullProp"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultTieRod"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultWaler"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countDefaultWingnut"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="countTimberFilling"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasTimberFillinglength"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="props:height"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="props:length"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="props:weight"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="props:width"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>peri:WDAMX330x10</AbbreviatedIRI>
+        <Literal>&quot;To adjust the thickness of the wall&quot;@en</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PCI</IRI>
+        <Literal>&quot;Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.&quot;@en</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

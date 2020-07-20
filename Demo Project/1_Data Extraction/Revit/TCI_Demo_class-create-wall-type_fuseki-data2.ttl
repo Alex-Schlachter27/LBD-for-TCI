@@ -1,0 +1,17 @@
+@prefix inst: <http://test/walls/> .
+@prefix ont: <http://test/ontology/> .
+
+inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba a ont:Concrete400MmCastInPlace .
+inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 a ont:Concrete400MmCastInPlace .
+inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f a ont:Concrete400MmCastInPlace .
+inst:f929e5c5-f013-495e-9ce1-7921920b4337-0009b513 a ont:Concrete400MmCastInPlace .
+inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 a ont:Concrete400MmCastInPlace .
+inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d a ont:Concrete400MmCastInPlace .
+inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a a ont:Concrete400MmCastInPlace .
+inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb a ont:Concrete400MmCastInPlace .
+inst:2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3 a ont:Concrete400MmCastInPlace .
+inst:29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59 a ont:Concrete400MmCastInPlace .
+inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d236 a ont:Concrete400MmCastInPlace .
+inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e a ont:Concrete400MmCastInPlace .
+inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d764 a ont:Concrete400MmCastInPlace .
+inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 a ont:Concrete400MmCastInPlace .

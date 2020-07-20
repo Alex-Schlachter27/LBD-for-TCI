@@ -1,0 +1,1324 @@
+[
+    {
+        "wallinst": "http://test/walls/450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba",
+        "ID": "585914",
+        "length": 6.2,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 8
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0",
+        "ID": "585968",
+        "length": 8.4,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 6
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 10
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/450d31df-4383-4692-9be4-9c0935e083ef-0008f14f",
+        "ID": "586063",
+        "length": 6.2,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 8
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/f929e5c5-f013-495e-9ce1-7921920b4337-0009b513",
+        "ID": "636179",
+        "length": 8.8,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 6
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 10
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.4
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.4
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504",
+        "ID": "640260",
+        "length": 8.4,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 6
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 10
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d",
+        "ID": "640605",
+        "length": 6.2,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 8
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a",
+        "ID": "640666",
+        "length": 8.4,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 6
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 10
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb",
+        "ID": "641019",
+        "length": 8.4,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 6
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 10
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3",
+        "ID": "641779",
+        "length": 8.8,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_2",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 6
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 12
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 10
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.4
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.4
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59",
+        "ID": "642905",
+        "length": 6.2,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 8
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/c1037085-1aff-4644-8770-66dc41edbf0b-0009d236",
+        "ID": "643638",
+        "length": 6.2,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 8
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e",
+        "ID": "644734",
+        "length": 6.2,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 8
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/c1037085-1aff-4644-8770-66dc41edbf0b-0009d764",
+        "ID": "644964",
+        "length": 6.2,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 8
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            }
+        ]
+    },
+    {
+        "wallinst": "http://test/walls/c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4",
+        "ID": "645092",
+        "length": 6.2,
+        "TCIsIn": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "TCIsOut": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_0",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240_1",
+                "length": 2.4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120_0",
+                "length": 1.2
+            }
+        ],
+        "secTCIs": [
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "weight": 4.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "weight": 4.43
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "weight": 2.58
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "weight": 22.8
+            }
+        ],
+        "TCIsCount": [
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x240",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPanel330x120",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Count": 2
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultCoupler",
+                "Count": 4
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultTieRod",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultWingnut",
+                "Count": 8
+            },
+            {
+                "TCIinst": "http://test/tci/DefaultPushPullProp",
+                "Count": 8
+            }
+        ],
+        "TimberFilling": [
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            },
+            {
+                "TCIinst": "http://test/tci/TimberFilling",
+                "Length": 0.2
+            }
+        ]
+    }
+]

@@ -1,0 +1,895 @@
+{
+    "version": "1.0",
+    "header": {
+        "vpsHost": "localhost",
+        "projectDbName": "705894d0-3136-45aa-ad27-410a79ad84e9",
+        "projectCode": ""
+    },
+    "messages": {
+        "infos": [],
+        "warnings": [],
+        "errors": [],
+        "authenticationErrors": [],
+        "authorizationErrors": []
+    },
+    "views": [
+        {
+            "viewType": "CadModelSystem",
+            "guid": "BCC434D2-AF0B-4E1E-AF92-B65128BE7AC5",
+            "records": [
+                {
+                    "rid": "0",
+                    "prid": "",
+                    "loid": "1000.0.4126",
+                    "type": "PROJECTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "1",
+                    "prid": "0",
+                    "loid": "1000.0.4134",
+                    "type": "CADMODELHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "2",
+                    "prid": "1",
+                    "loid": "1000.0.47245",
+                    "type": "CADMODEL",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "0",
+                            "name": "modelID",
+                            "dataType": "String",
+                            "value": "{1e9bc36d-677a-11ea-999d-f859718218e6}"
+                        },
+                        {
+                            "pid": "1",
+                            "name": "isActive",
+                            "dataType": "Bool",
+                            "value": "1"
+                        },
+                        {
+                            "pid": "2",
+                            "name": "hasEBActive",
+                            "dataType": "Bool",
+                            "value": "1"
+                        },
+                        {
+                            "pid": "3",
+                            "name": "isDefault",
+                            "dataType": "Bool",
+                            "value": "0"
+                        },
+                        {
+                            "pid": "4",
+                            "name": "source",
+                            "dataType": "String",
+                            "value": "IFC"
+                        },
+                        {
+                            "pid": "5",
+                            "name": "activeVersionLoid",
+                            "dataType": "Ref",
+                            "value": "1000.0.351390"
+                        }
+                    ]
+                },
+                {
+                    "rid": "3",
+                    "prid": "2",
+                    "loid": "1000.0.47245",
+                    "type": "MODELVERSIONHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "4",
+                    "prid": "3",
+                    "loid": "1000.0.351390",
+                    "type": "MODELVERSION",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "0",
+                            "name": "desc",
+                            "dataType": "String",
+                            "value": "AS_Demo_Project-6"
+                        },
+                        {
+                            "pid": "1",
+                            "name": "isActive",
+                            "dataType": "Bool",
+                            "value": "1"
+                        },
+                        {
+                            "pid": "2",
+                            "name": "hasEBActive",
+                            "dataType": "Bool",
+                            "value": "1"
+                        },
+                        {
+                            "pid": "3",
+                            "name": "version",
+                            "dataType": "Int",
+                            "value": "9"
+                        }
+                    ]
+                },
+                {
+                    "rid": "5",
+                    "prid": "4",
+                    "loid": "1000.0.351390",
+                    "type": "ELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "6",
+                    "prid": "5",
+                    "loid": "1000.0.351404",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "585914"
+                        }
+                    ]
+                },
+                {
+                    "rid": "7",
+                    "prid": "6",
+                    "loid": "1000.0.351404",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "8",
+                    "prid": "5",
+                    "loid": "1000.0.351451",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "585968"
+                        }
+                    ]
+                },
+                {
+                    "rid": "9",
+                    "prid": "8",
+                    "loid": "1000.0.351451",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "10",
+                    "prid": "5",
+                    "loid": "1000.0.351470",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{450d31df-4383-4692-9be4-9c0935e083ef-0008f14f}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "586063"
+                        }
+                    ]
+                },
+                {
+                    "rid": "11",
+                    "prid": "10",
+                    "loid": "1000.0.351470",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "12",
+                    "prid": "5",
+                    "loid": "1000.0.351489",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{f929e5c5-f013-495e-9ce1-79219202f624}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "13",
+                    "prid": "12",
+                    "loid": "1000.0.351489",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "42",
+                    "prid": "13",
+                    "loid": "1000.0.353875",
+                    "type": "DERIVEDELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{f929e5c5-f013-495e-9ce1-7921920b4337-0009b513}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "636179"
+                        }
+                    ]
+                },
+                {
+                    "rid": "14",
+                    "prid": "5",
+                    "loid": "1000.0.351508",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "640260"
+                        }
+                    ]
+                },
+                {
+                    "rid": "15",
+                    "prid": "14",
+                    "loid": "1000.0.351508",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "16",
+                    "prid": "5",
+                    "loid": "1000.0.351527",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c65d}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "640605"
+                        }
+                    ]
+                },
+                {
+                    "rid": "17",
+                    "prid": "16",
+                    "loid": "1000.0.351527",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "18",
+                    "prid": "5",
+                    "loid": "1000.0.351546",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c69a}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "640666"
+                        }
+                    ]
+                },
+                {
+                    "rid": "19",
+                    "prid": "18",
+                    "loid": "1000.0.351546",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "20",
+                    "prid": "5",
+                    "loid": "1000.0.351565",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c7fb}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "641019"
+                        }
+                    ]
+                },
+                {
+                    "rid": "21",
+                    "prid": "20",
+                    "loid": "1000.0.351565",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "22",
+                    "prid": "5",
+                    "loid": "1000.0.351584",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{2f26954f-222b-42ef-bf55-e8a38093a8cf}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "23",
+                    "prid": "22",
+                    "loid": "1000.0.351584",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "43",
+                    "prid": "23",
+                    "loid": "1000.0.354101",
+                    "type": "DERIVEDELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{2f26954f-222b-42ef-bf55-e8a3809a623c-0009caf3}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "641779"
+                        }
+                    ]
+                },
+                {
+                    "rid": "24",
+                    "prid": "5",
+                    "loid": "1000.0.351603",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{29956f3d-4683-4bef-82a2-36c85f72b7cf-0009cf59}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "642905"
+                        }
+                    ]
+                },
+                {
+                    "rid": "25",
+                    "prid": "24",
+                    "loid": "1000.0.351603",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "26",
+                    "prid": "5",
+                    "loid": "1000.0.351622",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{c1037085-1aff-4644-8770-66dc41edbf0b-0009d236}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "643638"
+                        }
+                    ]
+                },
+                {
+                    "rid": "27",
+                    "prid": "26",
+                    "loid": "1000.0.351622",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "28",
+                    "prid": "5",
+                    "loid": "1000.0.351641",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "644734"
+                        }
+                    ]
+                },
+                {
+                    "rid": "29",
+                    "prid": "28",
+                    "loid": "1000.0.351641",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "30",
+                    "prid": "5",
+                    "loid": "1000.0.351660",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{c1037085-1aff-4644-8770-66dc41edbf0b-0009d764}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "644964 "
+                        }
+                    ]
+                },
+                {
+                    "rid": "31",
+                    "prid": "30",
+                    "loid": "1000.0.351660",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "32",
+                    "prid": "5",
+                    "loid": "1000.0.351679",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "645092"
+                        }
+                    ]
+                },
+                {
+                    "rid": "33",
+                    "prid": "32",
+                    "loid": "1000.0.351679",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "34",
+                    "prid": "5",
+                    "loid": "1000.0.351698",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{10acc859-3ddd-4316-85db-298e98871a4f}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "35",
+                    "prid": "34",
+                    "loid": "1000.0.351698",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "44",
+                    "prid": "35",
+                    "loid": "1000.0.354179",
+                    "type": "DERIVEDELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{10acc859-3ddd-4316-85db-298e98871a4f}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "45",
+                    "prid": "35",
+                    "loid": "1000.0.354210",
+                    "type": "DERIVEDELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{10acc859-3ddd-4316-85db-298e98871a4f}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "46",
+                    "prid": "35",
+                    "loid": "1000.0.354241",
+                    "type": "DERIVEDELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{10acc859-3ddd-4316-85db-298e98871a4f}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "47",
+                    "prid": "35",
+                    "loid": "1000.0.354272",
+                    "type": "DERIVEDELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{10acc859-3ddd-4316-85db-298e98871a4f}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "36",
+                    "prid": "5",
+                    "loid": "1000.0.351713",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{4fa6715a-bfef-4d2e-a720-e10e81a80389}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "37",
+                    "prid": "36",
+                    "loid": "1000.0.351713",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "48",
+                    "prid": "37",
+                    "loid": "1000.0.355841",
+                    "type": "DERIVEDELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{4fa6715a-bfef-4d2e-a720-e10e81a80389}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "49",
+                    "prid": "37",
+                    "loid": "1000.0.355873",
+                    "type": "DERIVEDELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{4fa6715a-bfef-4d2e-a720-e10e81a80389}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "38",
+                    "prid": "5",
+                    "loid": "1000.0.351728",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{450d31df-4383-4692-9be4-9c0b35e87281}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "39",
+                    "prid": "38",
+                    "loid": "1000.0.351728",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "50",
+                    "prid": "39",
+                    "loid": "1000.0.354493",
+                    "type": "DERIVEDELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{450d31df-4383-4692-9be4-9c0b35e87281}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "40",
+                    "prid": "5",
+                    "loid": "1000.0.351743",
+                    "type": "ELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{450d31df-4383-4692-9be4-9c0a35e87281}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "rid": "41",
+                    "prid": "40",
+                    "loid": "1000.0.351743",
+                    "type": "DERIVEDELEMENTHEADER",
+                    "isDeleted": "0",
+                    "isExpandable": "1"
+                },
+                {
+                    "rid": "51",
+                    "prid": "41",
+                    "loid": "1000.0.354545",
+                    "type": "DERIVEDELEMENT",
+                    "isDeleted": "0",
+                    "isExpandable": "1",
+                    "properties": [
+                        {
+                            "pid": "9",
+                            "name": "elemID",
+                            "dataType": "String",
+                            "value": "{450d31df-4383-4692-9be4-9c0a35e87281}"
+                        },
+                        {
+                            "pid": "8",
+                            "name": "revitElemID",
+                            "dataType": "Int",
+                            "value": "0"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

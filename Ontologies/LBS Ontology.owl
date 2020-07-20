@@ -1,0 +1,164 @@
+@prefix : <http://test/peri#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix lbs: <http://test/lbs/> .
+@prefix opm: <https://w3id.org/opm#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tci: <http://test/tci/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix peri: <http://test/peri/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix props: <https://w3id.org/props#> .
+@prefix product: <https://w3id.org/product#> .
+@base <http://test/lbs> .
+
+<http://test/lbs> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://test/lbs#description
+:description rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:ObjectProperty .
+
+
+###  http://test/lbs#elementType
+:elementType rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:ObjectProperty .
+
+
+###  http://test/lbs#hasElementLoid
+:hasElementLoid rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:ObjectProperty .
+
+
+###  http://test/lbs#hasprojectGUID
+:hasprojectGUID rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:ObjectProperty .
+
+
+###  http://test/lbs#hastakeOffID
+:hastakeOffID rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:ObjectProperty .
+
+
+###  http://test/lbs#hastaskName
+:hastaskName rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:ObjectProperty .
+
+
+###  http://test/lbs/hasCompLoid
+lbs:hasCompLoid rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:ObjectProperty ;
+                rdfs:domain bot:Element ;
+                rdfs:range lbs:CompLoid .
+
+
+###  http://test/lbs/hasLocLoid
+lbs:hasLocLoid rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:ObjectProperty ;
+               rdfs:domain lbs:CompLoid ;
+               rdfs:range lbs:LocLoid .
+
+
+###  http://test/lbs/hasLocation
+lbs:hasLocation rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:ObjectProperty ;
+                rdfs:domain lbs:CompLoid ;
+                rdfs:range lbs:Location .
+
+
+###  http://test/lbs/hasSchedLoid
+lbs:hasSchedLoid rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:ObjectProperty ;
+                 rdfs:domain lbs:CompLoid ;
+                 rdfs:range lbs:SchedLoid .
+
+
+###  http://test/lbs/hasTaskLoid
+lbs:hasTaskLoid rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:ObjectProperty ;
+                rdfs:domain lbs:CompLoid ;
+                rdfs:range lbs:TaskLoid .
+
+
+###  http://www.w3.org/2002/07/owl#ObjectProperty
+owl:ObjectProperty rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://test/lbs/taskActualEndDate
+lbs:taskActualEndDate rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:DatatypeProperty ;
+                      rdfs:domain lbs:TaskLoid .
+
+
+###  http://test/lbs/taskActualStartDate
+lbs:taskActualStartDate rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:DatatypeProperty ;
+                        rdfs:domain lbs:TaskLoid .
+
+
+###  http://test/lbs/taskPlannedEndDate
+lbs:taskPlannedEndDate rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:DatatypeProperty ;
+                       rdfs:domain lbs:TaskLoid .
+
+
+###  http://test/lbs/taskPlannedStartDate
+lbs:taskPlannedStartDate rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:DatatypeProperty ;
+                         rdfs:domain lbs:TaskLoid .
+
+
+###  http://test/lbs/taskProgressCompletion
+lbs:taskProgressCompletion rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:DatatypeProperty ;
+                           rdfs:domain lbs:TaskLoid .
+
+
+###  http://test/lbs/taskProgressDate
+lbs:taskProgressDate rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:DatatypeProperty ;
+                     rdfs:domain lbs:TaskLoid .
+
+
+###  http://www.w3.org/2002/07/owl#DatatypeProperty
+owl:DatatypeProperty rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://test/lbs/CompLoid
+lbs:CompLoid rdf:type owl:Class ;
+             rdfs:subClassOf bot:Element .
+
+
+###  http://test/lbs/LocLoid
+lbs:LocLoid rdf:type owl:Class .
+
+
+###  http://test/lbs/Location
+lbs:Location rdf:type owl:Class .
+
+
+###  http://test/lbs/SchedLoid
+lbs:SchedLoid rdf:type owl:Class .
+
+
+###  http://test/lbs/TaskLoid
+lbs:TaskLoid rdf:type owl:Class .
+
+
+###  https://w3id.org/bot#Element
+bot:Element rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,235 @@
+@prefix product: <https://w3id.org/product#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix peri:  <http://test/peri/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tci:   <http://test/tci/> .
+@prefix props: <https://w3id.org/props#> .
+
+#################################################################
+#    A-BOX
+#################################################################
+
+tci:Producer a owl:Class .
+tci:ProductCatalogue a owl:Class .
+
+peri:PERIProduct rdf:type owl:Class ;
+                 rdfs:subClassOf tci:ConfirmedProduct .
+
+tci:Scaffolding rdf:type owl:Class ;
+                rdfs:subClassOf tci:TCI .
+
+tci:Formwork rdf:type owl:Class ;
+             rdfs:subClassOf tci:TCI .
+
+
+########################################
+#  T-Box
+########################################
+
+peri:DUO135  a  peri:PERIProduct ,
+                tci:FormworkVertical ;
+				rdf:label "DUO 135 Panel Formwork"^^xsd:string ;
+				tci:hasProducer "PERI GmbH"^^xsd:string .
+
+peri:MAXIMO_MX15   a  peri:PERIProduct ,
+                   	  tci:FormworkVertical ;
+				   rdf:label "MAXIMO MX15 Panel Formwork"^^xsd:string ;
+				   tci:hasProducer "PERI GmbH"^^xsd:string ;
+                   tci:hasProductCatalogue "MAXIMO MX 15, 270 _ 330 Instructions for Assembly and Use"^^xsd:string ;
+                   tci:consistsof peri:PERI_MXM330x60, peri:PERI_MXI330x60, peri:PERI_MXI330x50x20, peri:PERI_MXA330x45, peri:PERI_MX330x90, peri:PERI_MX330x60, peri:PERI_MX330x45, peri:PERI_MX330x30, peri:PERI_MX330x240, peri:PERI_MX330x120, peri:PERI_MXA330x35, peri:WDAMX330x10, peri:PERI_WingnutMX15, peri:PERI_WingnutDW15_Pivot, peri:PERI_WalerMAR853, peri:PERI_Waler85, peri:PERI_TieTS_TrioBulkhead, peri:PERI_TieMX15_3040, peri:PERI_AlignmentCouplerBFD .                    
+
+peri:PERI_MX330x240 rdf:type  owl:NamedIndividual ,
+							  peri:MAXIMO_MX15 ,
+                              tci:Panel ;
+					tci:hasArtNo  "114426"^^xsd:string ;
+                    rdf:label   "PERI MX 330x240"^^xsd:string ;
+                    props:length  "2.40"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "7.29"^^xsd:decimal ;
+                    props:width    "0.12"^^xsd:decimal ;
+                    props:weight    "408.0"^^xsd:decimal .
+                                                   
+peri:PERI_MX330x120 rdf:type  owl:NamedIndividual ,
+							  peri:MAXIMO_MX15 ,
+                              tci:Panel ;
+					tci:hasArtNo  "114248"^^xsd:string ;
+					rdf:label   "PERI MX 330x120"^^xsd:string ;
+                    props:length  "1.20"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "3.96"^^xsd:decimal ;
+                    props:width    "0.12"^^xsd:decimal ;
+                    props:weight    "226.0"^^xsd:decimal .
+                                                   
+peri:PERI_MX330x90 rdf:type owl:NamedIndividual ,
+							peri:MAXIMO_MX15 ,
+                            tci:Panel ;
+				   tci:hasArtNo  "114258"^^xsd:string ;
+				   rdf:label   "PERI MX 330x90"^^xsd:string ;
+                   props:length  "0.90"^^xsd:decimal ;
+                   props:height  "3.30"^^xsd:decimal ;
+                   props:area  "2.97"^^xsd:decimal ;
+                   props:width    "0.12"^^xsd:decimal ;
+                   props:weight    "171.0"^^xsd:decimal .
+
+peri:PERI_MX330x60 rdf:type  owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+                             tci:Panel ;
+				   tci:hasArtNo  "114445"^^xsd:string ;
+				   rdf:label   "PERI MX 330x60"^^xsd:string ;
+                   props:length  "0.60"^^xsd:decimal ;
+                   props:height  "3.30"^^xsd:decimal ;
+                   props:area  "1.98"^^xsd:decimal ;
+                   props:width    "0.12"^^xsd:decimal ;
+                   props:weight    "118.0"^^xsd:decimal .
+                                                  
+peri:PERI_MX330x45 rdf:type  owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+                             tci:Panel ;
+				   tci:hasArtNo  "114452"^^xsd:string ;
+				   rdf:label   "PERI MX 330x45"^^xsd:string ;
+                   props:length  "0.45"^^xsd:decimal ;
+                   props:height  "3.30"^^xsd:decimal ;
+                   props:area  "1.485"^^xsd:decimal ;
+                   props:width  "0.12"^^xsd:decimal ;
+                   props:weight  "99.8"^^xsd:decimal .
+
+peri:PERI_MX330x30 rdf:type  owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+                             tci:Panel ;
+				   tci:hasArtNo  "114457"^^xsd:string ;
+				   rdf:label   "PERI MX 330x30"^^xsd:string ;
+                   props:length  "0.30"^^xsd:decimal ;
+                   props:height  "3.30"^^xsd:decimal ;
+                   props:area  "0.99"^^xsd:decimal ;
+                   props:width  "0.12"^^xsd:decimal ;
+                   props:weight  "78.6"^^xsd:decimal .
+                                                  
+peri:PERI_MXM330x60 rdf:type owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+							 tci:Panel ; 
+					tci:hasArtNo  "114464"^^xsd:string ;
+					rdf:label   "PERI MXM 330x60"^^xsd:string ;
+                    props:length  "0.60"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "1.98"^^xsd:decimal ;
+                    props:width  "0.12"^^xsd:decimal ;
+					props:weight  "141,0"^^xsd:decimal .
+ 
+peri:PERI_MXI330x60 rdf:type owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+                             tci:InsideCorner ;
+				    tci:hasArtNo  "114470"^^xsd:string ;
+				    rdf:label   "PERI MXI 330x60"^^xsd:string ;
+                    props:length  "0.60"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "3.96"^^xsd:decimal ;
+                    props:width  "0.12"^^xsd:decimal ;
+                    props:weight  "199.0"^^xsd:decimal .
+                                                   
+peri:PERI_MXI330x50x20 rdf:type owl:NamedIndividual ,
+							    peri:MAXIMO_MX15 ,
+                                tci:InsideCorner ;
+					   tci:hasArtNo  "115338"^^xsd:string ;
+				 	   rdf:label   "PERI MXI 330x50x20"^^xsd:string ;
+                 	   props:length  "0.50"^^xsd:decimal , "0.20"^^xsd:decimal ;
+                 	   props:height  "3.30"^^xsd:decimal ;
+                 	   props:area  "2.31"^^xsd:decimal ;
+                 	   props:width    "0.12"^^xsd:decimal ;
+                 	   props:weight    "136.0"^^xsd:decimal .
+
+peri:PERI_MXA330x45 rdf:type owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+                             tci:OutsideCorner ;
+				    tci:hasArtNo  "114478"^^xsd:string ;
+				    rdf:label   "PERI MXA 330x45"^^xsd:string ;
+                    props:length  "0.45"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "2.97"^^xsd:decimal ;
+                    props:width  "0.12"^^xsd:decimal ;
+                    props:weight  "190.0"^^xsd:decimal .
+
+peri:PERI_MXA330x35 rdf:type  owl:NamedIndividual ,
+							  peri:MAXIMO_MX15 ,            
+                              tci:OutsideCorner ;
+					tci:hasArtNo  "114486"^^xsd:string ;
+					rdf:label  "PERI MXA 330x35"^^xsd:string ;
+                    props:length  "0.35"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "2.31"^^xsd:decimal ;
+                    props:width  "0.12"^^xsd:decimal ;
+                    props:weight  "168.0"^^xsd:decimal .
+
+peri:WDAMX330x10 rdf:type  owl:NamedIndividual ,
+						   peri:MAXIMO_MX15 ,
+                           peri:WallThicknessCompensation ;
+                 rdfs:comment "To adjust the thickness of the wall\"@en"^^xsd:string ;
+				 tci:hasArtNo  "114394"^^xsd:string ;
+				 rdf:label   "PERI WDA MX 330x10"^^xsd:string ;
+                 props:length  "3.30"^^xsd:decimal ;
+                 props:height  "0.12"^^xsd:decimal ;
+                 props:width  "0.10"^^xsd:decimal ;
+                 props:weight  "12.1"^^xsd:decimal .
+
+peri:PERI_WingnutMX15 rdf:type  owl:NamedIndividual ,
+							    peri:MAXIMO_MX15 ,
+                                tci:Wingnut ;
+					  tci:hasArtNo  "112386"^^xsd:string ;
+				 	  rdf:label   "PERI Wingnut MX15"^^xsd:string ;
+                 	  props:width  "0.13"^^xsd:decimal ;
+     	              props:height  "0.196"^^xsd:decimal ;
+                 	  props:weight  "2.58"^^xsd:decimal .
+
+peri:PERI_WingnutDW15_Pivot rdf:type owl:NamedIndividual ,
+							    	 peri:PERIProduct ,
+                                     tci:Wingnut ;
+							tci:hasArtNo  "030370"^^xsd:string ;
+				 			rdf:label  "PERI Wingnut Pivot Plate DW15"^^xsd:string ;
+                 			props:width  "0.117"^^xsd:decimal ;
+     	            		props:height  "0.117"^^xsd:decimal ;
+                 			props:weight  "1.66"^^xsd:decimal .
+
+peri:PERI_WalerMAR853 rdf:type owl:NamedIndividual ,
+							   peri:PERIProduct ,
+                               tci:Waler ;
+					  tci:hasArtNo  "12494"^^xsd:string ;
+				 	  rdf:label  "PERI Waler MAR 85-3"^^xsd:string ;
+                 	  props:length  "0.85"^^xsd:decimal ;
+     	              props:height  "0.115"^^xsd:decimal ;
+              	      props:width  "0.126"^^xsd:decimal ;
+                 	  props:weight  "14.10"^^xsd:decimal .
+
+peri:PERI_Waler85 rdf:type owl:NamedIndividual ,
+						   peri:PERIProduct ,
+                           tci:Waler ;
+				  tci:hasArtNo  "023551"^^xsd:string ;
+				  rdf:label  "PERI Waler 85"^^xsd:string ;
+                  props:length  "0.85"^^xsd:decimal ;
+     	          props:height  "0.105"^^xsd:decimal ;
+              	  props:width  "0.08"^^xsd:decimal ;
+                  props:weight  "8.58"^^xsd:decimal .
+
+peri:PERI_TieTS_TrioBulkhead rdf:type owl:NamedIndividual ,
+							    	  peri:PERIProduct ,
+                                      tci:TieRod ;
+							 tci:hasArtNo  "023640"^^xsd:string ;
+				 			 rdf:label  "PERI TRIO Bulkhead Tie TS"^^xsd:string ;
+                 			 props:length  "0.44"^^xsd:decimal ;
+                 			 props:weight  "1.14"^^xsd:decimal .
+
+peri:PERI_TieMX15_3040 rdf:type  owl:NamedIndividual ,
+							     peri:MAXIMO_MX15 ,
+                                 tci:TieRod ;
+					   tci:hasArtNo  "112464"^^xsd:string ;
+				  	   rdf:label  "PERI Tie MX15 30-40"^^xsd:string ;
+                 	   props:length  "0.838"^^xsd:decimal ;
+                 	   props:weight  "4.43"^^xsd:decimal .
+                                                    
+peri:PERI_AlignmentCouplerBFD rdf:type owl:NamedIndividual ,
+							           peri:PERIProduct ,
+                                       tci:Coupler ;
+							  tci:hasArtNo  "023500"^^xsd:string ;
+				 			  rdf:label  "PERI Alignment Coupler BFD"^^xsd:string ;
+                 			  props:weight  "4,58"^^xsd:decimal .

@@ -1,0 +1,662 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix bot:     <https://w3id.org/bot#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix props:   <https://w3id.org/props#> .
+@prefix product: <https://w3id.org/product#> .
+@prefix opm:     <https://w3id.org/opm#> .
+@prefix peri:    <http://test/peri/> .
+@prefix tci:     <http://test/tci/> .
+
+#################################################################
+#    A-BOX
+#################################################################
+
+tci:Producer a owl:Class .
+tci:ProductCatalogue a owl:Class .
+
+tci:PCI rdf:type owl:Class ;
+        rdfs:subClassOf  bot:Element, product:Product ;
+        rdfs:comment "Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.\"@en"^^xsd:string .
+
+product:Floor rdf:type owl:Class ;
+              rdfs:subClassOf tci:PCI ;
+              owl:disjointWith product:Wall .
+
+product:Slab rdf:type owl:Class ;
+             rdfs:subClassOf tci:PCI ;
+             owl:disjointWith product:Wall .
+
+product:Wall rdf:type owl:Class ;
+             rdfs:subClassOf tci:PCI ;
+             owl:disjointWith product:Floor, product:Slab .
+
+
+tci:TCI a owl:Class ;
+        rdfs:subClassOf  bot:Element, product:Product .
+
+tci:DefaultProduct rdf:type owl:Class ;
+                   rdfs:subClassOf tci:TCI .
+tci:DefaultFormwork rdf:type owl:Class ;
+                    rdfs:subClassOf tci:DefaultProduct .
+
+tci:ConfirmedProduct rdf:type owl:Class ;
+                     rdfs:subClassOf tci:TCI ;
+                     owl:disjointWith tci:DefaultProduct .
+peri:PERIProduct rdf:type owl:Class ;
+                 rdfs:subClassOf tci:ConfirmedProduct .
+
+tci:PrimaryTCI rdf:type owl:Class ;
+               rdfs:subClassOf tci:TCI ;
+               owl:disjointWith tci:SecondaryTCI .
+
+tci:DefaultPrimTCI rdf:type owl:Class ;
+                   rdfs:subClassOf tci:DefaultFormwork ,
+                                   tci:PrimaryTCI .
+
+tci:SecondaryTCI rdf:type owl:Class ;
+                 rdfs:subClassOf tci:TCI .
+
+tci:DefaultSecTCI rdf:type owl:Class ;
+                  rdfs:subClassOf tci:DefaultFormwork ,
+                                  tci:SecondaryTCI .
+
+tci:Scaffolding rdf:type owl:Class ;
+                rdfs:subClassOf tci:TCI .
+
+tci:ScaffoldingParts rdf:type owl:Class ;
+                         rdfs:subClassOf tci:Scaffolding .
+
+tci:Formwork rdf:type owl:Class ;
+             rdfs:subClassOf tci:TCI ;
+             owl:disjointWith tci:Scaffolding .
+
+tci:FormworkVertical  rdf:type owl:Class ;
+                      rdfs:subClassOf tci:Formwork ;
+                      tci:supportsPCIType product:Wall ;
+                      owl:disjointWith tci:FormworkHorizontal .
+
+tci:FormworkHorizontal  rdf:type owl:Class ;
+                        rdfs:subClassOf tci:Formwork ;
+                        tci:supportsPCIType product:Slab, product:Floor ;
+                        owl:disjointWith tci:FormworkVertical .
+
+tci:FormworkParts rdf:type owl:Class ;
+                  rdfs:subClassOf tci:Formwork .
+
+tci:Panel rdf:type owl:Class ;
+          rdfs:subClassOf tci:FormworkParts, tci:PrimaryTCI .
+
+tci:OutsideCorner rdf:type owl:Class ;
+                  rdfs:subClassOf tci:FormworkParts, tci:PrimaryTCI .
+
+tci:InsideCorner rdf:type owl:Class ;
+                 rdfs:subClassOf tci:FormworkParts, tci:PrimaryTCI .
+
+tci:Coupler rdf:type owl:Class ;
+            rdfs:subClassOf tci:FormworkParts, tci:SecondaryTCI .
+
+tci:Wingnut rdf:type owl:Class ;
+            rdfs:subClassOf tci:FormworkParts, tci:SecondaryTCI .
+
+tci:Waler rdf:type owl:Class ;
+          rdfs:subClassOf tci:FormworkParts, tci:SecondaryTCI .
+
+tci:TieRod rdf:type owl:Class ;
+           rdfs:subClassOf tci:FormworkParts, tci:SecondaryTCI .
+
+tci:PushPullProp rdf:type owl:Class ;
+                 rdfs:subClassOf tci:FormworkParts, tci:SecondaryTCI .
+
+peri:WallThicknessCompensation rdf:type owl:Class ;
+                               rdfs:subClassOf tci:FormworkParts, tci:SecondaryTCI .
+
+tci:TimberFilling rdf:type owl:Class ;
+                  rdfs:subClassOf tci:FormworkParts, tci:PrimaryTCI .
+
+
+tci:consistsOf rdf:type owl:ObjectProperty ;
+               rdfs:domain tci:TCI ;
+               rdfs:range tci:FormworkParts, product:ScaffoldingParts .
+
+tci:hasFormworkParts rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf tci:consistsOf ;
+                     rdfs:domain tci:Formwork ;
+                     rdfs:range tci:FormworkParts .
+
+product:hasScaffoldingParts rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf tci:consistsOf ;
+                            rdfs:domain tci:Scaffolding ;
+                            rdfs:range product:ScaffoldingParts .
+
+tci:tciType rdf:type owl:ObjectProperty ;
+            rdfs:domain bot:Element ,
+                        product:Product ;
+            rdfs:range tci:TCI .
+
+tci:supportsTCI rdf:type owl:ObjectProperty ;
+                rdfs:domain tci:SecondaryTCI , tci:DefaultSecTCI ;
+                rdfs:range tci:DefaultPrimTCI , tci:PrimaryTCI .
+
+tci:isSupportedBy rdf:type owl:ObjectProperty ;
+                  rdfs:domain tci:PrimaryTCI , tci:DefaultPrimTCI ;
+                  rdfs:range tci:SecondaryTCI , tci:DefaultSecTCI .
+
+tci:pciType rdf:type owl:ObjectProperty ;
+            rdfs:domain bot:Element ,
+                        product:Product ;
+            rdfs:range tci:PCI .
+
+tci:supportsPCIType rdf:type owl:ObjectProperty ;
+                    rdfs:domain tci:TCI ;
+                    rdfs:range product:Product, bot:Element .
+
+tci:iscounting	rdf:type	owl:ObjectProperty ;
+             	owl:inverseOf tci:iscounting ;
+				rdfs:range	tci:TCI .
+
+tci:countedBy rdf:type owl:ObjectProperty ;
+              owl:inverseOf tci:iscounting ;
+              rdfs:domain tci:TCI .
+
+tci:hasProducer rdf:type owl:ObjectProperty ;
+                owl:inverseOf tci:hasProduct ;
+                rdfs:domain tci:ConfirmedProduct ;
+                rdfs:range tci:Producer .
+
+tci:hasProduct rdf:type owl:ObjectProperty ;
+               rdfs:domain tci:Producer ;
+               rdfs:range tci:ConfirmedProduct .
+
+tci:hasProductCatalogue rdf:type owl:ObjectProperty ;
+                        rdfs:domain tci:ConfirmedProduct ;
+                        rdfs:range tci:Producer .
+
+props:height rdf:type owl:DatatypeProperty ;
+             rdfs:domain bot:Element ;
+             rdfs:range xsd:decimal .
+
+props:length rdf:type owl:DatatypeProperty ;
+             rdfs:domain bot:Element ;
+             rdfs:range xsd:decimal .
+
+props:width rdf:type owl:DatatypeProperty ;
+             rdfs:domain bot:Element ;
+             rdfs:range xsd:decimal .
+
+props:weight rdf:type owl:DatatypeProperty ;
+             rdfs:domain bot:Element ;
+             rdfs:range xsd:decimal .
+
+tci:countTCIs rdf:type owl:DatatypeProperty .
+
+tci:countDefaultCoupler rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger ;
+       					tci:iscounting  tci:DefaultCoupler .
+
+tci:countDefaultPanel330x120 rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger ;
+       					tci:iscounting  tci:DefaultPanel330x120 .
+
+tci:countDefaultPanel330x240 rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger ;
+       					tci:iscounting  tci:DefaultPanel330x240 .
+
+tci:countDefaultPanel330x30 rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger ;
+       					tci:iscounting  tci:DefaultPanel330x30 .
+
+tci:countDefaultPanel330x45 rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger ;
+       					tci:iscounting  tci:DefaultPanel330x45 .
+
+tci:countDefaultPanel330x60 rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger ;
+       					tci:iscounting  tci:DefaultPanel330x60 .
+
+tci:countDefaultPanel330x90 rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger ;
+       					tci:iscounting  tci:DefaultPanel330x90 .
+
+tci:countDefaultPushPullProp rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger ;
+       					tci:iscounting  tci:DefaultPushPullProp .
+
+tci:countDefaultTieRod rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger ;
+       					tci:iscounting  tci:DefaultTieRod .
+
+tci:countDefaultWaler rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger ;
+       					tci:iscounting  tci:DefaultWaler .
+
+tci:countDefaultWingnut rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger ;
+       					tci:iscounting  tci:DefaultWingnut .
+
+tci:countTimberFilling  rdf:type owl:DatatypeProperty ;
+						rdfs:subPropertyOf tci:countTCIs ;
+        				rdfs:range      xsd:nonNegativeInteger .
+
+tci:hasTimberFillinglength	rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:decimal ;
+       		 tci:iscounting  tci:TimberFilling .
+
+#################################################################
+#    T-BOX
+#################################################################
+ 
+
+tci:DefaultPanel330x240  rdf:type owl:NamedIndividual ,
+                                  tci:DefaultFormwork ,
+                   				  tci:FormworkVertical ,
+								  tci:DefaultPrimTCI ,
+                          		  tci:Panel ;
+						 tci:tciType tci:DefaultPanel330x240 ;
+						 tci:supportsPCIType product:Wall ;
+						 tci:countedBy  tci:countDefaultPanel330x240 ;
+						 tci:isSupportedBy tci:DefaultSecTCI ;
+                         rdf:label   "Default Panel 330x240"^^xsd:string ;
+                         props:length  "2.40"^^xsd:decimal ;
+                         props:height  "3.30"^^xsd:decimal ;
+                         props:area  "7.29"^^xsd:decimal ;
+                         props:width    "0.12"^^xsd:decimal ;
+                         props:weight    "408.0"^^xsd:decimal .
+
+tci:DefaultPanel330x120  rdf:type owl:NamedIndividual ,
+                                  tci:DefaultFormwork ,
+                   				  tci:FormworkVertical ,
+								  tci:DefaultPrimTCI ,
+                          		  tci:Panel ;
+						 tci:tciType tci:DefaultPanel330x120 ;
+						 tci:supportsPCIType product:Wall ;
+						 tci:countedBy  tci:countDefaultPanel330x120 ;
+						 tci:isSupportedBy tci:DefaultSecTCI ;
+                         rdf:label   "Default Panel 330x120"^^xsd:string ;
+                         props:length  "1.20"^^xsd:decimal ;
+                         props:height  "3.30"^^xsd:decimal ;
+                         props:area  "3.96"^^xsd:decimal ;
+                         props:width    "0.12"^^xsd:decimal ;
+                         props:weight    "226.0"^^xsd:decimal .
+
+tci:DefaultPanel330x90  rdf:type  owl:NamedIndividual ,
+                                  tci:DefaultFormwork ,
+                   				  tci:FormworkVertical ,
+								  tci:DefaultPrimTCI ,
+                          		  tci:Panel ;
+						 tci:tciType tci:DefaultPanel330x90 ;
+						 tci:supportsPCIType product:Wall ;
+						 tci:countedBy  tci:countDefaultPanel330x90 ;
+						 tci:isSupportedBy tci:DefaultSecTCI ;
+                         rdf:label   "Default Panel 330x90"^^xsd:string ;
+                         props:length  "0.90"^^xsd:decimal ;
+                         props:height  "3.30"^^xsd:decimal ;
+                         props:area  "2.97"^^xsd:decimal ;
+                         props:width    "0.12"^^xsd:decimal ;
+                         props:weight    "171.0"^^xsd:decimal .
+
+tci:DefaultPanel330x60  rdf:type  owl:NamedIndividual ,
+                                  tci:DefaultFormwork ,
+                   				  tci:FormworkVertical ,
+								  tci:DefaultPrimTCI ,
+                          		  tci:Panel ;
+						 tci:tciType tci:DefaultPanel330x60 ;
+						 tci:supportsPCIType product:Wall ;
+						 tci:countedBy  tci:countDefaultPanel330x60 ;
+						 tci:isSupportedBy tci:DefaultSecTCI ;
+                         rdf:label   "Default Panel 330x60"^^xsd:string ;
+                         props:length  "0.60"^^xsd:decimal ;
+                         props:height  "3.30"^^xsd:decimal ;
+                         props:area  "1.98"^^xsd:decimal ;
+                         props:width    "0.12"^^xsd:decimal ;
+                         props:weight    "118.0"^^xsd:decimal .
+
+tci:DefaultPanel330x45  rdf:type  owl:NamedIndividual ,
+                                  tci:DefaultFormwork ,
+                   				  tci:FormworkVertical ,
+								  tci:DefaultPrimTCI ,
+                          		  tci:Panel ;
+						 tci:tciType tci:DefaultPanel330x45 ;
+						 tci:supportsPCIType product:Wall ;
+						 tci:countedBy  tci:countDefaultPanel330x45 ;
+						 tci:isSupportedBy tci:DefaultSecTCI ;
+                         rdf:label   "Default Panel 330x45"^^xsd:string ;
+                         props:length  "0.45"^^xsd:decimal ;
+                         props:height  "3.30"^^xsd:decimal ;
+                         props:area  "1.485"^^xsd:decimal ;
+                         props:width    "0.12"^^xsd:decimal ;
+                         props:weight    "99.8"^^xsd:decimal .
+
+
+tci:DefaultInsideCorner330x20 rdf:type owl:NamedIndividual ,
+                                		  tci:DefaultFormwork ,
+                   				 		  tci:FormworkVertical ,
+								  tci:DefaultPrimTCI ,
+                                 		  tci:InsideCorner ;
+
+						 tci:tciType tci:DefaultInsideCorner330x20 ;
+						 tci:supportsPCIType product:Wall ;
+						 tci:countedBy  tci:countDefaultInsideCorner330x20 ;
+						 tci:isSupportedBy tci:DefaultSecTCI ;
+                       			 rdf:label   "Default Inside Corner 330x20"^^xsd:string ;
+                      			 props:length  "0.20"^^xsd:decimal ;
+                       			 props:height    "3.30"^^xsd:decimal ;
+                       			 props:area    "2.31"^^xsd:decimal ;
+                       			 props:width    "0.12"^^xsd:decimal ;
+                       			 props:weight    "136.0"^^xsd:decimal .
+
+tci:DefaultOutsideCorner330x60 rdf:type owl:NamedIndividual ,
+                                		tci:DefaultFormwork ,
+                   				 		tci:FormworkVertical ,
+								  tci:DefaultPrimTCI ,
+                                  		tci:OutsideCorner ;
+
+						 tci:tciType tci:DefaultOutsideCorner330x60 ;
+						 tci:supportsPCIType product:Wall ;
+						 tci:countedBy  tci:countDefaultOutsideCorner330x60 ;
+						 tci:isSupportedBy tci:DefaultSecTCI ;
+                       		   rdf:label   "Default Outside Corner 330x45"^^xsd:string ;
+                       		   props:length  "0.60"^^xsd:decimal ;
+                       		   props:height    "3.30"^^xsd:decimal ;
+                      		   props:area    "2.97"^^xsd:decimal ;
+                      		   props:width    "0.12"^^xsd:decimal ;
+                     		   props:weight    "190.0"^^xsd:decimal .
+
+tci:DefaultCoupler rdf:type owl:NamedIndividual ,
+                            tci:DefaultFormwork ,
+							tci:SecondaryTCI ,
+						    tci:DefaultSecTCI ,
+                            tci:Coupler ;
+				   tci:tciType tci:DefaultCoupler ;
+				   tci:supportsPCIType product:Wall ;
+				   tci:countedBy  tci:countDefaultCoupler ;
+				   tci:supportsTCI  tci:DefaultPrimTCI ;
+                   rdf:label  "Default Coupler"^^xsd:string ;
+                   props:length  "NULL"^^xsd:decimal ;
+                   props:height    "NULL"^^xsd:decimal ;
+                   props:width    "NULL"^^xsd:decimal ;
+                   props:weight  "4.58"^^xsd:decimal .
+
+tci:DefaultPushPullProp rdf:type owl:NamedIndividual ,
+                                 tci:DefaultFormwork ,
+								 tci:SecondaryTCI ,
+						    	 tci:DefaultSecTCI ,
+                                 tci:PushPullProp ;
+				   		tci:tciType tci:DefaultPushPullProp ;
+				   		tci:supportsPCIType product:Wall ;
+				   		tci:countedBy  tci:countDefaultPushPullProp ;
+				   		tci:supportsTCI  tci:DefaultPrimTCI ;
+                        rdf:label   "Default PushPull Prop"^^xsd:string ;
+                       	props:length  "2.80-4.50"^^xsd:decimal ;
+                   		props:height    "NULL"^^xsd:decimal ;
+                      	props:width    "0.073"^^xsd:decimal ;
+                     	props:weight    "22.8"^^xsd:decimal .
+
+tci:DefaultTieRod rdf:type owl:NamedIndividual ,
+                           tci:DefaultFormwork ,
+                   		   tci:FormworkVertical ,
+						   tci:SecondaryTCI ,
+						   tci:DefaultSecTCI ,
+                           tci:TieRod ;
+				  tci:tciType tci:DefaultTieRod ;
+				  tci:supportsPCIType product:Wall ;
+				  tci:countedBy  tci:countDefaultTieRod ;
+				  tci:supportsTCI  tci:DefaultPrimTCI ;
+                   rdf:label  "Default Tie Rod"^^xsd:string ;
+                   props:length  "NULL"^^xsd:decimal ;
+                   props:height    "NULL"^^xsd:decimal ;
+                   props:width    "NULL"^^xsd:decimal ;
+                   props:weight  "4.43"^^xsd:decimal .
+
+tci:DefaultWaler rdf:type owl:NamedIndividual ,
+                          tci:DefaultFormwork ,
+                   		  tci:FormworkVertical ,
+						  tci:SecondaryTCI ,
+						  tci:DefaultSecTCI ,
+                          tci:Waler ;
+				  tci:tciType tci:DefaultWaler ;
+				  tci:supportsPCIType product:Wall ;
+				  tci:countedBy  tci:countDefaultWaler ;
+				  tci:supportsTCI  tci:DefaultPrimTCI ;
+                 rdf:label  "Default Waler"^^xsd:string ;
+                 props:length  "0.85"^^xsd:decimal ;
+                 props:height    "0.105"^^xsd:decimal ;
+                 props:width    "0.08"^^xsd:decimal ;
+                 props:weight  "8.52"^^xsd:decimal .
+
+tci:DefaultWingnut rdf:type owl:NamedIndividual ,
+                            tci:DefaultFormwork ,
+                   			tci:FormworkVertical ,
+							tci:SecondaryTCI ,
+						    tci:DefaultSecTCI ,
+                            tci:Wingnut ;
+				  tci:tciType tci:DefaultWingnut ;
+				  tci:supportsPCIType product:Wall ;
+				  tci:countedBy  tci:countDefaultWingnut ;
+				  tci:supportsTCI  tci:DefaultPrimTCI ;
+                   rdf:label  "Default Wingnut"^^xsd:string ;
+                   props:length  "NULL"^^xsd:decimal ;
+                   props:height    "NULL"^^xsd:decimal ;
+                   props:width    "NULL"^^xsd:decimal ;
+                   props:weight  "2.58"^^xsd:decimal .
+
+########################################
+#  PERI PRODUCTS
+########################################
+
+peri:DUO135  a  peri:PERIProduct ,
+                tci:FormworkVertical ;
+				rdf:label "DUO 135 Panel Formwork"^^xsd:string ;
+				tci:hasProducer "PERI GmbH"^^xsd:string .
+
+peri:MAXIMO_MX15   a  peri:PERIProduct ,
+                   	  tci:FormworkVertical ;
+				   rdf:label "MAXIMO MX15 Panel Formwork"^^xsd:string ;
+				   tci:hasProducer "PERI GmbH"^^xsd:string ;
+                   tci:hasProductCatalogue "MAXIMO MX 15, 270 _ 330 Instructions for Assembly and Use"^^xsd:string ;
+                   tci:consistsof peri:PERI_MXM330x60, peri:PERI_MXI330x60, peri:PERI_MXI330x50x20, peri:PERI_MXA330x45, peri:PERI_MX330x90, peri:PERI_MX330x60, peri:PERI_MX330x45, peri:PERI_MX330x30, peri:PERI_MX330x240, peri:PERI_MX330x120, peri:PERI_MXA330x35, peri:WDAMX330x10, peri:PERI_WingnutMX15, peri:PERI_WingnutDW15_Pivot, peri:PERI_WalerMAR853, peri:PERI_Waler85, peri:PERI_TieTS_TrioBulkhead, peri:PERI_TieMX15_3040, peri:PERI_AlignmentCouplerBFD .                    
+
+peri:PERI_MX330x240 rdf:type  owl:NamedIndividual ,
+							  peri:MAXIMO_MX15 ,
+                              tci:Panel ;
+					tci:hasArtNo  "114426"^^xsd:string ;
+                    rdf:label   "PERI MX 330x240"^^xsd:string ;
+                    props:length  "2.40"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "7.29"^^xsd:decimal ;
+                    props:width    "0.12"^^xsd:decimal ;
+                    props:weight    "408.0"^^xsd:decimal .
+                                                   
+peri:PERI_MX330x120 rdf:type  owl:NamedIndividual ,
+							  peri:MAXIMO_MX15 ,
+                              tci:Panel ;
+					tci:hasArtNo  "114248"^^xsd:string ;
+					rdf:label   "PERI MX 330x120"^^xsd:string ;
+                    props:length  "1.20"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "3.96"^^xsd:decimal ;
+                    props:width    "0.12"^^xsd:decimal ;
+                    props:weight    "226.0"^^xsd:decimal .
+                                                   
+peri:PERI_MX330x90 rdf:type owl:NamedIndividual ,
+							peri:MAXIMO_MX15 ,
+                            tci:Panel ;
+				   tci:hasArtNo  "114258"^^xsd:string ;
+				   rdf:label   "PERI MX 330x90"^^xsd:string ;
+                   props:length  "0.90"^^xsd:decimal ;
+                   props:height  "3.30"^^xsd:decimal ;
+                   props:area  "2.97"^^xsd:decimal ;
+                   props:width    "0.12"^^xsd:decimal ;
+                   props:weight    "171.0"^^xsd:decimal .
+
+peri:PERI_MX330x60 rdf:type  owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+                             tci:Panel ;
+				   tci:hasArtNo  "114445"^^xsd:string ;
+				   rdf:label   "PERI MX 330x60"^^xsd:string ;
+                   props:length  "0.60"^^xsd:decimal ;
+                   props:height  "3.30"^^xsd:decimal ;
+                   props:area  "1.98"^^xsd:decimal ;
+                   props:width    "0.12"^^xsd:decimal ;
+                   props:weight    "118.0"^^xsd:decimal .
+                                                  
+peri:PERI_MX330x45 rdf:type  owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+                             tci:Panel ;
+				   tci:hasArtNo  "114452"^^xsd:string ;
+				   rdf:label   "PERI MX 330x45"^^xsd:string ;
+                   props:length  "0.45"^^xsd:decimal ;
+                   props:height  "3.30"^^xsd:decimal ;
+                   props:area  "1.485"^^xsd:decimal ;
+                   props:width  "0.12"^^xsd:decimal ;
+                   props:weight  "99.8"^^xsd:decimal .
+
+peri:PERI_MX330x30 rdf:type  owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+                             tci:Panel ;
+				   tci:hasArtNo  "114457"^^xsd:string ;
+				   rdf:label   "PERI MX 330x30"^^xsd:string ;
+                   props:length  "0.30"^^xsd:decimal ;
+                   props:height  "3.30"^^xsd:decimal ;
+                   props:area  "0.99"^^xsd:decimal ;
+                   props:width  "0.12"^^xsd:decimal ;
+                   props:weight  "78.6"^^xsd:decimal .
+                                                  
+peri:PERI_MXM330x60 rdf:type owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+							 tci:Panel ; 
+					tci:hasArtNo  "114464"^^xsd:string ;
+					rdf:label   "PERI MXM 330x60"^^xsd:string ;
+                    props:length  "0.60"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "1.98"^^xsd:decimal ;
+                    props:width  "0.12"^^xsd:decimal ;
+					props:weight  "141.0"^^xsd:decimal .
+ 
+peri:PERI_MXI330x60 rdf:type owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+                             tci:InsideCorner ;
+				    tci:hasArtNo  "114470"^^xsd:string ;
+				    rdf:label   "PERI MXI 330x60"^^xsd:string ;
+                    props:length  "0.60"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "3.96"^^xsd:decimal ;
+                    props:width  "0.12"^^xsd:decimal ;
+                    props:weight  "199.0"^^xsd:decimal .
+                                                   
+peri:PERI_MXI330x50x20 rdf:type owl:NamedIndividual ,
+							    peri:MAXIMO_MX15 ,
+                                tci:InsideCorner ;
+					   tci:hasArtNo  "115338"^^xsd:string ;
+				 	   rdf:label   "PERI MXI 330x50x20"^^xsd:string ;
+                 	   props:length  "0.50"^^xsd:decimal , "0.20"^^xsd:decimal ;
+                 	   props:height  "3.30"^^xsd:decimal ;
+                 	   props:area  "2.31"^^xsd:decimal ;
+                 	   props:width    "0.12"^^xsd:decimal ;
+                 	   props:weight    "136.0"^^xsd:decimal .
+
+peri:PERI_MXA330x45 rdf:type owl:NamedIndividual ,
+							 peri:MAXIMO_MX15 ,
+                             tci:OutsideCorner ;
+				    tci:hasArtNo  "114478"^^xsd:string ;
+				    rdf:label   "PERI MXA 330x45"^^xsd:string ;
+                    props:length  "0.45"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "2.97"^^xsd:decimal ;
+                    props:width  "0.12"^^xsd:decimal ;
+                    props:weight  "190.0"^^xsd:decimal .
+
+peri:PERI_MXA330x35 rdf:type  owl:NamedIndividual ,
+							  peri:MAXIMO_MX15 ,            
+                              tci:OutsideCorner ;
+					tci:hasArtNo  "114486"^^xsd:string ;
+					rdf:label  "PERI MXA 330x35"^^xsd:string ;
+                    props:length  "0.35"^^xsd:decimal ;
+                    props:height  "3.30"^^xsd:decimal ;
+                    props:area  "2.31"^^xsd:decimal ;
+                    props:width  "0.12"^^xsd:decimal ;
+                    props:weight  "168.0"^^xsd:decimal .
+
+peri:WDAMX330x10 rdf:type  owl:NamedIndividual ,
+						   peri:MAXIMO_MX15 ,
+                           peri:WallThicknessCompensation ;
+                 rdfs:comment "To adjust the thickness of the wall\"@en"^^xsd:string ;
+				 tci:hasArtNo  "114394"^^xsd:string ;
+				 rdf:label   "PERI WDA MX 330x10"^^xsd:string ;
+                 props:length  "3.30"^^xsd:decimal ;
+                 props:height  "0.12"^^xsd:decimal ;
+                 props:width  "0.10"^^xsd:decimal ;
+                 props:weight  "12.1"^^xsd:decimal .
+
+peri:PERI_WingnutMX15 rdf:type  owl:NamedIndividual ,
+							    peri:MAXIMO_MX15 ,
+                                tci:Wingnut ;
+					  tci:hasArtNo  "112386"^^xsd:string ;
+				 	  rdf:label   "PERI Wingnut MX15"^^xsd:string ;
+                 	  props:width  "0.13"^^xsd:decimal ;
+     	              props:height  "0.196"^^xsd:decimal ;
+                 	  props:weight  "2.58"^^xsd:decimal .
+
+peri:PERI_WingnutDW15_Pivot rdf:type owl:NamedIndividual ,
+							    	 peri:PERIProduct ,
+                                     tci:Wingnut ;
+							tci:hasArtNo  "030370"^^xsd:string ;
+				 			rdf:label  "PERI Wingnut Pivot Plate DW15"^^xsd:string ;
+                 			props:width  "0.117"^^xsd:decimal ;
+     	            		props:height  "0.117"^^xsd:decimal ;
+                 			props:weight  "1.66"^^xsd:decimal .
+
+peri:PERI_WalerMAR853 rdf:type owl:NamedIndividual ,
+							   peri:PERIProduct ,
+                               tci:Waler ;
+					  tci:hasArtNo  "12494"^^xsd:string ;
+				 	  rdf:label  "PERI Waler MAR 85-3"^^xsd:string ;
+                 	  props:length  "0.85"^^xsd:decimal ;
+     	              props:height  "0.115"^^xsd:decimal ;
+              	      props:width  "0.126"^^xsd:decimal ;
+                 	  props:weight  "14.10"^^xsd:decimal .
+
+peri:PERI_Waler85 rdf:type owl:NamedIndividual ,
+						   peri:PERIProduct ,
+                           tci:Waler ;
+				  tci:hasArtNo  "023551"^^xsd:string ;
+				  rdf:label  "PERI Waler 85"^^xsd:string ;
+                  props:length  "0.85"^^xsd:decimal ;
+     	          props:height  "0.105"^^xsd:decimal ;
+              	  props:width  "0.08"^^xsd:decimal ;
+                  props:weight  "8.58"^^xsd:decimal .
+
+peri:PERI_TieTS_TrioBulkhead rdf:type owl:NamedIndividual ,
+							    	  peri:PERIProduct ,
+                                      tci:TieRod ;
+							 tci:hasArtNo  "023640"^^xsd:string ;
+				 			 rdf:label  "PERI TRIO Bulkhead Tie TS"^^xsd:string ;
+                 			 props:length  "0.44"^^xsd:decimal ;
+                 			 props:weight  "1.14"^^xsd:decimal .
+
+peri:PERI_TieMX15_3040 rdf:type  owl:NamedIndividual ,
+							     peri:MAXIMO_MX15 ,
+                                 tci:TieRod ;
+					   tci:hasArtNo  "112464"^^xsd:string ;
+				  	   rdf:label  "PERI Tie MX15 30-40"^^xsd:string ;
+                 	   props:length  "0.838"^^xsd:decimal ;
+                 	   props:weight  "4.43"^^xsd:decimal .
+                                                    
+peri:PERI_AlignmentCouplerBFD rdf:type owl:NamedIndividual ,
+							           peri:PERIProduct ,
+                                       tci:Coupler ;
+							  tci:hasArtNo  "023500"^^xsd:string ;
+				 			  rdf:label  "PERI Alignment Coupler BFD"^^xsd:string ;
+                 			  props:weight  "4.58"^^xsd:decimal .

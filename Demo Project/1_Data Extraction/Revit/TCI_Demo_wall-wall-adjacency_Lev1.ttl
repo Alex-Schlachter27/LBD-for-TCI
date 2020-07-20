@@ -1,0 +1,15 @@
+@prefix inst: <http://test/walls/> .
+@prefix bot: <https://w3id.org/bot#> .
+
+inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba bot:adjacentElement inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 .
+inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba bot:adjacentElement inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e .
+inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 bot:adjacentElement inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f .
+inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 bot:adjacentElement inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e .
+inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f bot:adjacentElement inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 .
+inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f bot:adjacentElement inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 .
+inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 bot:adjacentElement inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba .
+inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 bot:adjacentElement inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 .
+inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e bot:adjacentElement inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0ba .
+inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d67e bot:adjacentElement inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f0f0 .
+inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 bot:adjacentElement inst:450d31df-4383-4692-9be4-9c0935e083ef-0008f14f .
+inst:c1037085-1aff-4644-8770-66dc41edbf0b-0009d7e4 bot:adjacentElement inst:40cab1d1-1d6f-47a3-9afb-bd8c6300ff7e-0009c504 .

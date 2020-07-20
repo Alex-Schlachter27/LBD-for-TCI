@@ -1,0 +1,14 @@
+@prefix rvt: <http://test/rvt/> .
+@prefix props: <https://w3id.org/props#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rvt:Vgy35 props:width "0.35"^^xsd:decimal ;
+	props:material "@_VG_Beton Insitu"^^xsd:string ;
+	props:ccsTypeID "[L]%UKH2377"^^xsd:string .
+rvt:Vgy39 props:width "0.39"^^xsd:decimal ;
+	props:material "@_VG_Beton Insitu"^^xsd:string ;
+	props:ccsTypeID "[L]%UKH3393"^^xsd:string .
+rvt:Vgy47 props:width "0.47"^^xsd:decimal ;
+	props:material "@_VG_Beton Insitu"^^xsd:string ;
+	props:ccsTypeID "[L]%UKH3392"^^xsd:string .
