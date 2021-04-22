@@ -1,0 +1,1163 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/lbs/tci#"
+     xml:base="https://w3id.org/lbs/tci"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="https://w3id.org/lbs/tci#">
+        <owl:versionIRI rdf:resource="https://w3id.org/lbs/tci-0.0.1"/>
+        <terms:creator rdf:resource="https://www.niras.dk/employees/alexander-schlachter-ales/"/>
+        <terms:creator>Alexander Schlachter</terms:creator>
+        <terms:description xml:lang="en">The Ontology for Temporary Construction Items (TCI) is...</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-21T19:00:00</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/1.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-21T19:00:00</terms:modified>
+        <terms:title xml:lang="en">Ontology for Temporary Construction Items (TCI)</terms:title>
+        <vann:preferredNamespacePrefix>tci</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/lbs/tci#"/>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://schema.org/domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/domainIncludes"/>
+    
+
+
+    <!-- http://schema.org/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/name"/>
+    
+
+
+    <!-- http://schema.org/rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#fn -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#fn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/lindt/custom_datatypes#cdt:area -->
+
+
+    <rdfs:Datatype rdf:about="http://w3id.org/lindt/custom_datatypes#cdt:area"/>
+    
+
+
+    <!-- http://w3id.org/lindt/custom_datatypes#cdt:length -->
+
+
+    <rdfs:Datatype rdf:about="http://w3id.org/lindt/custom_datatypes#cdt:length"/>
+    
+
+
+    <!-- http://w3id.org/lindt/custom_datatypes#cdt:mass -->
+
+
+    <rdfs:Datatype rdf:about="http://w3id.org/lindt/custom_datatypes#cdt:mass"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/lbs/tci#adjacentWall -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#adjacentWall">
+        <schema:domainIncludes rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall"/>
+        <schema:rangeIncludes rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall"/>
+        <rdfs:comment xml:lang="en">Used to specify adjecency between two walls</rdfs:comment>
+        <rdfs:label xml:lang="en">adjacent wall</rdfs:label>
+        <rdfs:label xml:lang="da">tilstødende væg</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#consistsOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#consistsOf">
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#TCI"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#ScaffoldingParts"/>
+        <rdfs:comment xml:lang="da">Bruges til at relatere en TCI-type til dens komponenter</rdfs:comment>
+        <rdfs:comment xml:lang="en">Used to relate a TCI-Type to its components</rdfs:comment>
+        <rdfs:label xml:lang="da">består af</rdfs:label>
+        <rdfs:label xml:lang="en">consists of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#cornerType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#cornerType">
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#CornerPanel"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#InsideCorner"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#OutsideCorner"/>
+        <rdfs:comment xml:lang="en">Defines the corner type of a corner element</rdfs:comment>
+        <rdfs:label xml:lang="en">corner type</rdfs:label>
+        <rdfs:label xml:lang="da">hjørnetype</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#countedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#countedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lbs/tci#iscounting"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#TCI"/>
+        <rdfs:comment xml:lang="en">Specifies property that counts the number of individuals of a specific TCI-class </rdfs:comment>
+        <rdfs:label xml:lang="en">counted by</rdfs:label>
+        <rdfs:label xml:lang="da">optalt af</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#hasFormworkParts -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#hasFormworkParts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lbs/tci#consistsOf"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#Formwork"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
+        <rdfs:comment xml:lang="da">Bruges til at relatere en Forskallings-type til dens komponenter</rdfs:comment>
+        <rdfs:comment xml:lang="en">Used to relate a formwork-type to its components</rdfs:comment>
+        <rdfs:label xml:lang="da">har forskallingskompoenter</rdfs:label>
+        <rdfs:label xml:lang="en">has formwork parts</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#hasProducer -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#hasProducer">
+        <owl:inverseOf rdf:resource="https://w3id.org/lbs/tci#hasProduct"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#ConfirmedProduct"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#Producer"/>
+        <rdfs:comment xml:lang="en">Specifies the producer of a product</rdfs:comment>
+        <rdfs:label xml:lang="da">har producent</rdfs:label>
+        <rdfs:label xml:lang="en">has producer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#hasProduct -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#hasProduct">
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#Producer"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#ConfirmedProduct"/>
+        <rdfs:comment xml:lang="en">Specifies the product of a producer</rdfs:comment>
+        <rdfs:label xml:lang="da">har produkt</rdfs:label>
+        <rdfs:label xml:lang="en">has product</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#hasProductCatalogue -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#hasProductCatalogue">
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#ConfirmedProduct"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#Producer"/>
+        <rdfs:comment xml:lang="en">Specifies the product catalogue of a product</rdfs:comment>
+        <rdfs:label xml:lang="da">har produktkatalog</rdfs:label>
+        <rdfs:label xml:lang="en">has product catalogue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#hasScaffoldingParts -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#hasScaffoldingParts">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lbs/tci#consistsOf"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#Scaffolding"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#ScaffoldingParts"/>
+        <rdfs:comment xml:lang="da">Bruges til at relatere en stilladser-type til dens komponenter</rdfs:comment>
+        <rdfs:comment xml:lang="en">Used to relate a scaffolding-type to its components</rdfs:comment>
+        <rdfs:label xml:lang="da">har stilladserkompoenter</rdfs:label>
+        <rdfs:label xml:lang="en">has scaffolding parts</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#hasTCIsIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#hasTCIsIn">
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#FormworkVertical"/>
+        <rdfs:comment xml:lang="en">Specifies the TCIs on the inner side of the PCI they support</rdfs:comment>
+        <rdfs:label xml:lang="da">har TCIs indenfor</rdfs:label>
+        <rdfs:label xml:lang="en">has TCIs inside</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#hasTCIsOut -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#hasTCIsOut">
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#FormworkVertical"/>
+        <rdfs:comment xml:lang="en">Specifies the TCIs on the outer side of the PCI they support</rdfs:comment>
+        <rdfs:label xml:lang="da">har TCIs udenfor</rdfs:label>
+        <rdfs:label xml:lang="en">has TCIs outside</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#hassecTCIs -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#hassecTCIs">
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
+        <rdfs:comment xml:lang="en">Specifies all secondary TCIs of a PCI</rdfs:comment>
+        <rdfs:label xml:lang="da">har sekundære TCIs</rdfs:label>
+        <rdfs:label xml:lang="en">has secondary TCIs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#isSupportedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#isSupportedBy">
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#DefaultPrimTCI"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#PrimaryTCI"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#DefaultSecTCI"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
+        <rdfs:comment xml:lang="en">Used to relate a primary tci to secondary elements that support it</rdfs:comment>
+        <rdfs:label xml:lang="en">is supported by</rdfs:label>
+        <rdfs:label xml:lang="da">understøttes af</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#iscounting -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#iscounting">
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#TCI"/>
+        <rdfs:comment xml:lang="en">Specifies the a specific TCI-class the property is counting</rdfs:comment>
+        <rdfs:label xml:lang="en">is counting</rdfs:label>
+        <rdfs:label xml:lang="da">tæller</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#pciType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#pciType">
+        <schema:domainIncludes rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/bot#Element"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#PCI"/>
+        <rdfs:comment xml:lang="en">Specifies the type of a PCI</rdfs:comment>
+        <rdfs:label xml:lang="da">permanent bygnings element type</rdfs:label>
+        <rdfs:label xml:lang="en">permanent construction item type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#supportsPCIType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#supportsPCIType">
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#TCI"/>
+        <schema:rangeIncludes rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/bot#Element"/>
+        <rdfs:comment xml:lang="en">Used to relate a TCI to the PCI it is supporting</rdfs:comment>
+        <rdfs:label xml:lang="en">supports pci type</rdfs:label>
+        <rdfs:label xml:lang="da">understøtter pci type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#supportsTCI -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#supportsTCI">
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#DefaultSecTCI"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#DefaultPrimTCI"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#PrimaryTCI"/>
+        <rdfs:comment xml:lang="en">Used to relate a PCI to its supported TCI</rdfs:comment>
+        <rdfs:label xml:lang="en">supports tci</rdfs:label>
+        <rdfs:label xml:lang="da">understøtter tci</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#tciType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lbs/tci#tciType">
+        <schema:domainIncludes rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"/>
+        <schema:domainIncludes rdf:resource="https://w3id.org/bot#Element"/>
+        <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#TCI"/>
+        <rdfs:comment xml:lang="en">Specifies the type of a TCI</rdfs:comment>
+        <rdfs:label xml:lang="da">temporary bygnings element type</rdfs:label>
+        <rdfs:label xml:lang="en">temporary construction item type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/lbs/tci#connectionType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#connectionType">
+        <schema:domainIncludes rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall"/>
+        <rdfs:comment xml:lang="en">The connection type of two element, e.g. Walls</rdfs:comment>
+        <rdfs:label xml:lang="en">connection type</rdfs:label>
+        <rdfs:label xml:lang="da">forbindelsestype</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#cornerAngle -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#cornerAngle">
+        <schema:domainIncludes rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Specifies the angle of a corner connection</rdfs:comment>
+        <rdfs:label xml:lang="en">corner angle</rdfs:label>
+        <rdfs:label xml:lang="da">hjørnevinkel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#countCoupler -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#countCoupler">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lbs/tci#countTCIs"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">property that counts the number of couplers, a PCI will equip during its construction</rdfs:comment>
+        <rdfs:label xml:lang="en">count coupler</rdfs:label>
+        <rdfs:label xml:lang="da">tælle kobling</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#countInsideCorner -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#countInsideCorner">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lbs/tci#countTCIs"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">property that counts the number of inside corners, a PCI will equip during its construction</rdfs:comment>
+        <rdfs:label xml:lang="en">count inside corner</rdfs:label>
+        <rdfs:label xml:lang="da">tælle indvendigt hjørne</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#countOutsideCorner -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#countOutsideCorner">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lbs/tci#countTCIs"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">property that counts the number of outside corners, a PCI will equip during its construction</rdfs:comment>
+        <rdfs:label xml:lang="en">count outside corner</rdfs:label>
+        <rdfs:label xml:lang="da">tælle udvendigt hjørne</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#countPanel -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#countPanel">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lbs/tci#countTCIs"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">property that counts the number of panels, a PCI will equip during its construction</rdfs:comment>
+        <rdfs:label xml:lang="en">count panel</rdfs:label>
+        <rdfs:label xml:lang="da">tælle panel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#countPushPullProp -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#countPushPullProp">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lbs/tci#countTCIs"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">property that counts the number of push-pull prop, a PCI will equip during its construction</rdfs:comment>
+        <rdfs:label xml:lang="en">counts push-pull prop</rdfs:label>
+        <rdfs:label xml:lang="da">tælle skubbe-trække støtte</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#countTCIs -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#countTCIs">
+        <rdfs:comment xml:lang="en">property that counts the number of TCIs, a PCI will equip during its construction</rdfs:comment>
+        <rdfs:label xml:lang="en">count TCIs</rdfs:label>
+        <rdfs:label xml:lang="da">tælle TCIs</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#countTieRod -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#countTieRod">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lbs/tci#countTCIs"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">property that counts the number of tie rods, a PCI will equip during its construction</rdfs:comment>
+        <rdfs:label xml:lang="en">count tie rod</rdfs:label>
+        <rdfs:label xml:lang="da">tælle trækstang</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#countTimberFilling -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#countTimberFilling">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lbs/tci#countTCIs"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">property that counts the number of timber filling, a PCI will equip during its construction</rdfs:comment>
+        <rdfs:label xml:lang="en">count timber filling</rdfs:label>
+        <rdfs:label xml:lang="da">tælle træfyldning</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#countWaler -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#countWaler">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lbs/tci#countTCIs"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">property that counts the number of walers, a PCI will equip during its construction</rdfs:comment>
+        <rdfs:label xml:lang="en">count waler</rdfs:label>
+        <rdfs:label xml:lang="da">tælle waler</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#countWingnut -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#countWingnut">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lbs/tci#countTCIs"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">property that counts the number of wingnuts, a PCI will equip during its construction</rdfs:comment>
+        <rdfs:label xml:lang="en">count wingnut</rdfs:label>
+        <rdfs:label xml:lang="da">tælle vingemøtrik </rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#hasTimberFillinglength -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/lbs/tci#hasTimberFillinglength">
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Specifies the length of the timber filling that is used to close a formwork panel sequence</rdfs:comment>
+        <rdfs:label xml:lang="da">har træfyldningslængde</rdfs:label>
+        <rdfs:label xml:lang="en">has timber filling length</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
+
+
+    <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+
+    <owl:Class rdf:about="http://schema.org/Person"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Individual -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Individual"/>
+    
+
+
+    <!-- https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct -->
+
+
+    <owl:Class rdf:about="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"/>
+    
+
+
+    <!-- https://w3id.org/bot#Element -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Element"/>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#ConfirmedProduct -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#ConfirmedProduct">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#TCI"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/lbs/tci#DefaultProduct"/>
+        <rdfs:comment xml:lang="en">Specified a confirmed product that comes from a producer and is retrieved e.g. from a product catalogue</rdfs:comment>
+        <rdfs:label xml:lang="da">bekræftet produkt</rdfs:label>
+        <rdfs:label xml:lang="en">confirmed product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#CornerPanel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#CornerPanel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#PrimaryTCI"/>
+        <rdfs:comment xml:lang="en">A formwork corner panel</rdfs:comment>
+        <rdfs:label xml:lang="en">corner panel</rdfs:label>
+        <rdfs:label xml:lang="da">hjørnepanel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#Coupler -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#Coupler">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
+        <rdfs:comment xml:lang="en">A formwork coupler</rdfs:comment>
+        <rdfs:label xml:lang="en">coupler</rdfs:label>
+        <rdfs:label xml:lang="da">kobling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#DefaultFormwork -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#DefaultFormwork">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#DefaultProduct"/>
+        <rdfs:comment xml:lang="en">the default set of formwork that is used when no tci:ConfirmedProduct is available</rdfs:comment>
+        <rdfs:label xml:lang="en">Default formwork</rdfs:label>
+        <rdfs:label xml:lang="da">standardforskalling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#DefaultPrimTCI -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#DefaultPrimTCI">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#PrimaryTCI"/>
+        <rdfs:comment xml:lang="en">Specifies the primary elements of a default set of formwork</rdfs:comment>
+        <rdfs:label xml:lang="en">Default primary TCI</rdfs:label>
+        <rdfs:label xml:lang="da">standard primær TCI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#DefaultProduct -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#DefaultProduct">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#TCI"/>
+        <rdfs:comment xml:lang="en">the default set of TCIs that is used when no tci:ConfirmedProduct is available</rdfs:comment>
+        <rdfs:label xml:lang="en">default product</rdfs:label>
+        <rdfs:label xml:lang="da">standard product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#DefaultSecTCI -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#DefaultSecTCI">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
+        <rdfs:comment xml:lang="en">Specifies the secondary elements of a default set of formwork</rdfs:comment>
+        <rdfs:label xml:lang="en">Default secondary TCI</rdfs:label>
+        <rdfs:label xml:lang="da">standard sekundær TCI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#Formwork -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#Formwork">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#TCI"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/lbs/tci#Scaffolding"/>
+        <rdfs:comment xml:lang="en">The elements that are used to creating a temporary mould into which concrete is poured and formed</rdfs:comment>
+        <rdfs:label xml:lang="en">Formwork</rdfs:label>
+        <rdfs:label xml:lang="da">Forskalling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#FormworkHorizontal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#FormworkHorizontal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#Formwork"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/lbs/tci#FormworkVertical"/>
+        <rdfs:comment xml:lang="en">Specifies the formwork type as horizontal formwork</rdfs:comment>
+        <rdfs:label xml:lang="en">Formwork horizontal</rdfs:label>
+        <rdfs:label xml:lang="da">Forskalling vandret</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#FormworkParts -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#FormworkParts">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#Formwork"/>
+        <rdfs:comment xml:lang="en">The components of a formwork</rdfs:comment>
+        <rdfs:label xml:lang="en">Formwork parts</rdfs:label>
+        <rdfs:label xml:lang="da">Forskalling elements</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#FormworkVertical -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#FormworkVertical">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#Formwork"/>
+        <rdfs:comment xml:lang="en">Specifies the formwork type as vertical formwork</rdfs:comment>
+        <rdfs:label xml:lang="en">Formwork vertical</rdfs:label>
+        <rdfs:label xml:lang="da">Forskalling lodret</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#InsideCorner -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#InsideCorner">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#CornerPanel"/>
+        <rdfs:comment xml:lang="en">The inside corner of a formwork corner panel</rdfs:comment>
+        <rdfs:label xml:lang="da">indvendigt hjørne</rdfs:label>
+        <rdfs:label xml:lang="en">inside corner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#OutsideCorner -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#OutsideCorner">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#CornerPanel"/>
+        <rdfs:comment xml:lang="en">The outside corner of a formwork corner panel</rdfs:comment>
+        <rdfs:label xml:lang="en">outside corner</rdfs:label>
+        <rdfs:label xml:lang="da">udvendigt hjørne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#PCI -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#PCI">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
+        <rdfs:comment>Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.&quot;@en</rdfs:comment>
+        <rdfs:label xml:lang="da">permanent bygnings element</rdfs:label>
+        <rdfs:label xml:lang="en">permanent construction item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#Panel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#Panel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#PrimaryTCI"/>
+        <rdfs:comment xml:lang="en">the panel of a formwork</rdfs:comment>
+        <rdfs:label xml:lang="da">panel</rdfs:label>
+        <rdfs:label xml:lang="en">panel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#PrimaryTCI -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#PrimaryTCI">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#TCI"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
+        <rdfs:comment xml:lang="en">The main components of a TCI type that directly relate to the PCI</rdfs:comment>
+        <rdfs:label xml:lang="en">primary TCI</rdfs:label>
+        <rdfs:label xml:lang="da">primær TCI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#Producer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#Producer">
+        <rdfs:comment xml:lang="en">the producer of a product</rdfs:comment>
+        <rdfs:label xml:lang="da">producent</rdfs:label>
+        <rdfs:label xml:lang="en">producer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#ProductCatalogue -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#ProductCatalogue">
+        <rdfs:comment xml:lang="en">the product catalogue, where components of a product are specified</rdfs:comment>
+        <rdfs:label xml:lang="en">Product catalogue</rdfs:label>
+        <rdfs:label xml:lang="da">Produktkatalog</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#PushPullProp -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#PushPullProp">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
+        <rdfs:comment xml:lang="en">Components for the stabilisation of wall and column formwork systems thta align and support panel gangs</rdfs:comment>
+        <rdfs:label xml:lang="en">push-pull prop</rdfs:label>
+        <rdfs:label xml:lang="da">skubbe-trække støtte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#Scaffolding -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#Scaffolding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
+        <rdfs:comment xml:lang="en">Temporary platform used to elevate and support workers and materials during the construction</rdfs:comment>
+        <rdfs:label xml:lang="en">Scaffolding</rdfs:label>
+        <rdfs:label xml:lang="da">stilladser</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#ScaffoldingParts -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#ScaffoldingParts">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#Scaffolding"/>
+        <rdfs:comment xml:lang="en">the components of a scaffolding</rdfs:comment>
+        <rdfs:label xml:lang="en">Scaffolding parts</rdfs:label>
+        <rdfs:label xml:lang="da">stilladser komponenter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#SecondaryTCI -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#SecondaryTCI">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#TCI"/>
+        <rdfs:comment xml:lang="en">Supports the main components of a TCI-system and has no direct relation to the PCI it supports</rdfs:comment>
+        <rdfs:label xml:lang="en">Secundary TCI</rdfs:label>
+        <rdfs:label xml:lang="da">Sekundær TCI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#TCI -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#TCI">
+        <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
+        <rdfs:comment xml:lang="en">components that support the construction of building elements and are only used temporarily</rdfs:comment>
+        <rdfs:label xml:lang="en">temporary construction item</rdfs:label>
+        <rdfs:label xml:lang="da">temporær bygnings element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#TieRod -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#TieRod">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
+        <rdfs:comment xml:lang="en">used to hold the concrete wall forms firmly against the lateral pressure</rdfs:comment>
+        <rdfs:label xml:lang="en">Tie rod</rdfs:label>
+        <rdfs:label xml:lang="da">trækstang</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#TimberFilling -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#TimberFilling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#PrimaryTCI"/>
+        <rdfs:comment xml:lang="en">is used to fill the gap of a formwork sequence</rdfs:comment>
+        <rdfs:label xml:lang="en">timber filling</rdfs:label>
+        <rdfs:label xml:lang="da">træfyldning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#Waler -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#Waler">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
+        <rdfs:comment xml:lang="en">holds formwork panels together when the distance is too big for a coupler</rdfs:comment>
+        <rdfs:label xml:lang="da">waler</rdfs:label>
+        <rdfs:label xml:lang="en">waler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lbs/tci#Wingnut -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lbs/tci#Wingnut">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
+        <rdfs:comment xml:lang="en">holds together tie rods</rdfs:comment>
+        <rdfs:label xml:lang="da">vingemøtrik</rdfs:label>
+        <rdfs:label xml:lang="en">wingnut</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/lbs/tci# -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci#">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultCoupler -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultCoupler">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#Coupler"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultSecTCI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultInsideCorner330x50x20 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultInsideCorner330x50x20">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#CornerPanel"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultPrimTCI"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#InsideCorner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultOutsideCorner270x45 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultOutsideCorner270x45">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#CornerPanel"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultPrimTCI"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#OutsideCorner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultPanel330x120 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultPanel330x120">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultPrimTCI"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#Panel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultPanel330x240 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultPanel330x240">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultPrimTCI"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#Panel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultPanel330x45 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultPanel330x45">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultPrimTCI"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#Panel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultPanel330x60 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultPanel330x60">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultPrimTCI"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#Panel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultPanel330x90 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultPanel330x90">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultPrimTCI"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#Panel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultPushPullProp -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultPushPullProp">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultSecTCI"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#PushPullProp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultTieRod -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultTieRod">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultSecTCI"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#TieRod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultWaler -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultWaler">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultSecTCI"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#Waler"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lbs/tci/generic#DefaultWingnut -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lbs/tci/generic#DefaultWingnut">
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#DefaultSecTCI"/>
+        <rdf:type rdf:resource="https://w3id.org/lbs/tci#Wingnut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.niras.dk/employees/alexander-schlachter-ales/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.niras.dk/employees/alexander-schlachter-ales/">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+        <schema:name>Alexander Schlachter</schema:name>
+        <ns:fn>Alexander Schlachter</ns:fn>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

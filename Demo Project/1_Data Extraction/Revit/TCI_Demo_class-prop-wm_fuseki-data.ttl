@@ -1,7 +1,0 @@
-@prefix ont: <http://test/ontology/> .
-@prefix props: <https://w3id.org/props#> .
-@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-ont:Concrete400MmCastInPlace props:width "0.4"^^cdt:length ;
-	props:material "Concrete, Cast-in-Place, Gray"^^xsd:string .

@@ -1,0 +1,1274 @@
+[ {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocommons/voaf#Vocabulary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://schema.org/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://schema.org/domainIncludes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/rangeIncludes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/lindt/custom_datatypes#cdt:area",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://w3id.org/lindt/custom_datatypes#cdt:length",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://w3id.org/lindt/custom_datatypes#cdt:mass",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/vcard/ns#Individual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2006/vcard/ns#fn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/bot#Element",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/vocommons/voaf#Vocabulary" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://www.niras.dk/employees/alexander-schlachter-ales/"
+  }, {
+    "@value" : "Alexander Schlachter"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The Ontology for Temporary Construction Items (TCI) is..."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-04-21T19:00:00"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/1.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-04-21T19:00:00"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for Temporary Construction Items (TCI)"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "tci"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://w3id.org/lbs/tci#"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/lbs/tci-0.0.1"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.0.1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#ConfirmedProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specified a confirmed product that comes from a producer and is retrieved e.g. from a product catalogue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "bekræftet produkt"
+  }, {
+    "@language" : "en",
+    "@value" : "confirmed product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#TCI"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/lbs/tci#DefaultProduct"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#CornerPanel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A formwork corner panel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "corner panel"
+  }, {
+    "@language" : "da",
+    "@value" : "hjørnepanel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkParts"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#PrimaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#Coupler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A formwork coupler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "coupler"
+  }, {
+    "@language" : "da",
+    "@value" : "kobling"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkParts"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#SecondaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#DefaultFormwork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the default set of formwork that is used when no tci:ConfirmedProduct is available"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Default formwork"
+  }, {
+    "@language" : "da",
+    "@value" : "standardforskalling"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#DefaultProduct"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#DefaultPrimTCI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the primary elements of a default set of formwork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Default primary TCI"
+  }, {
+    "@language" : "da",
+    "@value" : "standard primær TCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#DefaultFormwork"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#PrimaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#DefaultProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the default set of TCIs that is used when no tci:ConfirmedProduct is available"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "default product"
+  }, {
+    "@language" : "da",
+    "@value" : "standard product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#TCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#DefaultSecTCI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the secondary elements of a default set of formwork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Default secondary TCI"
+  }, {
+    "@language" : "da",
+    "@value" : "standard sekundær TCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#DefaultFormwork"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#SecondaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#Formwork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The elements that are used to creating a temporary mould into which concrete is poured and formed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Formwork"
+  }, {
+    "@language" : "da",
+    "@value" : "Forskalling"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#TCI"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/lbs/tci#Scaffolding"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#FormworkHorizontal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the formwork type as horizontal formwork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Formwork horizontal"
+  }, {
+    "@language" : "da",
+    "@value" : "Forskalling vandret"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#Formwork"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkVertical"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#FormworkParts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The components of a formwork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Formwork parts"
+  }, {
+    "@language" : "da",
+    "@value" : "Forskalling elements"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#Formwork"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#FormworkVertical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the formwork type as vertical formwork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Formwork vertical"
+  }, {
+    "@language" : "da",
+    "@value" : "Forskalling lodret"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#Formwork"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#InsideCorner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The inside corner of a formwork corner panel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "indvendigt hjørne"
+  }, {
+    "@language" : "en",
+    "@value" : "inside corner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#CornerPanel"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#OutsideCorner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The outside corner of a formwork corner panel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "outside corner"
+  }, {
+    "@language" : "da",
+    "@value" : "udvendigt hjørne"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#CornerPanel"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#PCI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.\"@en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "permanent bygnings element"
+  }, {
+    "@language" : "en",
+    "@value" : "permanent construction item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"
+  }, {
+    "@id" : "https://w3id.org/bot#Element"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#Panel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the panel of a formwork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "panel"
+  }, {
+    "@language" : "en",
+    "@value" : "panel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkParts"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#PrimaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#PrimaryTCI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The main components of a TCI type that directly relate to the PCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "primary TCI"
+  }, {
+    "@language" : "da",
+    "@value" : "primær TCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#TCI"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/lbs/tci#SecondaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#Producer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the producer of a product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "producent"
+  }, {
+    "@language" : "en",
+    "@value" : "producer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#ProductCatalogue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the product catalogue, where components of a product are specified"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Product catalogue"
+  }, {
+    "@language" : "da",
+    "@value" : "Produktkatalog"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#PushPullProp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Components for the stabilisation of wall and column formwork systems thta align and support panel gangs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "push-pull prop"
+  }, {
+    "@language" : "da",
+    "@value" : "skubbe-trække støtte"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkParts"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#SecondaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#Scaffolding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Temporary platform used to elevate and support workers and materials during the construction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Scaffolding"
+  }, {
+    "@language" : "da",
+    "@value" : "stilladser"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#SecondaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#ScaffoldingParts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the components of a scaffolding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Scaffolding parts"
+  }, {
+    "@language" : "da",
+    "@value" : "stilladser komponenter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#Scaffolding"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#SecondaryTCI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Supports the main components of a TCI-system and has no direct relation to the PCI it supports"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Secundary TCI"
+  }, {
+    "@language" : "da",
+    "@value" : "Sekundær TCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#TCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#TCI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "components that support the construction of building elements and are only used temporarily"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "temporary construction item"
+  }, {
+    "@language" : "da",
+    "@value" : "temporær bygnings element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"
+  }, {
+    "@id" : "https://w3id.org/bot#Element"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#TieRod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "used to hold the concrete wall forms firmly against the lateral pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tie rod"
+  }, {
+    "@language" : "da",
+    "@value" : "trækstang"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkParts"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#SecondaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#TimberFilling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "is used to fill the gap of a formwork sequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "timber filling"
+  }, {
+    "@language" : "da",
+    "@value" : "træfyldning"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkParts"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#PrimaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#Waler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "holds formwork panels together when the distance is too big for a coupler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "waler"
+  }, {
+    "@language" : "en",
+    "@value" : "waler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkParts"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#SecondaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#Wingnut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "holds together tie rods"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "vingemøtrik"
+  }, {
+    "@language" : "en",
+    "@value" : "wingnut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkParts"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#SecondaryTCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#adjacentWall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Used to specify adjecency between two walls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "adjacent wall"
+  }, {
+    "@language" : "da",
+    "@value" : "tilstødende væg"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#connectionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The connection type of two element, e.g. Walls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "connection type"
+  }, {
+    "@language" : "da",
+    "@value" : "forbindelsestype"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#consistsOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#TCI"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkParts"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#ScaffoldingParts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "da",
+    "@value" : "Bruges til at relatere en TCI-type til dens komponenter"
+  }, {
+    "@language" : "en",
+    "@value" : "Used to relate a TCI-Type to its components"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "består af"
+  }, {
+    "@language" : "en",
+    "@value" : "consists of"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#cornerAngle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the angle of a corner connection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "corner angle"
+  }, {
+    "@language" : "da",
+    "@value" : "hjørnevinkel"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#cornerType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#CornerPanel"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#InsideCorner"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#OutsideCorner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the corner type of a corner element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "corner type"
+  }, {
+    "@language" : "da",
+    "@value" : "hjørnetype"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#countCoupler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that counts the number of couplers, a PCI will equip during its construction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "count coupler"
+  }, {
+    "@language" : "da",
+    "@value" : "tælle kobling"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#countTCIs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#countInsideCorner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that counts the number of inside corners, a PCI will equip during its construction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "count inside corner"
+  }, {
+    "@language" : "da",
+    "@value" : "tælle indvendigt hjørne"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#countTCIs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#countOutsideCorner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that counts the number of outside corners, a PCI will equip during its construction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "count outside corner"
+  }, {
+    "@language" : "da",
+    "@value" : "tælle udvendigt hjørne"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#countTCIs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#countPanel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that counts the number of panels, a PCI will equip during its construction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "count panel"
+  }, {
+    "@language" : "da",
+    "@value" : "tælle panel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#countTCIs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#countPushPullProp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that counts the number of push-pull prop, a PCI will equip during its construction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "counts push-pull prop"
+  }, {
+    "@language" : "da",
+    "@value" : "tælle skubbe-trække støtte"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#countTCIs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#countTCIs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that counts the number of TCIs, a PCI will equip during its construction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "count TCIs"
+  }, {
+    "@language" : "da",
+    "@value" : "tælle TCIs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#countTieRod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that counts the number of tie rods, a PCI will equip during its construction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "count tie rod"
+  }, {
+    "@language" : "da",
+    "@value" : "tælle trækstang"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#countTCIs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#countTimberFilling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that counts the number of timber filling, a PCI will equip during its construction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "count timber filling"
+  }, {
+    "@language" : "da",
+    "@value" : "tælle træfyldning"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#countTCIs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#countWaler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that counts the number of walers, a PCI will equip during its construction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "count waler"
+  }, {
+    "@language" : "da",
+    "@value" : "tælle waler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#countTCIs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#countWingnut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that counts the number of wingnuts, a PCI will equip during its construction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "count wingnut"
+  }, {
+    "@language" : "da",
+    "@value" : "tælle vingemøtrik "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#countTCIs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#countedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#TCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies property that counts the number of individuals of a specific TCI-class "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "counted by"
+  }, {
+    "@language" : "da",
+    "@value" : "optalt af"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#iscounting"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#hasFormworkParts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#Formwork"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkParts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "da",
+    "@value" : "Bruges til at relatere en Forskallings-type til dens komponenter"
+  }, {
+    "@language" : "en",
+    "@value" : "Used to relate a formwork-type to its components"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har forskallingskompoenter"
+  }, {
+    "@language" : "en",
+    "@value" : "has formwork parts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#consistsOf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#hasProducer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#ConfirmedProduct"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#Producer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the producer of a product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har producent"
+  }, {
+    "@language" : "en",
+    "@value" : "has producer"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#hasProduct"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#hasProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#Producer"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#ConfirmedProduct"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the product of a producer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har produkt"
+  }, {
+    "@language" : "en",
+    "@value" : "has product"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#hasProductCatalogue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#ConfirmedProduct"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#Producer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the product catalogue of a product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har produktkatalog"
+  }, {
+    "@language" : "en",
+    "@value" : "has product catalogue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#hasScaffoldingParts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#Scaffolding"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#ScaffoldingParts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "da",
+    "@value" : "Bruges til at relatere en stilladser-type til dens komponenter"
+  }, {
+    "@language" : "en",
+    "@value" : "Used to relate a scaffolding-type to its components"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har stilladserkompoenter"
+  }, {
+    "@language" : "en",
+    "@value" : "has scaffolding parts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/lbs/tci#consistsOf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#hasTCIsIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkVertical"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the TCIs on the inner side of the PCI they support"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har TCIs indenfor"
+  }, {
+    "@language" : "en",
+    "@value" : "has TCIs inside"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#hasTCIsOut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#FormworkVertical"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the TCIs on the outer side of the PCI they support"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har TCIs udenfor"
+  }, {
+    "@language" : "en",
+    "@value" : "has TCIs outside"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#hasTimberFillinglength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the length of the timber filling that is used to close a formwork panel sequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har træfyldningslængde"
+  }, {
+    "@language" : "en",
+    "@value" : "has timber filling length"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#hassecTCIs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#SecondaryTCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies all secondary TCIs of a PCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "har sekundære TCIs"
+  }, {
+    "@language" : "en",
+    "@value" : "has secondary TCIs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#isSupportedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#DefaultPrimTCI"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#PrimaryTCI"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#DefaultSecTCI"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#SecondaryTCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Used to relate a primary tci to secondary elements that support it"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is supported by"
+  }, {
+    "@language" : "da",
+    "@value" : "understøttes af"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#iscounting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#TCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the a specific TCI-class the property is counting"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is counting"
+  }, {
+    "@language" : "da",
+    "@value" : "tæller"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#pciType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"
+  }, {
+    "@id" : "https://w3id.org/bot#Element"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#PCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the type of a PCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "permanent bygnings element type"
+  }, {
+    "@language" : "en",
+    "@value" : "permanent construction item type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#supportsPCIType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#TCI"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"
+  }, {
+    "@id" : "https://w3id.org/bot#Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Used to relate a TCI to the PCI it is supporting"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "supports pci type"
+  }, {
+    "@language" : "da",
+    "@value" : "understøtter pci type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#supportsTCI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#DefaultSecTCI"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#SecondaryTCI"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#DefaultPrimTCI"
+  }, {
+    "@id" : "https://w3id.org/lbs/tci#PrimaryTCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Used to relate a PCI to its supported TCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "supports tci"
+  }, {
+    "@language" : "da",
+    "@value" : "understøtter tci"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci#tciType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://schema.org/domainIncludes" : [ {
+    "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"
+  }, {
+    "@id" : "https://w3id.org/bot#Element"
+  } ],
+  "http://schema.org/rangeIncludes" : [ {
+    "@id" : "https://w3id.org/lbs/tci#TCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the type of a TCI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "da",
+    "@value" : "temporary bygnings element type"
+  }, {
+    "@language" : "en",
+    "@value" : "temporary construction item type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultCoupler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#Coupler", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultSecTCI" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultInsideCorner330x50x20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#CornerPanel", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultPrimTCI", "https://w3id.org/lbs/tci#InsideCorner" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultOutsideCorner270x45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#CornerPanel", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultPrimTCI", "https://w3id.org/lbs/tci#OutsideCorner" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultPanel330x120",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultPrimTCI", "https://w3id.org/lbs/tci#Panel" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultPanel330x240",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultPrimTCI", "https://w3id.org/lbs/tci#Panel" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultPanel330x45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultPrimTCI", "https://w3id.org/lbs/tci#Panel" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultPanel330x60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultPrimTCI", "https://w3id.org/lbs/tci#Panel" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultPanel330x90",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultPrimTCI", "https://w3id.org/lbs/tci#Panel" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultPushPullProp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultSecTCI", "https://w3id.org/lbs/tci#PushPullProp" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultTieRod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultSecTCI", "https://w3id.org/lbs/tci#TieRod" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultWaler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultSecTCI", "https://w3id.org/lbs/tci#Waler" ]
+}, {
+  "@id" : "https://w3id.org/lbs/tci/generic#DefaultWingnut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/lbs/tci#DefaultFormwork", "https://w3id.org/lbs/tci#DefaultSecTCI", "https://w3id.org/lbs/tci#Wingnut" ]
+}, {
+  "@id" : "https://www.niras.dk/employees/alexander-schlachter-ales/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://schema.org/Person", "http://www.w3.org/2006/vcard/ns#Individual" ],
+  "http://schema.org/name" : [ {
+    "@value" : "Alexander Schlachter"
+  } ],
+  "http://www.w3.org/2006/vcard/ns#fn" : [ {
+    "@value" : "Alexander Schlachter"
+  } ]
+} ]

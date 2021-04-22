@@ -1,0 +1,750 @@
+@prefix : <https://w3id.org/lbs/tci#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/lbs/tci#> .
+
+<https://w3id.org/lbs/tci#> rdf:type owl:Ontology ;
+                             owl:versionIRI <https://w3id.org/lbs/tci-0.0.1> ;
+                             <http://purl.org/dc/terms/creator> <https://www.niras.dk/employees/alexander-schlachter-ales/> ,
+                                                                "Alexander Schlachter" ;
+                             <http://purl.org/dc/terms/description> "The Ontology for Temporary Construction Items (TCI) is..."@en ;
+                             <http://purl.org/dc/terms/issued> "2021-04-21T19:00:00"^^xsd:dateTime ;
+                             <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/1.0/> ;
+                             <http://purl.org/dc/terms/modified> "2021-04-21T19:00:00"^^xsd:dateTime ;
+                             <http://purl.org/dc/terms/title> "Ontology for Temporary Construction Items (TCI)"@en ;
+                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "tci" ;
+                             <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/lbs/tci#> ;
+                             owl:versionInfo "0.0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/vcard/ns#fn
+<http://www.w3.org/2006/vcard/ns#fn> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://w3id.org/lindt/custom_datatypes#cdt:area
+<http://w3id.org/lindt/custom_datatypes#cdt:area> rdf:type rdfs:Datatype .
+
+
+###  http://w3id.org/lindt/custom_datatypes#cdt:length
+<http://w3id.org/lindt/custom_datatypes#cdt:length> rdf:type rdfs:Datatype .
+
+
+###  http://w3id.org/lindt/custom_datatypes#cdt:mass
+<http://w3id.org/lindt/custom_datatypes#cdt:mass> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/lbs/tci#adjacentWall
+:adjacentWall rdf:type owl:ObjectProperty ;
+              <http://schema.org/domainIncludes> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall> ;
+              <http://schema.org/rangeIncludes> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall> ;
+              rdfs:comment "Used to specify adjecency between two walls"@en ;
+              rdfs:label "adjacent wall"@en ,
+                         "tilstødende væg"@da .
+
+
+###  https://w3id.org/lbs/tci#consistsOf
+:consistsOf rdf:type owl:ObjectProperty ;
+            <http://schema.org/domainIncludes> :TCI ;
+            <http://schema.org/rangeIncludes> :FormworkParts ,
+                                              :ScaffoldingParts ;
+            rdfs:comment "Bruges til at relatere en TCI-type til dens komponenter"@da ,
+                         "Used to relate a TCI-Type to its components"@en ;
+            rdfs:label "består af"@da ,
+                       "consists of"@en .
+
+
+###  https://w3id.org/lbs/tci#cornerType
+:cornerType rdf:type owl:ObjectProperty ;
+            <http://schema.org/domainIncludes> :CornerPanel ;
+            <http://schema.org/rangeIncludes> :InsideCorner ,
+                                              :OutsideCorner ;
+            rdfs:comment "Defines the corner type of a corner element"@en ;
+            rdfs:label "corner type"@en ,
+                       "hjørnetype"@da .
+
+
+###  https://w3id.org/lbs/tci#countedBy
+:countedBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :iscounting ;
+           <http://schema.org/domainIncludes> :TCI ;
+           rdfs:comment "Specifies property that counts the number of individuals of a specific TCI-class "@en ;
+           rdfs:label "counted by"@en ,
+                      "optalt af"@da .
+
+
+###  https://w3id.org/lbs/tci#hasFormworkParts
+:hasFormworkParts rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :consistsOf ;
+                  <http://schema.org/domainIncludes> :Formwork ;
+                  <http://schema.org/rangeIncludes> :FormworkParts ;
+                  rdfs:comment "Bruges til at relatere en Forskallings-type til dens komponenter"@da ,
+                               "Used to relate a formwork-type to its components"@en ;
+                  rdfs:label "har forskallingskompoenter"@da ,
+                             "has formwork parts"@en .
+
+
+###  https://w3id.org/lbs/tci#hasProducer
+:hasProducer rdf:type owl:ObjectProperty ;
+             owl:inverseOf :hasProduct ;
+             <http://schema.org/domainIncludes> :ConfirmedProduct ;
+             <http://schema.org/rangeIncludes> :Producer ;
+             rdfs:comment "Specifies the producer of a product"@en ;
+             rdfs:label "har producent"@da ,
+                        "has producer"@en .
+
+
+###  https://w3id.org/lbs/tci#hasProduct
+:hasProduct rdf:type owl:ObjectProperty ;
+            <http://schema.org/domainIncludes> :Producer ;
+            <http://schema.org/rangeIncludes> :ConfirmedProduct ;
+            rdfs:comment "Specifies the product of a producer"@en ;
+            rdfs:label "har produkt"@da ,
+                       "has product"@en .
+
+
+###  https://w3id.org/lbs/tci#hasProductCatalogue
+:hasProductCatalogue rdf:type owl:ObjectProperty ;
+                     <http://schema.org/domainIncludes> :ConfirmedProduct ;
+                     <http://schema.org/rangeIncludes> :Producer ;
+                     rdfs:comment "Specifies the product catalogue of a product"@en ;
+                     rdfs:label "har produktkatalog"@da ,
+                                "has product catalogue"@en .
+
+
+###  https://w3id.org/lbs/tci#hasScaffoldingParts
+:hasScaffoldingParts rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :consistsOf ;
+                     <http://schema.org/domainIncludes> :Scaffolding ;
+                     <http://schema.org/rangeIncludes> :ScaffoldingParts ;
+                     rdfs:comment "Bruges til at relatere en stilladser-type til dens komponenter"@da ,
+                                  "Used to relate a scaffolding-type to its components"@en ;
+                     rdfs:label "har stilladserkompoenter"@da ,
+                                "has scaffolding parts"@en .
+
+
+###  https://w3id.org/lbs/tci#hasTCIsIn
+:hasTCIsIn rdf:type owl:ObjectProperty ;
+           <http://schema.org/rangeIncludes> :FormworkVertical ;
+           rdfs:comment "Specifies the TCIs on the inner side of the PCI they support"@en ;
+           rdfs:label "har TCIs indenfor"@da ,
+                      "has TCIs inside"@en .
+
+
+###  https://w3id.org/lbs/tci#hasTCIsOut
+:hasTCIsOut rdf:type owl:ObjectProperty ;
+            <http://schema.org/rangeIncludes> :FormworkVertical ;
+            rdfs:comment "Specifies the TCIs on the outer side of the PCI they support"@en ;
+            rdfs:label "har TCIs udenfor"@da ,
+                       "has TCIs outside"@en .
+
+
+###  https://w3id.org/lbs/tci#hassecTCIs
+:hassecTCIs rdf:type owl:ObjectProperty ;
+            <http://schema.org/rangeIncludes> :SecondaryTCI ;
+            rdfs:comment "Specifies all secondary TCIs of a PCI"@en ;
+            rdfs:label "har sekundære TCIs"@da ,
+                       "has secondary TCIs"@en .
+
+
+###  https://w3id.org/lbs/tci#isSupportedBy
+:isSupportedBy rdf:type owl:ObjectProperty ;
+               <http://schema.org/domainIncludes> :DefaultPrimTCI ,
+                                                  :PrimaryTCI ;
+               <http://schema.org/rangeIncludes> :DefaultSecTCI ,
+                                                 :SecondaryTCI ;
+               rdfs:comment "Used to relate a primary tci to secondary elements that support it"@en ;
+               rdfs:label "is supported by"@en ,
+                          "understøttes af"@da .
+
+
+###  https://w3id.org/lbs/tci#iscounting
+:iscounting rdf:type owl:ObjectProperty ;
+            <http://schema.org/rangeIncludes> :TCI ;
+            rdfs:comment "Specifies the a specific TCI-class the property is counting"@en ;
+            rdfs:label "is counting"@en ,
+                       "tæller"@da .
+
+
+###  https://w3id.org/lbs/tci#pciType
+:pciType rdf:type owl:ObjectProperty ;
+         <http://schema.org/domainIncludes> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> ,
+                                            <https://w3id.org/bot#Element> ;
+         <http://schema.org/rangeIncludes> :PCI ;
+         rdfs:comment "Specifies the type of a PCI"@en ;
+         rdfs:label "permanent bygnings element type"@da ,
+                    "permanent construction item type"@en .
+
+
+###  https://w3id.org/lbs/tci#supportsPCIType
+:supportsPCIType rdf:type owl:ObjectProperty ;
+                 <http://schema.org/domainIncludes> :TCI ;
+                 <http://schema.org/rangeIncludes> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> ,
+                                                   <https://w3id.org/bot#Element> ;
+                 rdfs:comment "Used to relate a TCI to the PCI it is supporting"@en ;
+                 rdfs:label "supports pci type"@en ,
+                            "understøtter pci type"@da .
+
+
+###  https://w3id.org/lbs/tci#supportsTCI
+:supportsTCI rdf:type owl:ObjectProperty ;
+             <http://schema.org/domainIncludes> :DefaultSecTCI ,
+                                                :SecondaryTCI ;
+             <http://schema.org/rangeIncludes> :DefaultPrimTCI ,
+                                               :PrimaryTCI ;
+             rdfs:comment "Used to relate a PCI to its supported TCI"@en ;
+             rdfs:label "supports tci"@en ,
+                        "understøtter tci"@da .
+
+
+###  https://w3id.org/lbs/tci#tciType
+:tciType rdf:type owl:ObjectProperty ;
+         <http://schema.org/domainIncludes> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> ,
+                                            <https://w3id.org/bot#Element> ;
+         <http://schema.org/rangeIncludes> :TCI ;
+         rdfs:comment "Specifies the type of a TCI"@en ;
+         rdfs:label "temporary bygnings element type"@da ,
+                    "temporary construction item type"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/lbs/tci#connectionType
+:connectionType rdf:type owl:DatatypeProperty ;
+                <http://schema.org/domainIncludes> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall> ;
+                rdfs:comment "The connection type of two element, e.g. Walls"@en ;
+                rdfs:label "connection type"@en ,
+                           "forbindelsestype"@da .
+
+
+###  https://w3id.org/lbs/tci#cornerAngle
+:cornerAngle rdf:type owl:DatatypeProperty ;
+             <http://schema.org/domainIncludes> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcWall> ;
+             <http://schema.org/rangeIncludes> xsd:decimal ;
+             rdfs:comment "Specifies the angle of a corner connection"@en ;
+             rdfs:label "corner angle"@en ,
+                        "hjørnevinkel"@da .
+
+
+###  https://w3id.org/lbs/tci#countCoupler
+:countCoupler rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :countTCIs ;
+              <http://schema.org/rangeIncludes> xsd:nonNegativeInteger ;
+              rdfs:comment "property that counts the number of couplers, a PCI will equip during its construction"@en ;
+              rdfs:label "count coupler"@en ,
+                         "tælle kobling"@da .
+
+
+###  https://w3id.org/lbs/tci#countInsideCorner
+:countInsideCorner rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :countTCIs ;
+                   <http://schema.org/rangeIncludes> xsd:nonNegativeInteger ;
+                   rdfs:comment "property that counts the number of inside corners, a PCI will equip during its construction"@en ;
+                   rdfs:label "count inside corner"@en ,
+                              "tælle indvendigt hjørne"@da .
+
+
+###  https://w3id.org/lbs/tci#countOutsideCorner
+:countOutsideCorner rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :countTCIs ;
+                    <http://schema.org/rangeIncludes> xsd:nonNegativeInteger ;
+                    rdfs:comment "property that counts the number of outside corners, a PCI will equip during its construction"@en ;
+                    rdfs:label "count outside corner"@en ,
+                               "tælle udvendigt hjørne"@da .
+
+
+###  https://w3id.org/lbs/tci#countPanel
+:countPanel rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :countTCIs ;
+            <http://schema.org/rangeIncludes> xsd:nonNegativeInteger ;
+            rdfs:comment "property that counts the number of panels, a PCI will equip during its construction"@en ;
+            rdfs:label "count panel"@en ,
+                       "tælle panel"@da .
+
+
+###  https://w3id.org/lbs/tci#countPushPullProp
+:countPushPullProp rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :countTCIs ;
+                   <http://schema.org/rangeIncludes> xsd:nonNegativeInteger ;
+                   rdfs:comment "property that counts the number of push-pull prop, a PCI will equip during its construction"@en ;
+                   rdfs:label "counts push-pull prop"@en ,
+                              "tælle skubbe-trække støtte"@da .
+
+
+###  https://w3id.org/lbs/tci#countTCIs
+:countTCIs rdf:type owl:DatatypeProperty ;
+           rdfs:comment "property that counts the number of TCIs, a PCI will equip during its construction"@en ;
+           rdfs:label "count TCIs"@en ,
+                      "tælle TCIs"@da .
+
+
+###  https://w3id.org/lbs/tci#countTieRod
+:countTieRod rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :countTCIs ;
+             <http://schema.org/rangeIncludes> xsd:nonNegativeInteger ;
+             rdfs:comment "property that counts the number of tie rods, a PCI will equip during its construction"@en ;
+             rdfs:label "count tie rod"@en ,
+                        "tælle trækstang"@da .
+
+
+###  https://w3id.org/lbs/tci#countTimberFilling
+:countTimberFilling rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :countTCIs ;
+                    <http://schema.org/rangeIncludes> xsd:nonNegativeInteger ;
+                    rdfs:comment "property that counts the number of timber filling, a PCI will equip during its construction"@en ;
+                    rdfs:label "count timber filling"@en ,
+                               "tælle træfyldning"@da .
+
+
+###  https://w3id.org/lbs/tci#countWaler
+:countWaler rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :countTCIs ;
+            <http://schema.org/rangeIncludes> xsd:nonNegativeInteger ;
+            rdfs:comment "property that counts the number of walers, a PCI will equip during its construction"@en ;
+            rdfs:label "count waler"@en ,
+                       "tælle waler"@da .
+
+
+###  https://w3id.org/lbs/tci#countWingnut
+:countWingnut rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :countTCIs ;
+              <http://schema.org/rangeIncludes> xsd:nonNegativeInteger ;
+              rdfs:comment "property that counts the number of wingnuts, a PCI will equip during its construction"@en ;
+              rdfs:label "count wingnut"@en ,
+                         "tælle vingemøtrik "@da .
+
+
+###  https://w3id.org/lbs/tci#hasTimberFillinglength
+:hasTimberFillinglength rdf:type owl:DatatypeProperty ;
+                        <http://schema.org/rangeIncludes> xsd:decimal ;
+                        rdfs:comment "Specifies the length of the timber filling that is used to close a formwork panel sequence"@en ;
+                        rdfs:label "har træfyldningslængde"@da ,
+                                   "has timber filling length"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
+
+
+###  http://schema.org/Person
+<http://schema.org/Person> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/vcard/ns#Individual
+<http://www.w3.org/2006/vcard/ns#Individual> rdf:type owl:Class .
+
+
+###  https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct
+<https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> rdf:type owl:Class .
+
+
+###  https://w3id.org/bot#Element
+<https://w3id.org/bot#Element> rdf:type owl:Class .
+
+
+###  https://w3id.org/lbs/tci#ConfirmedProduct
+:ConfirmedProduct rdf:type owl:Class ;
+                  rdfs:subClassOf :TCI ;
+                  owl:disjointWith :DefaultProduct ;
+                  rdfs:comment "Specified a confirmed product that comes from a producer and is retrieved e.g. from a product catalogue"@en ;
+                  rdfs:label "bekræftet produkt"@da ,
+                             "confirmed product"@en .
+
+
+###  https://w3id.org/lbs/tci#CornerPanel
+:CornerPanel rdf:type owl:Class ;
+             rdfs:subClassOf :FormworkParts ,
+                             :PrimaryTCI ;
+             rdfs:comment "A formwork corner panel"@en ;
+             rdfs:label "corner panel"@en ,
+                        "hjørnepanel"@da .
+
+
+###  https://w3id.org/lbs/tci#Coupler
+:Coupler rdf:type owl:Class ;
+         rdfs:subClassOf :FormworkParts ,
+                         :SecondaryTCI ;
+         rdfs:comment "A formwork coupler"@en ;
+         rdfs:label "coupler"@en ,
+                    "kobling"@da .
+
+
+###  https://w3id.org/lbs/tci#DefaultFormwork
+:DefaultFormwork rdf:type owl:Class ;
+                 rdfs:subClassOf :DefaultProduct ;
+                 rdfs:comment "the default set of formwork that is used when no tci:ConfirmedProduct is available"@en ;
+                 rdfs:label "Default formwork"@en ,
+                            "standardforskalling"@da .
+
+
+###  https://w3id.org/lbs/tci#DefaultPrimTCI
+:DefaultPrimTCI rdf:type owl:Class ;
+                rdfs:subClassOf :DefaultFormwork ,
+                                :PrimaryTCI ;
+                rdfs:comment "Specifies the primary elements of a default set of formwork"@en ;
+                rdfs:label "Default primary TCI"@en ,
+                           "standard primær TCI"@da .
+
+
+###  https://w3id.org/lbs/tci#DefaultProduct
+:DefaultProduct rdf:type owl:Class ;
+                rdfs:subClassOf :TCI ;
+                rdfs:comment "the default set of TCIs that is used when no tci:ConfirmedProduct is available"@en ;
+                rdfs:label "default product"@en ,
+                           "standard product"@da .
+
+
+###  https://w3id.org/lbs/tci#DefaultSecTCI
+:DefaultSecTCI rdf:type owl:Class ;
+               rdfs:subClassOf :DefaultFormwork ,
+                               :SecondaryTCI ;
+               rdfs:comment "Specifies the secondary elements of a default set of formwork"@en ;
+               rdfs:label "Default secondary TCI"@en ,
+                          "standard sekundær TCI"@da .
+
+
+###  https://w3id.org/lbs/tci#Formwork
+:Formwork rdf:type owl:Class ;
+          rdfs:subClassOf :TCI ;
+          owl:disjointWith :Scaffolding ;
+          rdfs:comment "The elements that are used to creating a temporary mould into which concrete is poured and formed"@en ;
+          rdfs:label "Formwork"@en ,
+                     "Forskalling"@da .
+
+
+###  https://w3id.org/lbs/tci#FormworkHorizontal
+:FormworkHorizontal rdf:type owl:Class ;
+                    rdfs:subClassOf :Formwork ;
+                    owl:disjointWith :FormworkVertical ;
+                    rdfs:comment "Specifies the formwork type as horizontal formwork"@en ;
+                    rdfs:label "Formwork horizontal"@en ,
+                               "Forskalling vandret"@da .
+
+
+###  https://w3id.org/lbs/tci#FormworkParts
+:FormworkParts rdf:type owl:Class ;
+               rdfs:subClassOf :Formwork ;
+               rdfs:comment "The components of a formwork"@en ;
+               rdfs:label "Formwork parts"@en ,
+                          "Forskalling elements"@da .
+
+
+###  https://w3id.org/lbs/tci#FormworkVertical
+:FormworkVertical rdf:type owl:Class ;
+                  rdfs:subClassOf :Formwork ;
+                  rdfs:comment "Specifies the formwork type as vertical formwork"@en ;
+                  rdfs:label "Formwork vertical"@en ,
+                             "Forskalling lodret"@da .
+
+
+###  https://w3id.org/lbs/tci#InsideCorner
+:InsideCorner rdf:type owl:Class ;
+              rdfs:subClassOf :CornerPanel ;
+              rdfs:comment "The inside corner of a formwork corner panel"@en ;
+              rdfs:label "indvendigt hjørne"@da ,
+                         "inside corner"@en .
+
+
+###  https://w3id.org/lbs/tci#OutsideCorner
+:OutsideCorner rdf:type owl:Class ;
+               rdfs:subClassOf :CornerPanel ;
+               rdfs:comment "The outside corner of a formwork corner panel"@en ;
+               rdfs:label "outside corner"@en ,
+                          "udvendigt hjørne"@da .
+
+
+###  https://w3id.org/lbs/tci#PCI
+:PCI rdf:type owl:Class ;
+     rdfs:subClassOf <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> ,
+                     <https://w3id.org/bot#Element> ;
+     rdfs:comment "Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.\"@en" ;
+     rdfs:label "permanent bygnings element"@da ,
+                "permanent construction item"@en .
+
+
+###  https://w3id.org/lbs/tci#Panel
+:Panel rdf:type owl:Class ;
+       rdfs:subClassOf :FormworkParts ,
+                       :PrimaryTCI ;
+       rdfs:comment "the panel of a formwork"@en ;
+       rdfs:label "panel"@da ,
+                  "panel"@en .
+
+
+###  https://w3id.org/lbs/tci#PrimaryTCI
+:PrimaryTCI rdf:type owl:Class ;
+            rdfs:subClassOf :TCI ;
+            owl:disjointWith :SecondaryTCI ;
+            rdfs:comment "The main components of a TCI type that directly relate to the PCI"@en ;
+            rdfs:label "primary TCI"@en ,
+                       "primær TCI"@da .
+
+
+###  https://w3id.org/lbs/tci#Producer
+:Producer rdf:type owl:Class ;
+          rdfs:comment "the producer of a product"@en ;
+          rdfs:label "producent"@da ,
+                     "producer"@en .
+
+
+###  https://w3id.org/lbs/tci#ProductCatalogue
+:ProductCatalogue rdf:type owl:Class ;
+                  rdfs:comment "the product catalogue, where components of a product are specified"@en ;
+                  rdfs:label "Product catalogue"@en ,
+                             "Produktkatalog"@da .
+
+
+###  https://w3id.org/lbs/tci#PushPullProp
+:PushPullProp rdf:type owl:Class ;
+              rdfs:subClassOf :FormworkParts ,
+                              :SecondaryTCI ;
+              rdfs:comment "Components for the stabilisation of wall and column formwork systems thta align and support panel gangs"@en ;
+              rdfs:label "push-pull prop"@en ,
+                         "skubbe-trække støtte"@da .
+
+
+###  https://w3id.org/lbs/tci#Scaffolding
+:Scaffolding rdf:type owl:Class ;
+             rdfs:subClassOf :SecondaryTCI ;
+             rdfs:comment "Temporary platform used to elevate and support workers and materials during the construction"@en ;
+             rdfs:label "Scaffolding"@en ,
+                        "stilladser"@da .
+
+
+###  https://w3id.org/lbs/tci#ScaffoldingParts
+:ScaffoldingParts rdf:type owl:Class ;
+                  rdfs:subClassOf :Scaffolding ;
+                  rdfs:comment "the components of a scaffolding"@en ;
+                  rdfs:label "Scaffolding parts"@en ,
+                             "stilladser komponenter"@da .
+
+
+###  https://w3id.org/lbs/tci#SecondaryTCI
+:SecondaryTCI rdf:type owl:Class ;
+              rdfs:subClassOf :TCI ;
+              rdfs:comment "Supports the main components of a TCI-system and has no direct relation to the PCI it supports"@en ;
+              rdfs:label "Secundary TCI"@en ,
+                         "Sekundær TCI"@da .
+
+
+###  https://w3id.org/lbs/tci#TCI
+:TCI rdf:type owl:Class ;
+     rdfs:subClassOf <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> ,
+                     <https://w3id.org/bot#Element> ;
+     rdfs:comment "components that support the construction of building elements and are only used temporarily"@en ;
+     rdfs:label "temporary construction item"@en ,
+                "temporær bygnings element"@da .
+
+
+###  https://w3id.org/lbs/tci#TieRod
+:TieRod rdf:type owl:Class ;
+        rdfs:subClassOf :FormworkParts ,
+                        :SecondaryTCI ;
+        rdfs:comment "used to hold the concrete wall forms firmly against the lateral pressure"@en ;
+        rdfs:label "Tie rod"@en ,
+                   "trækstang"@da .
+
+
+###  https://w3id.org/lbs/tci#TimberFilling
+:TimberFilling rdf:type owl:Class ;
+               rdfs:subClassOf :FormworkParts ,
+                               :PrimaryTCI ;
+               rdfs:comment "is used to fill the gap of a formwork sequence"@en ;
+               rdfs:label "timber filling"@en ,
+                          "træfyldning"@da .
+
+
+###  https://w3id.org/lbs/tci#Waler
+:Waler rdf:type owl:Class ;
+       rdfs:subClassOf :FormworkParts ,
+                       :SecondaryTCI ;
+       rdfs:comment "holds formwork panels together when the distance is too big for a coupler"@en ;
+       rdfs:label "waler"@da ,
+                  "waler"@en .
+
+
+###  https://w3id.org/lbs/tci#Wingnut
+:Wingnut rdf:type owl:Class ;
+         rdfs:subClassOf :FormworkParts ,
+                         :SecondaryTCI ;
+         rdfs:comment "holds together tie rods"@en ;
+         rdfs:label "vingemøtrik"@da ,
+                    "wingnut"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/lbs/tci#
+<https://w3id.org/lbs/tci#> rdf:type owl:NamedIndividual ,
+                                     <http://purl.org/vocommons/voaf#Vocabulary> .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultCoupler
+<https://w3id.org/lbs/tci/generic#DefaultCoupler> rdf:type owl:NamedIndividual ,
+                                                           :Coupler ,
+                                                           :DefaultFormwork ,
+                                                           :DefaultSecTCI .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultInsideCorner330x50x20
+<https://w3id.org/lbs/tci/generic#DefaultInsideCorner330x50x20> rdf:type owl:NamedIndividual ,
+                                                                         :CornerPanel ,
+                                                                         :DefaultFormwork ,
+                                                                         :DefaultPrimTCI ,
+                                                                         :InsideCorner .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultOutsideCorner270x45
+<https://w3id.org/lbs/tci/generic#DefaultOutsideCorner270x45> rdf:type owl:NamedIndividual ,
+                                                                       :CornerPanel ,
+                                                                       :DefaultFormwork ,
+                                                                       :DefaultPrimTCI ,
+                                                                       :OutsideCorner .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultPanel330x120
+<https://w3id.org/lbs/tci/generic#DefaultPanel330x120> rdf:type owl:NamedIndividual ,
+                                                                :DefaultFormwork ,
+                                                                :DefaultPrimTCI ,
+                                                                :Panel .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultPanel330x240
+<https://w3id.org/lbs/tci/generic#DefaultPanel330x240> rdf:type owl:NamedIndividual ,
+                                                                :DefaultFormwork ,
+                                                                :DefaultPrimTCI ,
+                                                                :Panel .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultPanel330x45
+<https://w3id.org/lbs/tci/generic#DefaultPanel330x45> rdf:type owl:NamedIndividual ,
+                                                               :DefaultFormwork ,
+                                                               :DefaultPrimTCI ,
+                                                               :Panel .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultPanel330x60
+<https://w3id.org/lbs/tci/generic#DefaultPanel330x60> rdf:type owl:NamedIndividual ,
+                                                               :DefaultFormwork ,
+                                                               :DefaultPrimTCI ,
+                                                               :Panel .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultPanel330x90
+<https://w3id.org/lbs/tci/generic#DefaultPanel330x90> rdf:type owl:NamedIndividual ,
+                                                               :DefaultFormwork ,
+                                                               :DefaultPrimTCI ,
+                                                               :Panel .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultPushPullProp
+<https://w3id.org/lbs/tci/generic#DefaultPushPullProp> rdf:type owl:NamedIndividual ,
+                                                                :DefaultFormwork ,
+                                                                :DefaultSecTCI ,
+                                                                :PushPullProp .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultTieRod
+<https://w3id.org/lbs/tci/generic#DefaultTieRod> rdf:type owl:NamedIndividual ,
+                                                          :DefaultFormwork ,
+                                                          :DefaultSecTCI ,
+                                                          :TieRod .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultWaler
+<https://w3id.org/lbs/tci/generic#DefaultWaler> rdf:type owl:NamedIndividual ,
+                                                         :DefaultFormwork ,
+                                                         :DefaultSecTCI ,
+                                                         :Waler .
+
+
+###  https://w3id.org/lbs/tci/generic#DefaultWingnut
+<https://w3id.org/lbs/tci/generic#DefaultWingnut> rdf:type owl:NamedIndividual ,
+                                                           :DefaultFormwork ,
+                                                           :DefaultSecTCI ,
+                                                           :Wingnut .
+
+
+###  https://www.niras.dk/employees/alexander-schlachter-ales/
+<https://www.niras.dk/employees/alexander-schlachter-ales/> rdf:type owl:NamedIndividual ,
+                                                                     <http://schema.org/Person> ,
+                                                                     <http://www.w3.org/2006/vcard/ns#Individual> ;
+                                                            <http://schema.org/name> "Alexander Schlachter" ;
+                                                            <http://www.w3.org/2006/vcard/ns#fn> "Alexander Schlachter" .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
