@@ -2,7 +2,7 @@
 <https://w3id.org/lbs/tci#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/lbs/tci-0.0.1> .
 <https://w3id.org/lbs/tci#> <http://purl.org/dc/terms/creator> <https://www.niras.dk/employees/alexander-schlachter-ales/> .
 <https://w3id.org/lbs/tci#> <http://purl.org/dc/terms/creator> "Alexander Schlachter" .
-<https://w3id.org/lbs/tci#> <http://purl.org/dc/terms/description> "The Ontology for Temporary Construction Items (TCI) is..."@en .
+<https://w3id.org/lbs/tci#> <http://purl.org/dc/terms/description> "The Ontology for Temporary Construction Items (TCI) is a minimal ontology for describing the concepts of temporary construction items as formwork and their relation to permanent construction items, e.g. walls and slabs."@en .
 <https://w3id.org/lbs/tci#> <http://purl.org/dc/terms/issued> "2021-04-21T19:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/lbs/tci#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/1.0/> .
 <https://w3id.org/lbs/tci#> <http://purl.org/dc/terms/modified> "2021-04-21T19:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
@@ -222,8 +222,8 @@
 <https://w3id.org/lbs/tci#supportsPCIType> <http://schema.org/rangeIncludes> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> .
 <https://w3id.org/lbs/tci#supportsPCIType> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Element> .
 <https://w3id.org/lbs/tci#supportsPCIType> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to relate a TCI to the PCI it is supporting"@en .
-<https://w3id.org/lbs/tci#supportsPCIType> <http://www.w3.org/2000/01/rdf-schema#label> "supports pci type"@en .
-<https://w3id.org/lbs/tci#supportsPCIType> <http://www.w3.org/2000/01/rdf-schema#label> "understøtter pci type"@da .
+<https://w3id.org/lbs/tci#supportsPCIType> <http://www.w3.org/2000/01/rdf-schema#label> "supports PCI type"@en .
+<https://w3id.org/lbs/tci#supportsPCIType> <http://www.w3.org/2000/01/rdf-schema#label> "understøtter PCI type"@da .
 # 
 # https://w3id.org/lbs/tci#supportsTCI
 <https://w3id.org/lbs/tci#supportsTCI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -232,8 +232,8 @@
 <https://w3id.org/lbs/tci#supportsTCI> <http://schema.org/rangeIncludes> <https://w3id.org/lbs/tci#DefaultPrimTCI> .
 <https://w3id.org/lbs/tci#supportsTCI> <http://schema.org/rangeIncludes> <https://w3id.org/lbs/tci#PrimaryTCI> .
 <https://w3id.org/lbs/tci#supportsTCI> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to relate a PCI to its supported TCI"@en .
-<https://w3id.org/lbs/tci#supportsTCI> <http://www.w3.org/2000/01/rdf-schema#label> "supports tci"@en .
-<https://w3id.org/lbs/tci#supportsTCI> <http://www.w3.org/2000/01/rdf-schema#label> "understøtter tci"@da .
+<https://w3id.org/lbs/tci#supportsTCI> <http://www.w3.org/2000/01/rdf-schema#label> "supports TCI"@en .
+<https://w3id.org/lbs/tci#supportsTCI> <http://www.w3.org/2000/01/rdf-schema#label> "understøtter TCI"@da .
 # 
 # https://w3id.org/lbs/tci#tciType
 <https://w3id.org/lbs/tci#tciType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -382,54 +382,54 @@
 <https://w3id.org/lbs/tci#ConfirmedProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#TCI> .
 <https://w3id.org/lbs/tci#ConfirmedProduct> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lbs/tci#DefaultProduct> .
 <https://w3id.org/lbs/tci#ConfirmedProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Specified a confirmed product that comes from a producer and is retrieved e.g. from a product catalogue"@en .
-<https://w3id.org/lbs/tci#ConfirmedProduct> <http://www.w3.org/2000/01/rdf-schema#label> "bekræftet produkt"@da .
-<https://w3id.org/lbs/tci#ConfirmedProduct> <http://www.w3.org/2000/01/rdf-schema#label> "confirmed product"@en .
+<https://w3id.org/lbs/tci#ConfirmedProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Bekræftet Produkt"@da .
+<https://w3id.org/lbs/tci#ConfirmedProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Confirmed Product"@en .
 # 
 # https://w3id.org/lbs/tci#CornerPanel
 <https://w3id.org/lbs/tci#CornerPanel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#CornerPanel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#FormworkParts> .
 <https://w3id.org/lbs/tci#CornerPanel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#PrimaryTCI> .
 <https://w3id.org/lbs/tci#CornerPanel> <http://www.w3.org/2000/01/rdf-schema#comment> "A formwork corner panel"@en .
-<https://w3id.org/lbs/tci#CornerPanel> <http://www.w3.org/2000/01/rdf-schema#label> "corner panel"@en .
-<https://w3id.org/lbs/tci#CornerPanel> <http://www.w3.org/2000/01/rdf-schema#label> "hjørnepanel"@da .
+<https://w3id.org/lbs/tci#CornerPanel> <http://www.w3.org/2000/01/rdf-schema#label> "Corner panel"@en .
+<https://w3id.org/lbs/tci#CornerPanel> <http://www.w3.org/2000/01/rdf-schema#label> "Hjørnepanel"@da .
 # 
 # https://w3id.org/lbs/tci#Coupler
 <https://w3id.org/lbs/tci#Coupler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#Coupler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#FormworkParts> .
 <https://w3id.org/lbs/tci#Coupler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#SecondaryTCI> .
 <https://w3id.org/lbs/tci#Coupler> <http://www.w3.org/2000/01/rdf-schema#comment> "A formwork coupler"@en .
-<https://w3id.org/lbs/tci#Coupler> <http://www.w3.org/2000/01/rdf-schema#label> "coupler"@en .
-<https://w3id.org/lbs/tci#Coupler> <http://www.w3.org/2000/01/rdf-schema#label> "kobling"@da .
+<https://w3id.org/lbs/tci#Coupler> <http://www.w3.org/2000/01/rdf-schema#label> "Coupler"@en .
+<https://w3id.org/lbs/tci#Coupler> <http://www.w3.org/2000/01/rdf-schema#label> "Kobling"@da .
 # 
 # https://w3id.org/lbs/tci#DefaultFormwork
 <https://w3id.org/lbs/tci#DefaultFormwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#DefaultFormwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#DefaultProduct> .
 <https://w3id.org/lbs/tci#DefaultFormwork> <http://www.w3.org/2000/01/rdf-schema#comment> "the default set of formwork that is used when no tci:ConfirmedProduct is available"@en .
-<https://w3id.org/lbs/tci#DefaultFormwork> <http://www.w3.org/2000/01/rdf-schema#label> "Default formwork"@en .
-<https://w3id.org/lbs/tci#DefaultFormwork> <http://www.w3.org/2000/01/rdf-schema#label> "standardforskalling"@da .
+<https://w3id.org/lbs/tci#DefaultFormwork> <http://www.w3.org/2000/01/rdf-schema#label> "Default Formwork"@en .
+<https://w3id.org/lbs/tci#DefaultFormwork> <http://www.w3.org/2000/01/rdf-schema#label> "Standardforskalling"@da .
 # 
 # https://w3id.org/lbs/tci#DefaultPrimTCI
 <https://w3id.org/lbs/tci#DefaultPrimTCI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#DefaultPrimTCI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#DefaultFormwork> .
 <https://w3id.org/lbs/tci#DefaultPrimTCI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#PrimaryTCI> .
 <https://w3id.org/lbs/tci#DefaultPrimTCI> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the primary elements of a default set of formwork"@en .
-<https://w3id.org/lbs/tci#DefaultPrimTCI> <http://www.w3.org/2000/01/rdf-schema#label> "Default primary TCI"@en .
-<https://w3id.org/lbs/tci#DefaultPrimTCI> <http://www.w3.org/2000/01/rdf-schema#label> "standard primær TCI"@da .
+<https://w3id.org/lbs/tci#DefaultPrimTCI> <http://www.w3.org/2000/01/rdf-schema#label> "Default Primary TCI"@en .
+<https://w3id.org/lbs/tci#DefaultPrimTCI> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Primær TCI"@da .
 # 
 # https://w3id.org/lbs/tci#DefaultProduct
 <https://w3id.org/lbs/tci#DefaultProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#DefaultProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#TCI> .
 <https://w3id.org/lbs/tci#DefaultProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "the default set of TCIs that is used when no tci:ConfirmedProduct is available"@en .
-<https://w3id.org/lbs/tci#DefaultProduct> <http://www.w3.org/2000/01/rdf-schema#label> "default product"@en .
-<https://w3id.org/lbs/tci#DefaultProduct> <http://www.w3.org/2000/01/rdf-schema#label> "standard product"@da .
+<https://w3id.org/lbs/tci#DefaultProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Default Product"@en .
+<https://w3id.org/lbs/tci#DefaultProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Product"@da .
 # 
 # https://w3id.org/lbs/tci#DefaultSecTCI
 <https://w3id.org/lbs/tci#DefaultSecTCI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#DefaultSecTCI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#DefaultFormwork> .
 <https://w3id.org/lbs/tci#DefaultSecTCI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#SecondaryTCI> .
 <https://w3id.org/lbs/tci#DefaultSecTCI> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the secondary elements of a default set of formwork"@en .
-<https://w3id.org/lbs/tci#DefaultSecTCI> <http://www.w3.org/2000/01/rdf-schema#label> "Default secondary TCI"@en .
-<https://w3id.org/lbs/tci#DefaultSecTCI> <http://www.w3.org/2000/01/rdf-schema#label> "standard sekundær TCI"@da .
+<https://w3id.org/lbs/tci#DefaultSecTCI> <http://www.w3.org/2000/01/rdf-schema#label> "Default Secondary TCI"@en .
+<https://w3id.org/lbs/tci#DefaultSecTCI> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Sekundær TCI"@da .
 # 
 # https://w3id.org/lbs/tci#Formwork
 <https://w3id.org/lbs/tci#Formwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -444,71 +444,71 @@
 <https://w3id.org/lbs/tci#FormworkHorizontal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#Formwork> .
 <https://w3id.org/lbs/tci#FormworkHorizontal> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lbs/tci#FormworkVertical> .
 <https://w3id.org/lbs/tci#FormworkHorizontal> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the formwork type as horizontal formwork"@en .
-<https://w3id.org/lbs/tci#FormworkHorizontal> <http://www.w3.org/2000/01/rdf-schema#label> "Formwork horizontal"@en .
-<https://w3id.org/lbs/tci#FormworkHorizontal> <http://www.w3.org/2000/01/rdf-schema#label> "Forskalling vandret"@da .
+<https://w3id.org/lbs/tci#FormworkHorizontal> <http://www.w3.org/2000/01/rdf-schema#label> "Formwork Horizontal"@en .
+<https://w3id.org/lbs/tci#FormworkHorizontal> <http://www.w3.org/2000/01/rdf-schema#label> "Forskalling Vandret"@da .
 # 
 # https://w3id.org/lbs/tci#FormworkParts
 <https://w3id.org/lbs/tci#FormworkParts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#FormworkParts> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#Formwork> .
 <https://w3id.org/lbs/tci#FormworkParts> <http://www.w3.org/2000/01/rdf-schema#comment> "The components of a formwork"@en .
-<https://w3id.org/lbs/tci#FormworkParts> <http://www.w3.org/2000/01/rdf-schema#label> "Formwork parts"@en .
-<https://w3id.org/lbs/tci#FormworkParts> <http://www.w3.org/2000/01/rdf-schema#label> "Forskalling elements"@da .
+<https://w3id.org/lbs/tci#FormworkParts> <http://www.w3.org/2000/01/rdf-schema#label> "Formwork Parts"@en .
+<https://w3id.org/lbs/tci#FormworkParts> <http://www.w3.org/2000/01/rdf-schema#label> "Forskalling Elements"@da .
 # 
 # https://w3id.org/lbs/tci#FormworkVertical
 <https://w3id.org/lbs/tci#FormworkVertical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#FormworkVertical> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#Formwork> .
 <https://w3id.org/lbs/tci#FormworkVertical> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the formwork type as vertical formwork"@en .
-<https://w3id.org/lbs/tci#FormworkVertical> <http://www.w3.org/2000/01/rdf-schema#label> "Formwork vertical"@en .
-<https://w3id.org/lbs/tci#FormworkVertical> <http://www.w3.org/2000/01/rdf-schema#label> "Forskalling lodret"@da .
+<https://w3id.org/lbs/tci#FormworkVertical> <http://www.w3.org/2000/01/rdf-schema#label> "Formwork Vertical"@en .
+<https://w3id.org/lbs/tci#FormworkVertical> <http://www.w3.org/2000/01/rdf-schema#label> "Forskalling Lodret"@da .
 # 
 # https://w3id.org/lbs/tci#InsideCorner
 <https://w3id.org/lbs/tci#InsideCorner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#InsideCorner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#CornerPanel> .
 <https://w3id.org/lbs/tci#InsideCorner> <http://www.w3.org/2000/01/rdf-schema#comment> "The inside corner of a formwork corner panel"@en .
-<https://w3id.org/lbs/tci#InsideCorner> <http://www.w3.org/2000/01/rdf-schema#label> "indvendigt hjørne"@da .
-<https://w3id.org/lbs/tci#InsideCorner> <http://www.w3.org/2000/01/rdf-schema#label> "inside corner"@en .
+<https://w3id.org/lbs/tci#InsideCorner> <http://www.w3.org/2000/01/rdf-schema#label> "Indvendigt Hjørne"@da .
+<https://w3id.org/lbs/tci#InsideCorner> <http://www.w3.org/2000/01/rdf-schema#label> "Inside Corner"@en .
 # 
 # https://w3id.org/lbs/tci#OutsideCorner
 <https://w3id.org/lbs/tci#OutsideCorner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#OutsideCorner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#CornerPanel> .
 <https://w3id.org/lbs/tci#OutsideCorner> <http://www.w3.org/2000/01/rdf-schema#comment> "The outside corner of a formwork corner panel"@en .
-<https://w3id.org/lbs/tci#OutsideCorner> <http://www.w3.org/2000/01/rdf-schema#label> "outside corner"@en .
-<https://w3id.org/lbs/tci#OutsideCorner> <http://www.w3.org/2000/01/rdf-schema#label> "udvendigt hjørne"@da .
+<https://w3id.org/lbs/tci#OutsideCorner> <http://www.w3.org/2000/01/rdf-schema#label> "Outside Corner"@en .
+<https://w3id.org/lbs/tci#OutsideCorner> <http://www.w3.org/2000/01/rdf-schema#label> "Udvendigt Hjørne"@da .
 # 
 # https://w3id.org/lbs/tci#PCI
 <https://w3id.org/lbs/tci#PCI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#PCI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> .
 <https://w3id.org/lbs/tci#PCI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .
 <https://w3id.org/lbs/tci#PCI> <http://www.w3.org/2000/01/rdf-schema#comment> "Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.\"@en" .
-<https://w3id.org/lbs/tci#PCI> <http://www.w3.org/2000/01/rdf-schema#label> "permanent bygnings element"@da .
-<https://w3id.org/lbs/tci#PCI> <http://www.w3.org/2000/01/rdf-schema#label> "permanent construction item"@en .
+<https://w3id.org/lbs/tci#PCI> <http://www.w3.org/2000/01/rdf-schema#label> "PCI"@da .
+<https://w3id.org/lbs/tci#PCI> <http://www.w3.org/2000/01/rdf-schema#label> "PCI"@en .
 # 
 # https://w3id.org/lbs/tci#Panel
 <https://w3id.org/lbs/tci#Panel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#Panel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#FormworkParts> .
 <https://w3id.org/lbs/tci#Panel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#PrimaryTCI> .
 <https://w3id.org/lbs/tci#Panel> <http://www.w3.org/2000/01/rdf-schema#comment> "the panel of a formwork"@en .
-<https://w3id.org/lbs/tci#Panel> <http://www.w3.org/2000/01/rdf-schema#label> "panel"@da .
-<https://w3id.org/lbs/tci#Panel> <http://www.w3.org/2000/01/rdf-schema#label> "panel"@en .
+<https://w3id.org/lbs/tci#Panel> <http://www.w3.org/2000/01/rdf-schema#label> "Panel"@da .
+<https://w3id.org/lbs/tci#Panel> <http://www.w3.org/2000/01/rdf-schema#label> "Panel"@en .
 # 
 # https://w3id.org/lbs/tci#PrimaryTCI
 <https://w3id.org/lbs/tci#PrimaryTCI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#PrimaryTCI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#TCI> .
 <https://w3id.org/lbs/tci#PrimaryTCI> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/lbs/tci#SecondaryTCI> .
 <https://w3id.org/lbs/tci#PrimaryTCI> <http://www.w3.org/2000/01/rdf-schema#comment> "The main components of a TCI type that directly relate to the PCI"@en .
-<https://w3id.org/lbs/tci#PrimaryTCI> <http://www.w3.org/2000/01/rdf-schema#label> "primary TCI"@en .
-<https://w3id.org/lbs/tci#PrimaryTCI> <http://www.w3.org/2000/01/rdf-schema#label> "primær TCI"@da .
+<https://w3id.org/lbs/tci#PrimaryTCI> <http://www.w3.org/2000/01/rdf-schema#label> "Primary TCI"@en .
+<https://w3id.org/lbs/tci#PrimaryTCI> <http://www.w3.org/2000/01/rdf-schema#label> "Primær TCI"@da .
 # 
 # https://w3id.org/lbs/tci#Producer
 <https://w3id.org/lbs/tci#Producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#Producer> <http://www.w3.org/2000/01/rdf-schema#comment> "the producer of a product"@en .
-<https://w3id.org/lbs/tci#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "producent"@da .
-<https://w3id.org/lbs/tci#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "producer"@en .
+<https://w3id.org/lbs/tci#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "Producent"@da .
+<https://w3id.org/lbs/tci#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "Producer"@en .
 # 
 # https://w3id.org/lbs/tci#ProductCatalogue
 <https://w3id.org/lbs/tci#ProductCatalogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#ProductCatalogue> <http://www.w3.org/2000/01/rdf-schema#comment> "the product catalogue, where components of a product are specified"@en .
-<https://w3id.org/lbs/tci#ProductCatalogue> <http://www.w3.org/2000/01/rdf-schema#label> "Product catalogue"@en .
+<https://w3id.org/lbs/tci#ProductCatalogue> <http://www.w3.org/2000/01/rdf-schema#label> "Product Catalogue"@en .
 <https://w3id.org/lbs/tci#ProductCatalogue> <http://www.w3.org/2000/01/rdf-schema#label> "Produktkatalog"@da .
 # 
 # https://w3id.org/lbs/tci#PushPullProp
@@ -516,8 +516,8 @@
 <https://w3id.org/lbs/tci#PushPullProp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#FormworkParts> .
 <https://w3id.org/lbs/tci#PushPullProp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#SecondaryTCI> .
 <https://w3id.org/lbs/tci#PushPullProp> <http://www.w3.org/2000/01/rdf-schema#comment> "Components for the stabilisation of wall and column formwork systems thta align and support panel gangs"@en .
-<https://w3id.org/lbs/tci#PushPullProp> <http://www.w3.org/2000/01/rdf-schema#label> "push-pull prop"@en .
-<https://w3id.org/lbs/tci#PushPullProp> <http://www.w3.org/2000/01/rdf-schema#label> "skubbe-trække støtte"@da .
+<https://w3id.org/lbs/tci#PushPullProp> <http://www.w3.org/2000/01/rdf-schema#label> "Push-Pull Prop"@en .
+<https://w3id.org/lbs/tci#PushPullProp> <http://www.w3.org/2000/01/rdf-schema#label> "Skubbe-Trække Støtte"@da .
 # 
 # https://w3id.org/lbs/tci#Scaffolding
 <https://w3id.org/lbs/tci#Scaffolding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -530,55 +530,54 @@
 <https://w3id.org/lbs/tci#ScaffoldingParts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#ScaffoldingParts> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#Scaffolding> .
 <https://w3id.org/lbs/tci#ScaffoldingParts> <http://www.w3.org/2000/01/rdf-schema#comment> "the components of a scaffolding"@en .
-<https://w3id.org/lbs/tci#ScaffoldingParts> <http://www.w3.org/2000/01/rdf-schema#label> "Scaffolding parts"@en .
-<https://w3id.org/lbs/tci#ScaffoldingParts> <http://www.w3.org/2000/01/rdf-schema#label> "stilladser komponenter"@da .
+<https://w3id.org/lbs/tci#ScaffoldingParts> <http://www.w3.org/2000/01/rdf-schema#label> "Scaffolding Parts"@en .
+<https://w3id.org/lbs/tci#ScaffoldingParts> <http://www.w3.org/2000/01/rdf-schema#label> "Stilladser Komponenter"@da .
 # 
 # https://w3id.org/lbs/tci#SecondaryTCI
 <https://w3id.org/lbs/tci#SecondaryTCI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#SecondaryTCI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#TCI> .
 <https://w3id.org/lbs/tci#SecondaryTCI> <http://www.w3.org/2000/01/rdf-schema#comment> "Supports the main components of a TCI-system and has no direct relation to the PCI it supports"@en .
-<https://w3id.org/lbs/tci#SecondaryTCI> <http://www.w3.org/2000/01/rdf-schema#label> "Secundary TCI"@en .
+<https://w3id.org/lbs/tci#SecondaryTCI> <http://www.w3.org/2000/01/rdf-schema#label> "Secondary TCI"@en .
 <https://w3id.org/lbs/tci#SecondaryTCI> <http://www.w3.org/2000/01/rdf-schema#label> "Sekundær TCI"@da .
 # 
 # https://w3id.org/lbs/tci#TCI
 <https://w3id.org/lbs/tci#TCI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#TCI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> .
-<https://w3id.org/lbs/tci#TCI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .
 <https://w3id.org/lbs/tci#TCI> <http://www.w3.org/2000/01/rdf-schema#comment> "components that support the construction of building elements and are only used temporarily"@en .
-<https://w3id.org/lbs/tci#TCI> <http://www.w3.org/2000/01/rdf-schema#label> "temporary construction item"@en .
-<https://w3id.org/lbs/tci#TCI> <http://www.w3.org/2000/01/rdf-schema#label> "temporær bygnings element"@da .
+<https://w3id.org/lbs/tci#TCI> <http://www.w3.org/2000/01/rdf-schema#label> "TCI"@da .
+<https://w3id.org/lbs/tci#TCI> <http://www.w3.org/2000/01/rdf-schema#label> "TCI"@en .
 # 
 # https://w3id.org/lbs/tci#TieRod
 <https://w3id.org/lbs/tci#TieRod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#TieRod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#FormworkParts> .
 <https://w3id.org/lbs/tci#TieRod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#SecondaryTCI> .
 <https://w3id.org/lbs/tci#TieRod> <http://www.w3.org/2000/01/rdf-schema#comment> "used to hold the concrete wall forms firmly against the lateral pressure"@en .
-<https://w3id.org/lbs/tci#TieRod> <http://www.w3.org/2000/01/rdf-schema#label> "Tie rod"@en .
-<https://w3id.org/lbs/tci#TieRod> <http://www.w3.org/2000/01/rdf-schema#label> "trækstang"@da .
+<https://w3id.org/lbs/tci#TieRod> <http://www.w3.org/2000/01/rdf-schema#label> "Tie Rod"@en .
+<https://w3id.org/lbs/tci#TieRod> <http://www.w3.org/2000/01/rdf-schema#label> "Trækstang"@da .
 # 
 # https://w3id.org/lbs/tci#TimberFilling
 <https://w3id.org/lbs/tci#TimberFilling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#TimberFilling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#FormworkParts> .
 <https://w3id.org/lbs/tci#TimberFilling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#PrimaryTCI> .
 <https://w3id.org/lbs/tci#TimberFilling> <http://www.w3.org/2000/01/rdf-schema#comment> "is used to fill the gap of a formwork sequence"@en .
-<https://w3id.org/lbs/tci#TimberFilling> <http://www.w3.org/2000/01/rdf-schema#label> "timber filling"@en .
-<https://w3id.org/lbs/tci#TimberFilling> <http://www.w3.org/2000/01/rdf-schema#label> "træfyldning"@da .
+<https://w3id.org/lbs/tci#TimberFilling> <http://www.w3.org/2000/01/rdf-schema#label> "Timber Filling"@en .
+<https://w3id.org/lbs/tci#TimberFilling> <http://www.w3.org/2000/01/rdf-schema#label> "Træfyldning"@da .
 # 
 # https://w3id.org/lbs/tci#Waler
 <https://w3id.org/lbs/tci#Waler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#Waler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#FormworkParts> .
 <https://w3id.org/lbs/tci#Waler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#SecondaryTCI> .
 <https://w3id.org/lbs/tci#Waler> <http://www.w3.org/2000/01/rdf-schema#comment> "holds formwork panels together when the distance is too big for a coupler"@en .
-<https://w3id.org/lbs/tci#Waler> <http://www.w3.org/2000/01/rdf-schema#label> "waler"@da .
-<https://w3id.org/lbs/tci#Waler> <http://www.w3.org/2000/01/rdf-schema#label> "waler"@en .
+<https://w3id.org/lbs/tci#Waler> <http://www.w3.org/2000/01/rdf-schema#label> "Waler"@da .
+<https://w3id.org/lbs/tci#Waler> <http://www.w3.org/2000/01/rdf-schema#label> "Waler"@en .
 # 
 # https://w3id.org/lbs/tci#Wingnut
 <https://w3id.org/lbs/tci#Wingnut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/lbs/tci#Wingnut> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#FormworkParts> .
 <https://w3id.org/lbs/tci#Wingnut> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/lbs/tci#SecondaryTCI> .
 <https://w3id.org/lbs/tci#Wingnut> <http://www.w3.org/2000/01/rdf-schema#comment> "holds together tie rods"@en .
-<https://w3id.org/lbs/tci#Wingnut> <http://www.w3.org/2000/01/rdf-schema#label> "vingemøtrik"@da .
-<https://w3id.org/lbs/tci#Wingnut> <http://www.w3.org/2000/01/rdf-schema#label> "wingnut"@en .
+<https://w3id.org/lbs/tci#Wingnut> <http://www.w3.org/2000/01/rdf-schema#label> "Vingemøtrik"@da .
+<https://w3id.org/lbs/tci#Wingnut> <http://www.w3.org/2000/01/rdf-schema#label> "Wingnut"@en .
 # 
 # 
 # 

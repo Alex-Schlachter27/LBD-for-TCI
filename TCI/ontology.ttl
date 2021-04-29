@@ -10,7 +10,7 @@
                              owl:versionIRI <https://w3id.org/lbs/tci-0.0.1> ;
                              <http://purl.org/dc/terms/creator> <https://www.niras.dk/employees/alexander-schlachter-ales/> ,
                                                                 "Alexander Schlachter" ;
-                             <http://purl.org/dc/terms/description> "The Ontology for Temporary Construction Items (TCI) is..."@en ;
+                             <http://purl.org/dc/terms/description> "The Ontology for Temporary Construction Items (TCI) is a minimal ontology for describing the concepts of temporary construction items as formwork and their relation to permanent construction items, e.g. walls and slabs."@en ;
                              <http://purl.org/dc/terms/issued> "2021-04-21T19:00:00"^^xsd:dateTime ;
                              <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/1.0/> ;
                              <http://purl.org/dc/terms/modified> "2021-04-21T19:00:00"^^xsd:dateTime ;
@@ -248,8 +248,8 @@
                  <http://schema.org/rangeIncludes> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> ,
                                                    <https://w3id.org/bot#Element> ;
                  rdfs:comment "Used to relate a TCI to the PCI it is supporting"@en ;
-                 rdfs:label "supports pci type"@en ,
-                            "understøtter pci type"@da .
+                 rdfs:label "supports PCI type"@en ,
+                            "understøtter PCI type"@da .
 
 
 ###  https://w3id.org/lbs/tci#supportsTCI
@@ -259,8 +259,8 @@
              <http://schema.org/rangeIncludes> :DefaultPrimTCI ,
                                                :PrimaryTCI ;
              rdfs:comment "Used to relate a PCI to its supported TCI"@en ;
-             rdfs:label "supports tci"@en ,
-                        "understøtter tci"@da .
+             rdfs:label "supports TCI"@en ,
+                        "understøtter TCI"@da .
 
 
 ###  https://w3id.org/lbs/tci#tciType
@@ -419,8 +419,8 @@
                   rdfs:subClassOf :TCI ;
                   owl:disjointWith :DefaultProduct ;
                   rdfs:comment "Specified a confirmed product that comes from a producer and is retrieved e.g. from a product catalogue"@en ;
-                  rdfs:label "bekræftet produkt"@da ,
-                             "confirmed product"@en .
+                  rdfs:label "Bekræftet Produkt"@da ,
+                             "Confirmed Product"@en .
 
 
 ###  https://w3id.org/lbs/tci#CornerPanel
@@ -428,8 +428,8 @@
              rdfs:subClassOf :FormworkParts ,
                              :PrimaryTCI ;
              rdfs:comment "A formwork corner panel"@en ;
-             rdfs:label "corner panel"@en ,
-                        "hjørnepanel"@da .
+             rdfs:label "Corner panel"@en ,
+                        "Hjørnepanel"@da .
 
 
 ###  https://w3id.org/lbs/tci#Coupler
@@ -437,16 +437,16 @@
          rdfs:subClassOf :FormworkParts ,
                          :SecondaryTCI ;
          rdfs:comment "A formwork coupler"@en ;
-         rdfs:label "coupler"@en ,
-                    "kobling"@da .
+         rdfs:label "Coupler"@en ,
+                    "Kobling"@da .
 
 
 ###  https://w3id.org/lbs/tci#DefaultFormwork
 :DefaultFormwork rdf:type owl:Class ;
                  rdfs:subClassOf :DefaultProduct ;
                  rdfs:comment "the default set of formwork that is used when no tci:ConfirmedProduct is available"@en ;
-                 rdfs:label "Default formwork"@en ,
-                            "standardforskalling"@da .
+                 rdfs:label "Default Formwork"@en ,
+                            "Standardforskalling"@da .
 
 
 ###  https://w3id.org/lbs/tci#DefaultPrimTCI
@@ -454,16 +454,16 @@
                 rdfs:subClassOf :DefaultFormwork ,
                                 :PrimaryTCI ;
                 rdfs:comment "Specifies the primary elements of a default set of formwork"@en ;
-                rdfs:label "Default primary TCI"@en ,
-                           "standard primær TCI"@da .
+                rdfs:label "Default Primary TCI"@en ,
+                           "Standard Primær TCI"@da .
 
 
 ###  https://w3id.org/lbs/tci#DefaultProduct
 :DefaultProduct rdf:type owl:Class ;
                 rdfs:subClassOf :TCI ;
                 rdfs:comment "the default set of TCIs that is used when no tci:ConfirmedProduct is available"@en ;
-                rdfs:label "default product"@en ,
-                           "standard product"@da .
+                rdfs:label "Default Product"@en ,
+                           "Standard Product"@da .
 
 
 ###  https://w3id.org/lbs/tci#DefaultSecTCI
@@ -471,8 +471,8 @@
                rdfs:subClassOf :DefaultFormwork ,
                                :SecondaryTCI ;
                rdfs:comment "Specifies the secondary elements of a default set of formwork"@en ;
-               rdfs:label "Default secondary TCI"@en ,
-                          "standard sekundær TCI"@da .
+               rdfs:label "Default Secondary TCI"@en ,
+                          "Standard Sekundær TCI"@da .
 
 
 ###  https://w3id.org/lbs/tci#Formwork
@@ -489,40 +489,40 @@
                     rdfs:subClassOf :Formwork ;
                     owl:disjointWith :FormworkVertical ;
                     rdfs:comment "Specifies the formwork type as horizontal formwork"@en ;
-                    rdfs:label "Formwork horizontal"@en ,
-                               "Forskalling vandret"@da .
+                    rdfs:label "Formwork Horizontal"@en ,
+                               "Forskalling Vandret"@da .
 
 
 ###  https://w3id.org/lbs/tci#FormworkParts
 :FormworkParts rdf:type owl:Class ;
                rdfs:subClassOf :Formwork ;
                rdfs:comment "The components of a formwork"@en ;
-               rdfs:label "Formwork parts"@en ,
-                          "Forskalling elements"@da .
+               rdfs:label "Formwork Parts"@en ,
+                          "Forskalling Elements"@da .
 
 
 ###  https://w3id.org/lbs/tci#FormworkVertical
 :FormworkVertical rdf:type owl:Class ;
                   rdfs:subClassOf :Formwork ;
                   rdfs:comment "Specifies the formwork type as vertical formwork"@en ;
-                  rdfs:label "Formwork vertical"@en ,
-                             "Forskalling lodret"@da .
+                  rdfs:label "Formwork Vertical"@en ,
+                             "Forskalling Lodret"@da .
 
 
 ###  https://w3id.org/lbs/tci#InsideCorner
 :InsideCorner rdf:type owl:Class ;
               rdfs:subClassOf :CornerPanel ;
               rdfs:comment "The inside corner of a formwork corner panel"@en ;
-              rdfs:label "indvendigt hjørne"@da ,
-                         "inside corner"@en .
+              rdfs:label "Indvendigt Hjørne"@da ,
+                         "Inside Corner"@en .
 
 
 ###  https://w3id.org/lbs/tci#OutsideCorner
 :OutsideCorner rdf:type owl:Class ;
                rdfs:subClassOf :CornerPanel ;
                rdfs:comment "The outside corner of a formwork corner panel"@en ;
-               rdfs:label "outside corner"@en ,
-                          "udvendigt hjørne"@da .
+               rdfs:label "Outside Corner"@en ,
+                          "Udvendigt Hjørne"@da .
 
 
 ###  https://w3id.org/lbs/tci#PCI
@@ -530,8 +530,8 @@
      rdfs:subClassOf <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> ,
                      <https://w3id.org/bot#Element> ;
      rdfs:comment "Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.\"@en" ;
-     rdfs:label "permanent bygnings element"@da ,
-                "permanent construction item"@en .
+     rdfs:label "PCI"@da ,
+                "PCI"@en .
 
 
 ###  https://w3id.org/lbs/tci#Panel
@@ -539,8 +539,8 @@
        rdfs:subClassOf :FormworkParts ,
                        :PrimaryTCI ;
        rdfs:comment "the panel of a formwork"@en ;
-       rdfs:label "panel"@da ,
-                  "panel"@en .
+       rdfs:label "Panel"@da ,
+                  "Panel"@en .
 
 
 ###  https://w3id.org/lbs/tci#PrimaryTCI
@@ -548,21 +548,21 @@
             rdfs:subClassOf :TCI ;
             owl:disjointWith :SecondaryTCI ;
             rdfs:comment "The main components of a TCI type that directly relate to the PCI"@en ;
-            rdfs:label "primary TCI"@en ,
-                       "primær TCI"@da .
+            rdfs:label "Primary TCI"@en ,
+                       "Primær TCI"@da .
 
 
 ###  https://w3id.org/lbs/tci#Producer
 :Producer rdf:type owl:Class ;
           rdfs:comment "the producer of a product"@en ;
-          rdfs:label "producent"@da ,
-                     "producer"@en .
+          rdfs:label "Producent"@da ,
+                     "Producer"@en .
 
 
 ###  https://w3id.org/lbs/tci#ProductCatalogue
 :ProductCatalogue rdf:type owl:Class ;
                   rdfs:comment "the product catalogue, where components of a product are specified"@en ;
-                  rdfs:label "Product catalogue"@en ,
+                  rdfs:label "Product Catalogue"@en ,
                              "Produktkatalog"@da .
 
 
@@ -571,8 +571,8 @@
               rdfs:subClassOf :FormworkParts ,
                               :SecondaryTCI ;
               rdfs:comment "Components for the stabilisation of wall and column formwork systems thta align and support panel gangs"@en ;
-              rdfs:label "push-pull prop"@en ,
-                         "skubbe-trække støtte"@da .
+              rdfs:label "Push-Pull Prop"@en ,
+                         "Skubbe-Trække Støtte"@da .
 
 
 ###  https://w3id.org/lbs/tci#Scaffolding
@@ -587,25 +587,24 @@
 :ScaffoldingParts rdf:type owl:Class ;
                   rdfs:subClassOf :Scaffolding ;
                   rdfs:comment "the components of a scaffolding"@en ;
-                  rdfs:label "Scaffolding parts"@en ,
-                             "stilladser komponenter"@da .
+                  rdfs:label "Scaffolding Parts"@en ,
+                             "Stilladser Komponenter"@da .
 
 
 ###  https://w3id.org/lbs/tci#SecondaryTCI
 :SecondaryTCI rdf:type owl:Class ;
               rdfs:subClassOf :TCI ;
               rdfs:comment "Supports the main components of a TCI-system and has no direct relation to the PCI it supports"@en ;
-              rdfs:label "Secundary TCI"@en ,
+              rdfs:label "Secondary TCI"@en ,
                          "Sekundær TCI"@da .
 
 
 ###  https://w3id.org/lbs/tci#TCI
 :TCI rdf:type owl:Class ;
-     rdfs:subClassOf <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> ,
-                     <https://w3id.org/bot#Element> ;
+     rdfs:subClassOf <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct> ;
      rdfs:comment "components that support the construction of building elements and are only used temporarily"@en ;
-     rdfs:label "temporary construction item"@en ,
-                "temporær bygnings element"@da .
+     rdfs:label "TCI"@da ,
+                "TCI"@en .
 
 
 ###  https://w3id.org/lbs/tci#TieRod
@@ -613,8 +612,8 @@
         rdfs:subClassOf :FormworkParts ,
                         :SecondaryTCI ;
         rdfs:comment "used to hold the concrete wall forms firmly against the lateral pressure"@en ;
-        rdfs:label "Tie rod"@en ,
-                   "trækstang"@da .
+        rdfs:label "Tie Rod"@en ,
+                   "Trækstang"@da .
 
 
 ###  https://w3id.org/lbs/tci#TimberFilling
@@ -622,8 +621,8 @@
                rdfs:subClassOf :FormworkParts ,
                                :PrimaryTCI ;
                rdfs:comment "is used to fill the gap of a formwork sequence"@en ;
-               rdfs:label "timber filling"@en ,
-                          "træfyldning"@da .
+               rdfs:label "Timber Filling"@en ,
+                          "Træfyldning"@da .
 
 
 ###  https://w3id.org/lbs/tci#Waler
@@ -631,8 +630,8 @@
        rdfs:subClassOf :FormworkParts ,
                        :SecondaryTCI ;
        rdfs:comment "holds formwork panels together when the distance is too big for a coupler"@en ;
-       rdfs:label "waler"@da ,
-                  "waler"@en .
+       rdfs:label "Waler"@da ,
+                  "Waler"@en .
 
 
 ###  https://w3id.org/lbs/tci#Wingnut
@@ -640,8 +639,8 @@
          rdfs:subClassOf :FormworkParts ,
                          :SecondaryTCI ;
          rdfs:comment "holds together tie rods"@en ;
-         rdfs:label "vingemøtrik"@da ,
-                    "wingnut"@en .
+         rdfs:label "Vingemøtrik"@da ,
+                    "Wingnut"@en .
 
 
 #################################################################

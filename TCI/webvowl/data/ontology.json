@@ -10,7 +10,7 @@
     "version" : "0.0.1",
     "author" : [ "https://www.niras.dk/employees/alexander-schlachter-ales/", "Alexander Schlachter" ],
     "description" : {
-      "en" : "The Ontology for Temporary Construction Items (TCI) is..."
+      "en" : "The Ontology for Temporary Construction Items (TCI) is a minimal ontology for describing the concepts of temporary construction items as formwork and their relation to permanent construction items, e.g. walls and slabs."
     },
     "other" : {
       "license" : [ {
@@ -42,17 +42,17 @@
         "value" : "2021-04-21T19:00:00",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/lbs/tci#",
-        "type" : "iri"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "0.0.1",
         "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/lbs/tci#",
+        "type" : "iri"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -85,7 +85,7 @@
     "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "39",
+    "id" : "38",
     "type" : "owl:Class"
   }, {
     "id" : "41",
@@ -127,7 +127,7 @@
     "id" : "60",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "66",
+    "id" : "67",
     "type" : "owl:Class"
   }, {
     "id" : "14",
@@ -142,19 +142,19 @@
     "id" : "46",
     "type" : "owl:Class"
   }, {
-    "id" : "63",
+    "id" : "65",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "69",
+    "id" : "70",
     "type" : "owl:Class"
   }, {
     "id" : "49",
     "type" : "owl:Class"
   }, {
-    "id" : "85",
+    "id" : "86",
     "type" : "owl:Class"
   }, {
     "id" : "16",
@@ -169,19 +169,19 @@
     "id" : "100",
     "type" : "owl:Class"
   }, {
-    "id" : "91",
+    "id" : "63",
     "type" : "owl:Class"
   }, {
     "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
+    "id" : "26",
     "type" : "owl:Class"
   }, {
     "id" : "43",
     "type" : "owl:Class"
   }, {
-    "id" : "25",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
     "id" : "4",
@@ -193,7 +193,7 @@
     "id" : "7",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "68",
+    "id" : "69",
     "type" : "rdfs:Literal"
   }, {
     "id" : "9",
@@ -205,7 +205,7 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
+    "id" : "39",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -214,8 +214,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "PrimaryTCI",
-      "en" : "primary TCI",
-      "da" : "primær TCI"
+      "en" : "Primary TCI",
+      "da" : "Primær TCI"
     },
     "subClasses" : [ "12", "13", "14", "15" ],
     "comment" : {
@@ -229,8 +229,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "FormworkParts",
-      "en" : "Formwork parts",
-      "da" : "Forskalling elements"
+      "en" : "Formwork Parts",
+      "da" : "Forskalling Elements"
     },
     "subClasses" : [ "17", "1", "13", "18", "19", "14", "15", "20" ],
     "comment" : {
@@ -244,8 +244,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "Wingnut",
-      "en" : "wingnut",
-      "da" : "vingemøtrik"
+      "en" : "Wingnut",
+      "da" : "Vingemøtrik"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultWingnut",
@@ -265,23 +265,23 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "TCI",
-      "en" : "temporary construction item",
-      "da" : "temporær bygnings element"
+      "en" : "TCI",
+      "da" : "TCI"
     },
-    "subClasses" : [ "23", "26", "10", "16", "27" ],
+    "subClasses" : [ "23", "25", "10", "16", "26" ],
     "comment" : {
       "en" : "components that support the construction of building elements and are only used temporarily"
     },
     "id" : "11",
-    "superClasses" : [ "24", "25" ]
+    "superClasses" : [ "24" ]
   }, {
     "iri" : "https://w3id.org/lbs/tci#PushPullProp",
     "baseIri" : "https://w3id.org/lbs/tci",
     "instances" : 0,
     "label" : {
       "IRI-based" : "PushPullProp",
-      "en" : "push-pull prop",
-      "da" : "skubbe-trække støtte"
+      "en" : "Push-Pull Prop",
+      "da" : "Skubbe-Trække Støtte"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultPushPullProp",
@@ -301,22 +301,22 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "PCI",
-      "en" : "permanent construction item",
-      "da" : "permanent bygnings element"
+      "en" : "PCI",
+      "da" : "PCI"
     },
     "comment" : {
       "undefined" : "Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.\"@en"
     },
-    "id" : "39",
-    "superClasses" : [ "24", "25" ]
+    "id" : "38",
+    "superClasses" : [ "39", "24" ]
   }, {
     "iri" : "https://w3id.org/lbs/tci#Producer",
     "baseIri" : "https://w3id.org/lbs/tci",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Producer",
-      "en" : "producer",
-      "da" : "producent"
+      "en" : "Producer",
+      "da" : "Producent"
     },
     "comment" : {
       "en" : "the producer of a product"
@@ -328,8 +328,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "CornerPanel",
-      "en" : "corner panel",
-      "da" : "hjørnepanel"
+      "en" : "Corner panel",
+      "da" : "Hjørnepanel"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultInsideCorner330x50x20",
@@ -356,8 +356,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "Waler",
-      "en" : "waler",
-      "da" : "waler"
+      "en" : "Waler",
+      "da" : "Waler"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultWaler",
@@ -382,14 +382,14 @@
       "iri" : "https://www.niras.dk/employees/alexander-schlachter-ales/",
       "baseIri" : "https://www.niras.dk/employees",
       "annotations" : {
-        "name" : [ {
-          "identifier" : "name",
+        "fn" : [ {
+          "identifier" : "fn",
           "language" : "undefined",
           "value" : "Alexander Schlachter",
           "type" : "label"
         } ],
-        "fn" : [ {
-          "identifier" : "fn",
+        "name" : [ {
+          "identifier" : "name",
           "language" : "undefined",
           "value" : "Alexander Schlachter",
           "type" : "label"
@@ -475,13 +475,13 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "ScaffoldingParts",
-      "en" : "Scaffolding parts",
-      "da" : "stilladser komponenter"
+      "en" : "Scaffolding Parts",
+      "da" : "Stilladser Komponenter"
     },
     "comment" : {
       "en" : "the components of a scaffolding"
     },
-    "id" : "66",
+    "id" : "67",
     "superClasses" : [ "43" ]
   }, {
     "iri" : "https://w3id.org/lbs/tci#TimberFilling",
@@ -489,8 +489,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "TimberFilling",
-      "en" : "timber filling",
-      "da" : "træfyldning"
+      "en" : "Timber Filling",
+      "da" : "Træfyldning"
     },
     "comment" : {
       "en" : "is used to fill the gap of a formwork sequence"
@@ -503,8 +503,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "DefaultPrimTCI",
-      "en" : "Default primary TCI",
-      "da" : "standard primær TCI"
+      "en" : "Default Primary TCI",
+      "da" : "Standard Primær TCI"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultInsideCorner330x50x20",
@@ -553,15 +553,15 @@
       "en" : "Specifies the primary elements of a default set of formwork"
     },
     "id" : "12",
-    "superClasses" : [ "69", "10" ]
+    "superClasses" : [ "70", "10" ]
   }, {
     "iri" : "https://w3id.org/lbs/tci#OutsideCorner",
     "baseIri" : "https://w3id.org/lbs/tci",
     "instances" : 0,
     "label" : {
       "IRI-based" : "OutsideCorner",
-      "en" : "outside corner",
-      "da" : "udvendigt hjørne"
+      "en" : "Outside Corner",
+      "da" : "Udvendigt Hjørne"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultOutsideCorner270x45",
@@ -581,8 +581,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "InsideCorner",
-      "en" : "inside corner",
-      "da" : "indvendigt hjørne"
+      "en" : "Inside Corner",
+      "da" : "Indvendigt Hjørne"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultInsideCorner330x50x20",
@@ -602,13 +602,13 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "FormworkHorizontal",
-      "en" : "Formwork horizontal",
-      "da" : "Forskalling vandret"
+      "en" : "Formwork Horizontal",
+      "da" : "Forskalling Vandret"
     },
     "comment" : {
       "en" : "Specifies the formwork type as horizontal formwork"
     },
-    "id" : "63",
+    "id" : "65",
     "superClasses" : [ "16" ]
   }, {
     "iri" : "https://w3id.org/lbs/tci#ConfirmedProduct",
@@ -616,13 +616,13 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "ConfirmedProduct",
-      "en" : "confirmed product",
-      "da" : "bekræftet produkt"
+      "en" : "Confirmed Product",
+      "da" : "Bekræftet Produkt"
     },
     "comment" : {
       "en" : "Specified a confirmed product that comes from a producer and is retrieved e.g. from a product catalogue"
     },
-    "id" : "26",
+    "id" : "25",
     "superClasses" : [ "11" ]
   }, {
     "iri" : "https://w3id.org/lbs/tci#DefaultFormwork",
@@ -630,8 +630,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "DefaultFormwork",
-      "en" : "Default formwork",
-      "da" : "standardforskalling"
+      "en" : "Default Formwork",
+      "da" : "Standardforskalling"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultInsideCorner330x50x20",
@@ -640,10 +640,10 @@
         "IRI-based" : "DefaultInsideCorner330x50x20"
       }
     }, {
-      "iri" : "https://w3id.org/lbs/tci/generic#DefaultPushPullProp",
+      "iri" : "https://w3id.org/lbs/tci/generic#DefaultPanel330x45",
       "baseIri" : "https://w3id.org/lbs/tci/generic",
       "labels" : {
-        "IRI-based" : "DefaultPushPullProp"
+        "IRI-based" : "DefaultPanel330x45"
       }
     }, {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultTieRod",
@@ -652,22 +652,22 @@
         "IRI-based" : "DefaultTieRod"
       }
     }, {
-      "iri" : "https://w3id.org/lbs/tci/generic#DefaultPanel330x45",
+      "iri" : "https://w3id.org/lbs/tci/generic#DefaultPushPullProp",
       "baseIri" : "https://w3id.org/lbs/tci/generic",
       "labels" : {
-        "IRI-based" : "DefaultPanel330x45"
-      }
-    }, {
-      "iri" : "https://w3id.org/lbs/tci/generic#DefaultCoupler",
-      "baseIri" : "https://w3id.org/lbs/tci/generic",
-      "labels" : {
-        "IRI-based" : "DefaultCoupler"
+        "IRI-based" : "DefaultPushPullProp"
       }
     }, {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultWaler",
       "baseIri" : "https://w3id.org/lbs/tci/generic",
       "labels" : {
         "IRI-based" : "DefaultWaler"
+      }
+    }, {
+      "iri" : "https://w3id.org/lbs/tci/generic#DefaultCoupler",
+      "baseIri" : "https://w3id.org/lbs/tci/generic",
+      "labels" : {
+        "IRI-based" : "DefaultCoupler"
       }
     }, {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultPanel330x90",
@@ -710,40 +710,40 @@
     "comment" : {
       "en" : "the default set of formwork that is used when no tci:ConfirmedProduct is available"
     },
-    "id" : "69",
-    "superClasses" : [ "27" ]
+    "id" : "70",
+    "superClasses" : [ "26" ]
   }, {
     "iri" : "https://w3id.org/lbs/tci#DefaultSecTCI",
     "baseIri" : "https://w3id.org/lbs/tci",
     "instances" : 0,
     "label" : {
       "IRI-based" : "DefaultSecTCI",
-      "en" : "Default secondary TCI",
-      "da" : "standard sekundær TCI"
+      "en" : "Default Secondary TCI",
+      "da" : "Standard Sekundær TCI"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/lbs/tci/generic#DefaultTieRod",
-      "baseIri" : "https://w3id.org/lbs/tci/generic",
-      "labels" : {
-        "IRI-based" : "DefaultTieRod"
-      }
-    }, {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultPushPullProp",
       "baseIri" : "https://w3id.org/lbs/tci/generic",
       "labels" : {
         "IRI-based" : "DefaultPushPullProp"
       }
     }, {
-      "iri" : "https://w3id.org/lbs/tci/generic#DefaultWaler",
+      "iri" : "https://w3id.org/lbs/tci/generic#DefaultTieRod",
       "baseIri" : "https://w3id.org/lbs/tci/generic",
       "labels" : {
-        "IRI-based" : "DefaultWaler"
+        "IRI-based" : "DefaultTieRod"
       }
     }, {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultCoupler",
       "baseIri" : "https://w3id.org/lbs/tci/generic",
       "labels" : {
         "IRI-based" : "DefaultCoupler"
+      }
+    }, {
+      "iri" : "https://w3id.org/lbs/tci/generic#DefaultWaler",
+      "baseIri" : "https://w3id.org/lbs/tci/generic",
+      "labels" : {
+        "IRI-based" : "DefaultWaler"
       }
     }, {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultWingnut",
@@ -756,20 +756,20 @@
       "en" : "Specifies the secondary elements of a default set of formwork"
     },
     "id" : "49",
-    "superClasses" : [ "23", "69" ]
+    "superClasses" : [ "23", "70" ]
   }, {
     "iri" : "https://w3id.org/lbs/tci#ProductCatalogue",
     "baseIri" : "https://w3id.org/lbs/tci",
     "instances" : 0,
     "label" : {
       "IRI-based" : "ProductCatalogue",
-      "en" : "Product catalogue",
+      "en" : "Product Catalogue",
       "da" : "Produktkatalog"
     },
     "comment" : {
       "en" : "the product catalogue, where components of a product are specified"
     },
-    "id" : "85"
+    "id" : "86"
   }, {
     "iri" : "https://w3id.org/lbs/tci#Formwork",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -779,7 +779,7 @@
       "en" : "Formwork",
       "da" : "Forskalling"
     },
-    "subClasses" : [ "63", "91", "2" ],
+    "subClasses" : [ "65", "63", "2" ],
     "comment" : {
       "en" : "The elements that are used to creating a temporary mould into which concrete is poured and formed"
     },
@@ -791,7 +791,7 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "SecondaryTCI",
-      "en" : "Secundary TCI",
+      "en" : "Secondary TCI",
       "da" : "Sekundær TCI"
     },
     "subClasses" : [ "49", "17", "1", "18", "43", "19", "20" ],
@@ -806,8 +806,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "Coupler",
-      "en" : "coupler",
-      "da" : "kobling"
+      "en" : "Coupler",
+      "da" : "Kobling"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultCoupler",
@@ -832,14 +832,14 @@
       "iri" : "https://www.niras.dk/employees/alexander-schlachter-ales/",
       "baseIri" : "https://www.niras.dk/employees",
       "annotations" : {
-        "name" : [ {
-          "identifier" : "name",
+        "fn" : [ {
+          "identifier" : "fn",
           "language" : "undefined",
           "value" : "Alexander Schlachter",
           "type" : "label"
         } ],
-        "fn" : [ {
-          "identifier" : "fn",
+        "name" : [ {
+          "identifier" : "name",
           "language" : "undefined",
           "value" : "Alexander Schlachter",
           "type" : "label"
@@ -855,13 +855,13 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "FormworkVertical",
-      "en" : "Formwork vertical",
-      "da" : "Forskalling lodret"
+      "en" : "Formwork Vertical",
+      "da" : "Forskalling Lodret"
     },
     "comment" : {
       "en" : "Specifies the formwork type as vertical formwork"
     },
-    "id" : "91",
+    "id" : "63",
     "superClasses" : [ "16" ]
   }, {
     "iri" : "https://w3id.org/lbs/tci#Panel",
@@ -869,8 +869,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "Panel",
-      "en" : "panel",
-      "da" : "panel"
+      "en" : "Panel",
+      "da" : "Panel"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultPanel330x45",
@@ -914,14 +914,14 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "DefaultProduct",
-      "en" : "default product",
-      "da" : "standard product"
+      "en" : "Default Product",
+      "da" : "Standard Product"
     },
-    "subClasses" : [ "69" ],
+    "subClasses" : [ "70" ],
     "comment" : {
       "en" : "the default set of TCIs that is used when no tci:ConfirmedProduct is available"
     },
-    "id" : "27",
+    "id" : "26",
     "superClasses" : [ "11" ]
   }, {
     "iri" : "https://w3id.org/lbs/tci#Scaffolding",
@@ -932,7 +932,7 @@
       "en" : "Scaffolding",
       "da" : "stilladser"
     },
-    "subClasses" : [ "66" ],
+    "subClasses" : [ "67" ],
     "comment" : {
       "en" : "Temporary platform used to elevate and support workers and materials during the construction"
     },
@@ -945,9 +945,9 @@
     "label" : {
       "IRI-based" : "IfcProduct"
     },
-    "subClasses" : [ "11", "39" ],
+    "subClasses" : [ "11", "38" ],
     "attributes" : [ "external" ],
-    "id" : "25"
+    "id" : "24"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -971,7 +971,7 @@
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "68",
+    "id" : "69",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -996,8 +996,8 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "TieRod",
-      "en" : "Tie rod",
-      "da" : "trækstang"
+      "en" : "Tie Rod",
+      "da" : "Trækstang"
     },
     "individuals" : [ {
       "iri" : "https://w3id.org/lbs/tci/generic#DefaultTieRod",
@@ -1018,9 +1018,9 @@
     "label" : {
       "IRI-based" : "Element"
     },
-    "subClasses" : [ "11", "39" ],
+    "subClasses" : [ "38" ],
     "attributes" : [ "external" ],
-    "id" : "24"
+    "id" : "39"
   } ],
   "property" : [ {
     "id" : "0",
@@ -1038,17 +1038,20 @@
     "id" : "21",
     "type" : "owl:datatypeProperty"
   }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "28",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "29",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "30",
+    "id" : "31",
     "type" : "owl:objectProperty"
   }, {
     "id" : "32",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "33",
     "type" : "rdfs:SubClassOf"
@@ -1063,9 +1066,6 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "37",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "38",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "40",
@@ -1095,26 +1095,23 @@
     "id" : "64",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "65",
+    "id" : "66",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "67",
+    "id" : "68",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "70",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "71",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "72",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "73",
     "type" : "owl:objectProperty"
   }, {
     "id" : "74",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "75",
     "type" : "rdfs:SubClassOf"
@@ -1126,19 +1123,19 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "78",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "79",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "80",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "81",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "82",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "83",
     "type" : "rdfs:SubClassOf"
@@ -1146,11 +1143,11 @@
     "id" : "84",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "86",
-    "type" : "owl:datatypeProperty"
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "87",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "88",
     "type" : "rdfs:SubClassOf"
@@ -1159,6 +1156,9 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "92",
@@ -1179,7 +1179,7 @@
     "id" : "97",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "31",
+    "id" : "30",
     "type" : "owl:objectProperty"
   }, {
     "id" : "98",
@@ -1191,7 +1191,7 @@
     "id" : "101",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "102",
+    "id" : "103",
     "type" : "owl:objectProperty"
   }, {
     "id" : "104",
@@ -1207,16 +1207,16 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "108",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "109",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "110",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "111",
+    "id" : "110",
     "type" : "owl:disjointWith"
+  }, {
+    "id" : "111",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "112",
     "type" : "owl:objectProperty"
@@ -1225,27 +1225,24 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "114",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "115",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "116",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "102",
     "type" : "owl:objectProperty"
   }, {
     "id" : "117",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "103",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "118",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "0"
   }, {
     "iri" : "https://w3id.org/lbs/tci#hasProducer",
@@ -1355,13 +1352,13 @@
   }, {
     "range" : "2",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "28"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
   }, {
     "range" : "10",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "29"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
@@ -1370,9 +1367,9 @@
       "IRI-based" : "topObjectProperty"
     },
     "domain" : "4",
-    "subproperty" : [ "31" ],
-    "attributes" : [ "external", "object" ],
-    "id" : "30"
+    "subproperty" : [ "30" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "29"
   }, {
     "iri" : "https://w3id.org/lbs/tci#hasTCIsOut",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -1395,46 +1392,46 @@
       "en" : "Specifies the TCIs on the outer side of the PCI they support"
     },
     "attributes" : [ "object" ],
-    "id" : "32"
+    "id" : "31"
   }, {
     "range" : "10",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "33"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
   }, {
     "range" : "23",
     "domain" : "20",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "34"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
   }, {
     "range" : "10",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "35"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
   }, {
     "range" : "10",
     "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "36"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
   }, {
     "range" : "23",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "37"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
   }, {
     "range" : "23",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "38"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
   }, {
     "range" : "23",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "40"
   }, {
     "range" : "23",
     "domain" : "43",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
     "iri" : "https://w3id.org/lbs/tci#iscounting",
@@ -1462,17 +1459,17 @@
   }, {
     "range" : "23",
     "domain" : "49",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "48"
   }, {
     "range" : "23",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "51"
   }, {
     "iri" : "https://w3id.org/lbs/tci#hasTimberFillinglength",
     "baseIri" : "https://w3id.org/lbs/tci",
-    "range" : "54",
+    "range" : "50",
     "annotations" : {
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
@@ -1493,19 +1490,19 @@
     "attributes" : [ "datatype" ],
     "id" : "58"
   }, {
-    "range" : "24",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "39",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "61"
   }, {
     "range" : "16",
     "domain" : "63",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "62"
   }, {
-    "range" : "24",
-    "domain" : "39",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "16",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "64"
   }, {
     "iri" : "https://w3id.org/lbs/tci#adjacentWall",
@@ -1535,11 +1532,11 @@
       "en" : "Used to specify adjecency between two walls"
     },
     "attributes" : [ "object" ],
-    "id" : "65"
+    "id" : "66"
   }, {
     "iri" : "https://w3id.org/lbs/tci#connectionType",
     "baseIri" : "https://w3id.org/lbs/tci",
-    "range" : "68",
+    "range" : "69",
     "annotations" : {
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
@@ -1558,17 +1555,17 @@
       "en" : "The connection type of two element, e.g. Walls"
     },
     "attributes" : [ "datatype" ],
-    "id" : "67"
+    "id" : "68"
   }, {
-    "range" : "25",
-    "domain" : "39",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "70"
-  }, {
-    "range" : "25",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "24",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "71"
+  }, {
+    "range" : "24",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "72"
   }, {
     "iri" : "https://w3id.org/lbs/tci#hassecTCIs",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -1591,7 +1588,7 @@
       "en" : "Specifies all secondary TCIs of a PCI"
     },
     "attributes" : [ "object" ],
-    "id" : "72"
+    "id" : "73"
   }, {
     "iri" : "https://w3id.org/lbs/tci#cornerType",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -1625,27 +1622,27 @@
       "en" : "Defines the corner type of a corner element"
     },
     "attributes" : [ "object" ],
-    "id" : "73"
-  }, {
-    "range" : "69",
-    "domain" : "49",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "74"
   }, {
-    "range" : "69",
-    "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "70",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "75"
   }, {
-    "range" : "13",
-    "domain" : "46",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "70",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "76"
   }, {
     "range" : "13",
-    "domain" : "45",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "77"
+  }, {
+    "range" : "13",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
   }, {
     "iri" : "https://w3id.org/lbs/tci#countTieRod",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -1668,17 +1665,17 @@
       "en" : "property that counts the number of tie rods, a PCI will equip during its construction"
     },
     "attributes" : [ "datatype" ],
-    "id" : "78"
-  }, {
-    "range" : "43",
-    "domain" : "66",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "79"
   }, {
-    "range" : "27",
-    "domain" : "69",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "43",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "80"
+  }, {
+    "range" : "26",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
   }, {
     "iri" : "https://w3id.org/lbs/tci#countWaler",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -1701,22 +1698,22 @@
       "en" : "property that counts the number of walers, a PCI will equip during its construction"
     },
     "attributes" : [ "datatype" ],
-    "id" : "81"
-  }, {
-    "range" : "11",
-    "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "82"
   }, {
     "range" : "11",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "83"
   }, {
     "range" : "11",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "84"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
   }, {
     "iri" : "https://w3id.org/lbs/tci#countTimberFilling",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -1739,27 +1736,27 @@
       "en" : "property that counts the number of timber filling, a PCI will equip during its construction"
     },
     "attributes" : [ "datatype" ],
-    "id" : "86"
-  }, {
-    "range" : "2",
-    "domain" : "20",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "87"
   }, {
     "range" : "2",
-    "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "88"
   }, {
-    "range" : "11",
-    "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "2",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "89"
   }, {
     "range" : "11",
-    "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "90"
+  }, {
+    "range" : "11",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "91"
   }, {
     "iri" : "https://w3id.org/lbs/tci#countTCIs",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -1778,17 +1775,17 @@
   }, {
     "range" : "2",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "93"
   }, {
     "range" : "2",
     "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "94"
   }, {
     "iri" : "https://w3id.org/lbs/tci#countWingnut",
     "baseIri" : "https://w3id.org/lbs/tci",
-    "range" : "50",
+    "range" : "54",
     "annotations" : {
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
@@ -1811,12 +1808,12 @@
   }, {
     "range" : "2",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "96"
   }, {
     "range" : "2",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "97"
   }, {
     "iri" : "https://w3id.org/lbs/tci#countedBy",
@@ -1836,13 +1833,13 @@
       "en" : "counted by",
       "da" : "optalt af"
     },
-    "superproperty" : [ "30" ],
+    "superproperty" : [ "29" ],
     "domain" : "4",
     "comment" : {
       "en" : "Specifies property that counts the number of individuals of a specific TCI-class "
     },
     "attributes" : [ "object" ],
-    "id" : "31"
+    "id" : "30"
   }, {
     "iri" : "https://w3id.org/lbs/tci#countOutsideCorner",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -1896,6 +1893,42 @@
     "attributes" : [ "object" ],
     "id" : "5"
   }, {
+    "iri" : "https://w3id.org/lbs/tci#consistsOf",
+    "baseIri" : "https://w3id.org/lbs/tci",
+    "range" : "4",
+    "annotations" : {
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/lbs/tci#FormworkParts",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/lbs/tci#ScaffoldingParts",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "https://w3id.org/lbs/tci#TCI",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "consistsOf",
+      "en" : "consists of",
+      "da" : "består af"
+    },
+    "domain" : "4",
+    "subproperty" : [ "102", "103" ],
+    "comment" : {
+      "en" : "Used to relate a TCI-Type to its components",
+      "da" : "Bruges til at relatere en TCI-type til dens komponenter"
+    },
+    "attributes" : [ "object" ],
+    "id" : "101"
+  }, {
     "iri" : "https://w3id.org/lbs/tci#hasScaffoldingParts",
     "baseIri" : "https://w3id.org/lbs/tci",
     "range" : "4",
@@ -1918,50 +1951,14 @@
       "en" : "has scaffolding parts",
       "da" : "har stilladserkompoenter"
     },
-    "superproperty" : [ "102" ],
+    "superproperty" : [ "101" ],
     "domain" : "4",
     "comment" : {
       "en" : "Used to relate a scaffolding-type to its components",
       "da" : "Bruges til at relatere en stilladser-type til dens komponenter"
     },
     "attributes" : [ "object" ],
-    "id" : "101"
-  }, {
-    "iri" : "https://w3id.org/lbs/tci#consistsOf",
-    "baseIri" : "https://w3id.org/lbs/tci",
-    "range" : "4",
-    "annotations" : {
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/lbs/tci#ScaffoldingParts",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/lbs/tci#FormworkParts",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "https://w3id.org/lbs/tci#TCI",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "consistsOf",
-      "en" : "consists of",
-      "da" : "består af"
-    },
-    "domain" : "4",
-    "subproperty" : [ "103", "101" ],
-    "comment" : {
-      "en" : "Used to relate a TCI-Type to its components",
-      "da" : "Bruges til at relatere en TCI-type til dens komponenter"
-    },
-    "attributes" : [ "object" ],
-    "id" : "102"
+    "id" : "103"
   }, {
     "iri" : "https://w3id.org/lbs/tci#hasTCIsIn",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -2034,18 +2031,13 @@
   }, {
     "range" : "16",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "107"
   }, {
-    "range" : "16",
-    "domain" : "91",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "63",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "108"
-  }, {
-    "range" : "91",
-    "domain" : "63",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "109"
   }, {
     "iri" : "https://w3id.org/lbs/tci#tciType",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -2079,12 +2071,12 @@
       "en" : "Specifies the type of a TCI"
     },
     "attributes" : [ "object" ],
-    "id" : "110"
+    "id" : "109"
   }, {
     "range" : "23",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "111"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
   }, {
     "iri" : "https://w3id.org/lbs/tci#supportsTCI",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -2115,15 +2107,15 @@
     },
     "label" : {
       "IRI-based" : "supportsTCI",
-      "en" : "supports tci",
-      "da" : "understøtter tci"
+      "en" : "supports TCI",
+      "da" : "understøtter TCI"
     },
     "domain" : "4",
     "comment" : {
       "en" : "Used to relate a PCI to its supported TCI"
     },
     "attributes" : [ "object" ],
-    "id" : "112"
+    "id" : "111"
   }, {
     "iri" : "https://w3id.org/lbs/tci#pciType",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -2138,12 +2130,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/bot#Element",
+        "value" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct",
+        "value" : "https://w3id.org/bot#Element",
         "type" : "iri"
       } ]
     },
@@ -2157,7 +2149,7 @@
       "en" : "Specifies the type of a PCI"
     },
     "attributes" : [ "object" ],
-    "id" : "113"
+    "id" : "112"
   }, {
     "iri" : "https://w3id.org/lbs/tci#isSupportedBy",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -2196,12 +2188,12 @@
       "en" : "Used to relate a primary tci to secondary elements that support it"
     },
     "attributes" : [ "object" ],
-    "id" : "114"
+    "id" : "113"
   }, {
-    "range" : "27",
-    "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "115"
+    "range" : "26",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
   }, {
     "iri" : "https://w3id.org/lbs/tci#supportsPCIType",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -2210,12 +2202,12 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct",
+        "value" : "https://w3id.org/bot#Element",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "https://w3id.org/bot#Element",
+        "value" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
@@ -2227,20 +2219,20 @@
     },
     "label" : {
       "IRI-based" : "supportsPCIType",
-      "en" : "supports pci type",
-      "da" : "understøtter pci type"
+      "en" : "supports PCI type",
+      "da" : "understøtter PCI type"
     },
     "domain" : "4",
     "comment" : {
       "en" : "Used to relate a TCI to the PCI it is supporting"
     },
     "attributes" : [ "object" ],
-    "id" : "116"
+    "id" : "115"
   }, {
     "range" : "43",
     "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "117"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
   }, {
     "iri" : "https://w3id.org/lbs/tci#hasFormworkParts",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -2264,14 +2256,14 @@
       "en" : "has formwork parts",
       "da" : "har forskallingskompoenter"
     },
-    "superproperty" : [ "102" ],
+    "superproperty" : [ "101" ],
     "domain" : "4",
     "comment" : {
       "en" : "Used to relate a formwork-type to its components",
       "da" : "Bruges til at relatere en Forskallings-type til dens komponenter"
     },
     "attributes" : [ "object" ],
-    "id" : "103"
+    "id" : "102"
   }, {
     "iri" : "https://w3id.org/lbs/tci#hasProductCatalogue",
     "baseIri" : "https://w3id.org/lbs/tci",
@@ -2300,6 +2292,6 @@
       "en" : "Specifies the product catalogue of a product"
     },
     "attributes" : [ "object" ],
-    "id" : "118"
+    "id" : "117"
   } ]
 }

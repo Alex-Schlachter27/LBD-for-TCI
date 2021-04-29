@@ -15,7 +15,7 @@
         <owl:versionIRI rdf:resource="https://w3id.org/lbs/tci-0.0.1"/>
         <terms:creator rdf:resource="https://www.niras.dk/employees/alexander-schlachter-ales/"/>
         <terms:creator>Alexander Schlachter</terms:creator>
-        <terms:description xml:lang="en">The Ontology for Temporary Construction Items (TCI) is...</terms:description>
+        <terms:description xml:lang="en">The Ontology for Temporary Construction Items (TCI) is a minimal ontology for describing the concepts of temporary construction items as formwork and their relation to permanent construction items, e.g. walls and slabs.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-21T19:00:00</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/1.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-21T19:00:00</terms:modified>
@@ -393,8 +393,8 @@
         <schema:rangeIncludes rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"/>
         <schema:rangeIncludes rdf:resource="https://w3id.org/bot#Element"/>
         <rdfs:comment xml:lang="en">Used to relate a TCI to the PCI it is supporting</rdfs:comment>
-        <rdfs:label xml:lang="en">supports pci type</rdfs:label>
-        <rdfs:label xml:lang="da">understøtter pci type</rdfs:label>
+        <rdfs:label xml:lang="en">supports PCI type</rdfs:label>
+        <rdfs:label xml:lang="da">understøtter PCI type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -408,8 +408,8 @@
         <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#DefaultPrimTCI"/>
         <schema:rangeIncludes rdf:resource="https://w3id.org/lbs/tci#PrimaryTCI"/>
         <rdfs:comment xml:lang="en">Used to relate a PCI to its supported TCI</rdfs:comment>
-        <rdfs:label xml:lang="en">supports tci</rdfs:label>
-        <rdfs:label xml:lang="da">understøtter tci</rdfs:label>
+        <rdfs:label xml:lang="en">supports TCI</rdfs:label>
+        <rdfs:label xml:lang="da">understøtter TCI</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -659,8 +659,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#TCI"/>
         <owl:disjointWith rdf:resource="https://w3id.org/lbs/tci#DefaultProduct"/>
         <rdfs:comment xml:lang="en">Specified a confirmed product that comes from a producer and is retrieved e.g. from a product catalogue</rdfs:comment>
-        <rdfs:label xml:lang="da">bekræftet produkt</rdfs:label>
-        <rdfs:label xml:lang="en">confirmed product</rdfs:label>
+        <rdfs:label xml:lang="da">Bekræftet Produkt</rdfs:label>
+        <rdfs:label xml:lang="en">Confirmed Product</rdfs:label>
     </owl:Class>
     
 
@@ -672,8 +672,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#PrimaryTCI"/>
         <rdfs:comment xml:lang="en">A formwork corner panel</rdfs:comment>
-        <rdfs:label xml:lang="en">corner panel</rdfs:label>
-        <rdfs:label xml:lang="da">hjørnepanel</rdfs:label>
+        <rdfs:label xml:lang="en">Corner panel</rdfs:label>
+        <rdfs:label xml:lang="da">Hjørnepanel</rdfs:label>
     </owl:Class>
     
 
@@ -685,8 +685,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
         <rdfs:comment xml:lang="en">A formwork coupler</rdfs:comment>
-        <rdfs:label xml:lang="en">coupler</rdfs:label>
-        <rdfs:label xml:lang="da">kobling</rdfs:label>
+        <rdfs:label xml:lang="en">Coupler</rdfs:label>
+        <rdfs:label xml:lang="da">Kobling</rdfs:label>
     </owl:Class>
     
 
@@ -697,8 +697,8 @@
     <owl:Class rdf:about="https://w3id.org/lbs/tci#DefaultFormwork">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#DefaultProduct"/>
         <rdfs:comment xml:lang="en">the default set of formwork that is used when no tci:ConfirmedProduct is available</rdfs:comment>
-        <rdfs:label xml:lang="en">Default formwork</rdfs:label>
-        <rdfs:label xml:lang="da">standardforskalling</rdfs:label>
+        <rdfs:label xml:lang="en">Default Formwork</rdfs:label>
+        <rdfs:label xml:lang="da">Standardforskalling</rdfs:label>
     </owl:Class>
     
 
@@ -710,8 +710,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#PrimaryTCI"/>
         <rdfs:comment xml:lang="en">Specifies the primary elements of a default set of formwork</rdfs:comment>
-        <rdfs:label xml:lang="en">Default primary TCI</rdfs:label>
-        <rdfs:label xml:lang="da">standard primær TCI</rdfs:label>
+        <rdfs:label xml:lang="en">Default Primary TCI</rdfs:label>
+        <rdfs:label xml:lang="da">Standard Primær TCI</rdfs:label>
     </owl:Class>
     
 
@@ -722,8 +722,8 @@
     <owl:Class rdf:about="https://w3id.org/lbs/tci#DefaultProduct">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#TCI"/>
         <rdfs:comment xml:lang="en">the default set of TCIs that is used when no tci:ConfirmedProduct is available</rdfs:comment>
-        <rdfs:label xml:lang="en">default product</rdfs:label>
-        <rdfs:label xml:lang="da">standard product</rdfs:label>
+        <rdfs:label xml:lang="en">Default Product</rdfs:label>
+        <rdfs:label xml:lang="da">Standard Product</rdfs:label>
     </owl:Class>
     
 
@@ -735,8 +735,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#DefaultFormwork"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
         <rdfs:comment xml:lang="en">Specifies the secondary elements of a default set of formwork</rdfs:comment>
-        <rdfs:label xml:lang="en">Default secondary TCI</rdfs:label>
-        <rdfs:label xml:lang="da">standard sekundær TCI</rdfs:label>
+        <rdfs:label xml:lang="en">Default Secondary TCI</rdfs:label>
+        <rdfs:label xml:lang="da">Standard Sekundær TCI</rdfs:label>
     </owl:Class>
     
 
@@ -761,8 +761,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#Formwork"/>
         <owl:disjointWith rdf:resource="https://w3id.org/lbs/tci#FormworkVertical"/>
         <rdfs:comment xml:lang="en">Specifies the formwork type as horizontal formwork</rdfs:comment>
-        <rdfs:label xml:lang="en">Formwork horizontal</rdfs:label>
-        <rdfs:label xml:lang="da">Forskalling vandret</rdfs:label>
+        <rdfs:label xml:lang="en">Formwork Horizontal</rdfs:label>
+        <rdfs:label xml:lang="da">Forskalling Vandret</rdfs:label>
     </owl:Class>
     
 
@@ -773,8 +773,8 @@
     <owl:Class rdf:about="https://w3id.org/lbs/tci#FormworkParts">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#Formwork"/>
         <rdfs:comment xml:lang="en">The components of a formwork</rdfs:comment>
-        <rdfs:label xml:lang="en">Formwork parts</rdfs:label>
-        <rdfs:label xml:lang="da">Forskalling elements</rdfs:label>
+        <rdfs:label xml:lang="en">Formwork Parts</rdfs:label>
+        <rdfs:label xml:lang="da">Forskalling Elements</rdfs:label>
     </owl:Class>
     
 
@@ -785,8 +785,8 @@
     <owl:Class rdf:about="https://w3id.org/lbs/tci#FormworkVertical">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#Formwork"/>
         <rdfs:comment xml:lang="en">Specifies the formwork type as vertical formwork</rdfs:comment>
-        <rdfs:label xml:lang="en">Formwork vertical</rdfs:label>
-        <rdfs:label xml:lang="da">Forskalling lodret</rdfs:label>
+        <rdfs:label xml:lang="en">Formwork Vertical</rdfs:label>
+        <rdfs:label xml:lang="da">Forskalling Lodret</rdfs:label>
     </owl:Class>
     
 
@@ -797,8 +797,8 @@
     <owl:Class rdf:about="https://w3id.org/lbs/tci#InsideCorner">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#CornerPanel"/>
         <rdfs:comment xml:lang="en">The inside corner of a formwork corner panel</rdfs:comment>
-        <rdfs:label xml:lang="da">indvendigt hjørne</rdfs:label>
-        <rdfs:label xml:lang="en">inside corner</rdfs:label>
+        <rdfs:label xml:lang="da">Indvendigt Hjørne</rdfs:label>
+        <rdfs:label xml:lang="en">Inside Corner</rdfs:label>
     </owl:Class>
     
 
@@ -809,8 +809,8 @@
     <owl:Class rdf:about="https://w3id.org/lbs/tci#OutsideCorner">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#CornerPanel"/>
         <rdfs:comment xml:lang="en">The outside corner of a formwork corner panel</rdfs:comment>
-        <rdfs:label xml:lang="en">outside corner</rdfs:label>
-        <rdfs:label xml:lang="da">udvendigt hjørne</rdfs:label>
+        <rdfs:label xml:lang="en">Outside Corner</rdfs:label>
+        <rdfs:label xml:lang="da">Udvendigt Hjørne</rdfs:label>
     </owl:Class>
     
 
@@ -822,8 +822,8 @@
         <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
         <rdfs:comment>Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.&quot;@en</rdfs:comment>
-        <rdfs:label xml:lang="da">permanent bygnings element</rdfs:label>
-        <rdfs:label xml:lang="en">permanent construction item</rdfs:label>
+        <rdfs:label xml:lang="da">PCI</rdfs:label>
+        <rdfs:label xml:lang="en">PCI</rdfs:label>
     </owl:Class>
     
 
@@ -835,8 +835,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#PrimaryTCI"/>
         <rdfs:comment xml:lang="en">the panel of a formwork</rdfs:comment>
-        <rdfs:label xml:lang="da">panel</rdfs:label>
-        <rdfs:label xml:lang="en">panel</rdfs:label>
+        <rdfs:label xml:lang="da">Panel</rdfs:label>
+        <rdfs:label xml:lang="en">Panel</rdfs:label>
     </owl:Class>
     
 
@@ -848,8 +848,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#TCI"/>
         <owl:disjointWith rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
         <rdfs:comment xml:lang="en">The main components of a TCI type that directly relate to the PCI</rdfs:comment>
-        <rdfs:label xml:lang="en">primary TCI</rdfs:label>
-        <rdfs:label xml:lang="da">primær TCI</rdfs:label>
+        <rdfs:label xml:lang="en">Primary TCI</rdfs:label>
+        <rdfs:label xml:lang="da">Primær TCI</rdfs:label>
     </owl:Class>
     
 
@@ -859,8 +859,8 @@
 
     <owl:Class rdf:about="https://w3id.org/lbs/tci#Producer">
         <rdfs:comment xml:lang="en">the producer of a product</rdfs:comment>
-        <rdfs:label xml:lang="da">producent</rdfs:label>
-        <rdfs:label xml:lang="en">producer</rdfs:label>
+        <rdfs:label xml:lang="da">Producent</rdfs:label>
+        <rdfs:label xml:lang="en">Producer</rdfs:label>
     </owl:Class>
     
 
@@ -870,7 +870,7 @@
 
     <owl:Class rdf:about="https://w3id.org/lbs/tci#ProductCatalogue">
         <rdfs:comment xml:lang="en">the product catalogue, where components of a product are specified</rdfs:comment>
-        <rdfs:label xml:lang="en">Product catalogue</rdfs:label>
+        <rdfs:label xml:lang="en">Product Catalogue</rdfs:label>
         <rdfs:label xml:lang="da">Produktkatalog</rdfs:label>
     </owl:Class>
     
@@ -883,8 +883,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
         <rdfs:comment xml:lang="en">Components for the stabilisation of wall and column formwork systems thta align and support panel gangs</rdfs:comment>
-        <rdfs:label xml:lang="en">push-pull prop</rdfs:label>
-        <rdfs:label xml:lang="da">skubbe-trække støtte</rdfs:label>
+        <rdfs:label xml:lang="en">Push-Pull Prop</rdfs:label>
+        <rdfs:label xml:lang="da">Skubbe-Trække Støtte</rdfs:label>
     </owl:Class>
     
 
@@ -907,8 +907,8 @@
     <owl:Class rdf:about="https://w3id.org/lbs/tci#ScaffoldingParts">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#Scaffolding"/>
         <rdfs:comment xml:lang="en">the components of a scaffolding</rdfs:comment>
-        <rdfs:label xml:lang="en">Scaffolding parts</rdfs:label>
-        <rdfs:label xml:lang="da">stilladser komponenter</rdfs:label>
+        <rdfs:label xml:lang="en">Scaffolding Parts</rdfs:label>
+        <rdfs:label xml:lang="da">Stilladser Komponenter</rdfs:label>
     </owl:Class>
     
 
@@ -919,7 +919,7 @@
     <owl:Class rdf:about="https://w3id.org/lbs/tci#SecondaryTCI">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#TCI"/>
         <rdfs:comment xml:lang="en">Supports the main components of a TCI-system and has no direct relation to the PCI it supports</rdfs:comment>
-        <rdfs:label xml:lang="en">Secundary TCI</rdfs:label>
+        <rdfs:label xml:lang="en">Secondary TCI</rdfs:label>
         <rdfs:label xml:lang="da">Sekundær TCI</rdfs:label>
     </owl:Class>
     
@@ -930,10 +930,9 @@
 
     <owl:Class rdf:about="https://w3id.org/lbs/tci#TCI">
         <rdfs:subClassOf rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
         <rdfs:comment xml:lang="en">components that support the construction of building elements and are only used temporarily</rdfs:comment>
-        <rdfs:label xml:lang="en">temporary construction item</rdfs:label>
-        <rdfs:label xml:lang="da">temporær bygnings element</rdfs:label>
+        <rdfs:label xml:lang="da">TCI</rdfs:label>
+        <rdfs:label xml:lang="en">TCI</rdfs:label>
     </owl:Class>
     
 
@@ -945,8 +944,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
         <rdfs:comment xml:lang="en">used to hold the concrete wall forms firmly against the lateral pressure</rdfs:comment>
-        <rdfs:label xml:lang="en">Tie rod</rdfs:label>
-        <rdfs:label xml:lang="da">trækstang</rdfs:label>
+        <rdfs:label xml:lang="en">Tie Rod</rdfs:label>
+        <rdfs:label xml:lang="da">Trækstang</rdfs:label>
     </owl:Class>
     
 
@@ -958,8 +957,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#PrimaryTCI"/>
         <rdfs:comment xml:lang="en">is used to fill the gap of a formwork sequence</rdfs:comment>
-        <rdfs:label xml:lang="en">timber filling</rdfs:label>
-        <rdfs:label xml:lang="da">træfyldning</rdfs:label>
+        <rdfs:label xml:lang="en">Timber Filling</rdfs:label>
+        <rdfs:label xml:lang="da">Træfyldning</rdfs:label>
     </owl:Class>
     
 
@@ -971,8 +970,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
         <rdfs:comment xml:lang="en">holds formwork panels together when the distance is too big for a coupler</rdfs:comment>
-        <rdfs:label xml:lang="da">waler</rdfs:label>
-        <rdfs:label xml:lang="en">waler</rdfs:label>
+        <rdfs:label xml:lang="da">Waler</rdfs:label>
+        <rdfs:label xml:lang="en">Waler</rdfs:label>
     </owl:Class>
     
 
@@ -984,8 +983,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#FormworkParts"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lbs/tci#SecondaryTCI"/>
         <rdfs:comment xml:lang="en">holds together tie rods</rdfs:comment>
-        <rdfs:label xml:lang="da">vingemøtrik</rdfs:label>
-        <rdfs:label xml:lang="en">wingnut</rdfs:label>
+        <rdfs:label xml:lang="da">Vingemøtrik</rdfs:label>
+        <rdfs:label xml:lang="en">Wingnut</rdfs:label>
     </owl:Class>
     
 

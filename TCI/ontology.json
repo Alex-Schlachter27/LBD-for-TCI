@@ -74,7 +74,7 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "The Ontology for Temporary Construction Items (TCI) is..."
+    "@value" : "The Ontology for Temporary Construction Items (TCI) is a minimal ontology for describing the concepts of temporary construction items as formwork and their relation to permanent construction items, e.g. walls and slabs."
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
@@ -112,10 +112,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "da",
-    "@value" : "bekræftet produkt"
+    "@value" : "Bekræftet Produkt"
   }, {
     "@language" : "en",
-    "@value" : "confirmed product"
+    "@value" : "Confirmed Product"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#TCI"
@@ -132,10 +132,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "corner panel"
+    "@value" : "Corner panel"
   }, {
     "@language" : "da",
-    "@value" : "hjørnepanel"
+    "@value" : "Hjørnepanel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#FormworkParts"
@@ -151,10 +151,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "coupler"
+    "@value" : "Coupler"
   }, {
     "@language" : "da",
-    "@value" : "kobling"
+    "@value" : "Kobling"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#FormworkParts"
@@ -170,10 +170,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Default formwork"
+    "@value" : "Default Formwork"
   }, {
     "@language" : "da",
-    "@value" : "standardforskalling"
+    "@value" : "Standardforskalling"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#DefaultProduct"
@@ -187,10 +187,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Default primary TCI"
+    "@value" : "Default Primary TCI"
   }, {
     "@language" : "da",
-    "@value" : "standard primær TCI"
+    "@value" : "Standard Primær TCI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#DefaultFormwork"
@@ -206,10 +206,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "default product"
+    "@value" : "Default Product"
   }, {
     "@language" : "da",
-    "@value" : "standard product"
+    "@value" : "Standard Product"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#TCI"
@@ -223,10 +223,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Default secondary TCI"
+    "@value" : "Default Secondary TCI"
   }, {
     "@language" : "da",
-    "@value" : "standard sekundær TCI"
+    "@value" : "Standard Sekundær TCI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#DefaultFormwork"
@@ -262,10 +262,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Formwork horizontal"
+    "@value" : "Formwork Horizontal"
   }, {
     "@language" : "da",
-    "@value" : "Forskalling vandret"
+    "@value" : "Forskalling Vandret"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#Formwork"
@@ -282,10 +282,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Formwork parts"
+    "@value" : "Formwork Parts"
   }, {
     "@language" : "da",
-    "@value" : "Forskalling elements"
+    "@value" : "Forskalling Elements"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#Formwork"
@@ -299,10 +299,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Formwork vertical"
+    "@value" : "Formwork Vertical"
   }, {
     "@language" : "da",
-    "@value" : "Forskalling lodret"
+    "@value" : "Forskalling Lodret"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#Formwork"
@@ -316,10 +316,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "da",
-    "@value" : "indvendigt hjørne"
+    "@value" : "Indvendigt Hjørne"
   }, {
     "@language" : "en",
-    "@value" : "inside corner"
+    "@value" : "Inside Corner"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#CornerPanel"
@@ -333,10 +333,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "outside corner"
+    "@value" : "Outside Corner"
   }, {
     "@language" : "da",
-    "@value" : "udvendigt hjørne"
+    "@value" : "Udvendigt Hjørne"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#CornerPanel"
@@ -349,10 +349,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "da",
-    "@value" : "permanent bygnings element"
+    "@value" : "PCI"
   }, {
     "@language" : "en",
-    "@value" : "permanent construction item"
+    "@value" : "PCI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"
@@ -368,10 +368,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "da",
-    "@value" : "panel"
+    "@value" : "Panel"
   }, {
     "@language" : "en",
-    "@value" : "panel"
+    "@value" : "Panel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#FormworkParts"
@@ -387,10 +387,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "primary TCI"
+    "@value" : "Primary TCI"
   }, {
     "@language" : "da",
-    "@value" : "primær TCI"
+    "@value" : "Primær TCI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#TCI"
@@ -407,10 +407,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "da",
-    "@value" : "producent"
+    "@value" : "Producent"
   }, {
     "@language" : "en",
-    "@value" : "producer"
+    "@value" : "Producer"
   } ]
 }, {
   "@id" : "https://w3id.org/lbs/tci#ProductCatalogue",
@@ -421,7 +421,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Product catalogue"
+    "@value" : "Product Catalogue"
   }, {
     "@language" : "da",
     "@value" : "Produktkatalog"
@@ -435,10 +435,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "push-pull prop"
+    "@value" : "Push-Pull Prop"
   }, {
     "@language" : "da",
-    "@value" : "skubbe-trække støtte"
+    "@value" : "Skubbe-Trække Støtte"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#FormworkParts"
@@ -471,10 +471,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Scaffolding parts"
+    "@value" : "Scaffolding Parts"
   }, {
     "@language" : "da",
-    "@value" : "stilladser komponenter"
+    "@value" : "Stilladser Komponenter"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#Scaffolding"
@@ -488,7 +488,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Secundary TCI"
+    "@value" : "Secondary TCI"
   }, {
     "@language" : "da",
     "@value" : "Sekundær TCI"
@@ -504,16 +504,14 @@
     "@value" : "components that support the construction of building elements and are only used temporarily"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "temporary construction item"
-  }, {
     "@language" : "da",
-    "@value" : "temporær bygnings element"
+    "@value" : "TCI"
+  }, {
+    "@language" : "en",
+    "@value" : "TCI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#IfcProduct"
-  }, {
-    "@id" : "https://w3id.org/bot#Element"
   } ]
 }, {
   "@id" : "https://w3id.org/lbs/tci#TieRod",
@@ -524,10 +522,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Tie rod"
+    "@value" : "Tie Rod"
   }, {
     "@language" : "da",
-    "@value" : "trækstang"
+    "@value" : "Trækstang"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#FormworkParts"
@@ -543,10 +541,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "timber filling"
+    "@value" : "Timber Filling"
   }, {
     "@language" : "da",
-    "@value" : "træfyldning"
+    "@value" : "Træfyldning"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#FormworkParts"
@@ -562,10 +560,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "da",
-    "@value" : "waler"
+    "@value" : "Waler"
   }, {
     "@language" : "en",
-    "@value" : "waler"
+    "@value" : "Waler"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#FormworkParts"
@@ -581,10 +579,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "da",
-    "@value" : "vingemøtrik"
+    "@value" : "Vingemøtrik"
   }, {
     "@language" : "en",
-    "@value" : "wingnut"
+    "@value" : "Wingnut"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/lbs/tci#FormworkParts"
@@ -1175,10 +1173,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "supports pci type"
+    "@value" : "supports PCI type"
   }, {
     "@language" : "da",
-    "@value" : "understøtter pci type"
+    "@value" : "understøtter PCI type"
   } ]
 }, {
   "@id" : "https://w3id.org/lbs/tci#supportsTCI",
@@ -1199,10 +1197,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "supports tci"
+    "@value" : "supports TCI"
   }, {
     "@language" : "da",
-    "@value" : "understøtter tci"
+    "@value" : "understøtter TCI"
   } ]
 }, {
   "@id" : "https://w3id.org/lbs/tci#tciType",
