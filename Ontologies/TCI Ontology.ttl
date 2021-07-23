@@ -1,18 +1,58 @@
-@prefix : <http://test/tci/> .
 @prefix bot: <https://w3id.org/bot#> .
 @prefix opm: <https://w3id.org/opm#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix tci: <http://test/tci/> .
+@prefix tci: <https://w3id.org/lbs/tci#>  .
+@prefix generic: <https://w3id.org/lbs/tci/generic#> .
+@prefix ifc: <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix peri: <http://test/peri/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix props: <https://w3id.org/props#> .
-@prefix product: <https://w3id.org/product#> .
+@prefix vs:       <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix vann:     <http://purl.org/vocab/vann/> .
+@prefix voaf:     <http://purl.org/vocommons/voaf#> .
+@prefix schema: <http://schema.org/> .
 @base <http://test/tci/> .
 
-<http://test/tci/> rdf:type owl:Ontology .
+#################################################################
+#    Metadata
+#################################################################
+
+voaf:Vocabulary a owl:Class .
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+schema:domainIncludes a owl:AnnotationProperty .
+schema:rangeIncludes a owl:AnnotationProperty .
+vs:term_status a owl:AnnotationProperty .
+vcard:fn a owl:AnnotationProperty .
+schema:name a owl:AnnotationProperty .
+
+<https://w3id.org/lbs/tci#>  rdf:type owl:Ontology , voaf:Vocabulary ;
+    dcterms:modified    "2021-04-21T19:00:00"^^xsd:dateTime ;
+    dcterms:issued      "2021-04-21T19:00:00"^^xsd:dateTime ;
+    owl:versionInfo     "0.0.1" ;
+    owl:versionIRI      <https://w3id.org/lbs/tci-0.0.1> ;
+    # owl:priorVersion    <https://w3id.org/tci-0.0.1> ;
+    dcterms:title       "Ontology for Temporary Construction Items (TCI)"@en ;
+    dcterms:description """The Ontology for Temporary Construction Items (TCI) is a minimal ontology for describing the concepts of temporary construction items as formwork and their relation to permanent construction items, e.g. walls and slabs."""@en ;
+    dcterms:creator     "Alexander Schlachter" ;
+    dcterms:creator     <https://www.niras.dk/employees/alexander-schlachter-ales/> ;
+    dcterms:license     <https://creativecommons.org/licenses/by/1.0/> ;
+    vann:preferredNamespacePrefix "tci" ;
+    vann:preferredNamespaceUri    <https://w3id.org/lbs/tci#>  .
+
+<https://www.niras.dk/employees/alexander-schlachter-ales/> a vcard:Individual , schema:Person; 
+	vcard:fn   "Alexander Schlachter" ;
+	schema:name "Alexander Schlachter" .
 
 #################################################################
 #    Datatypes
@@ -34,682 +74,475 @@
 #    Object Properties
 #################################################################
 
-###  http://test/tci/adjacentWall1
-tci:adjacentWall1 rdf:type owl:ObjectProperty ;
-                  rdfs:domain product:Wall ;
-                  rdfs:range product:Wall .
-
-
-###  http://test/tci/adjacentWall2
-tci:adjacentWall2 rdf:type owl:ObjectProperty ;
-                  rdfs:domain product:Wall ;
-                  rdfs:range product:Wall .
+###  http://test/tci/adjacentWall
+tci:adjacentWall rdf:type owl:ObjectProperty ;
+                  rdfs:label "adjacent wall"@en , "tilstødende væg"@da ;
+                  rdfs:comment "Used to specify adjecency between two walls"@en ;
+                  schema:domainIncludes ifc:IfcWall ;
+                  schema:rangeIncludes ifc:IfcWall .
 
 
 ###  http://test/tci/consistsOf
 tci:consistsOf rdf:type owl:ObjectProperty ;
-               rdfs:domain tci:TCI ;
-               rdfs:range tci:FormworkParts ,
-                          <https://test/tci/ScaffoldingParts> .
+               rdfs:label "consists of"@en , "består af"@da ;
+               rdfs:comment "Used to relate a TCI-Type to its components"@en , "Bruges til at relatere en TCI-type til dens komponenter"@da ;
+               schema:domainIncludes tci:TCI ;
+               schema:rangeIncludes tci:FormworkParts ,
+                          tci:ScaffoldingParts .
 
 
 ###  http://test/tci/cornerType
 tci:cornerType rdf:type owl:ObjectProperty ;
-               rdfs:domain tci:CornerPanel ;
-               rdfs:range tci:InsideCorner ,
+               rdfs:label "corner type"@en , "hjørnetype"@da ;
+               rdfs:comment "Defines the corner type of a corner element"@en ;
+               schema:domainIncludes tci:CornerPanel ;
+               schema:rangeIncludes tci:InsideCorner ,
                           tci:OutsideCorner .
 
 
 ###  http://test/tci/countedBy
 tci:countedBy rdf:type owl:ObjectProperty ;
+              rdfs:label "counted by"@en , "optalt af"@da ;
+              rdfs:comment "Specifies property that counts the number of individuals of a specific TCI-class "@en ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               owl:inverseOf tci:iscounting ;
-              rdfs:domain tci:TCI .
+              schema:domainIncludes tci:TCI .
 
 
 ###  http://test/tci/hasFormworkParts
 tci:hasFormworkParts rdf:type owl:ObjectProperty ;
+                     rdfs:label "has formwork parts"@en , "har forskallingskompoenter"@da ;
+                     rdfs:comment "Used to relate a formwork-type to its components"@en , "Bruges til at relatere en Forskallings-type til dens komponenter"@da ;
                      rdfs:subPropertyOf tci:consistsOf ;
-                     rdfs:domain tci:Formwork ;
-                     rdfs:range tci:FormworkParts .
+                     schema:domainIncludes tci:Formwork ;
+                     schema:rangeIncludes tci:FormworkParts .
 
 
 ###  http://test/tci/hasProducer
 tci:hasProducer rdf:type owl:ObjectProperty ;
+                rdfs:label "has producer"@en , "har producent"@da ;
+                rdfs:comment "Specifies the producer of a product"@en ;     
                 owl:inverseOf tci:hasProduct ;
-                rdfs:domain tci:ConfirmedProduct ;
-                rdfs:range tci:Producer .
+                schema:domainIncludes tci:ConfirmedProduct ;
+                schema:rangeIncludes tci:Producer .
 
 
 ###  http://test/tci/hasProduct
 tci:hasProduct rdf:type owl:ObjectProperty ;
-               rdfs:domain tci:Producer ;
-               rdfs:range tci:ConfirmedProduct .
+               rdfs:label "has product"@en , "har produkt"@da ;
+                rdfs:comment "Specifies the product of a producer"@en ;    
+               schema:domainIncludes tci:Producer ;
+               schema:rangeIncludes tci:ConfirmedProduct .
 
 
 ###  http://test/tci/hasProductCatalogue
 tci:hasProductCatalogue rdf:type owl:ObjectProperty ;
-                        rdfs:domain tci:ConfirmedProduct ;
-                        rdfs:range tci:Producer .
+                        rdfs:label "has product catalogue"@en , "har produktkatalog"@da ;
+                        rdfs:comment "Specifies the product catalogue of a product"@en ;
+                        schema:domainIncludes tci:ConfirmedProduct ;
+                        schema:rangeIncludes tci:Producer .
 
 
 ###  http://test/tci/isSupportedBy
 tci:isSupportedBy rdf:type owl:ObjectProperty ;
-                  rdfs:domain tci:DefaultPrimTCI ,
+                  rdfs:label "is supported by"@en , "understøttes af"@da ;
+                  rdfs:comment "Used to relate a primary tci to secondary elements that support it"@en ;      
+                  schema:domainIncludes tci:DefaultPrimTCI ,
                               tci:PrimaryTCI ;
-                  rdfs:range tci:DefaultSecTCI ,
+                  schema:rangeIncludes tci:DefaultSecTCI ,
                              tci:SecondaryTCI .
 
 
 ###  http://test/tci/iscounting
 tci:iscounting rdf:type owl:ObjectProperty ;
-               rdfs:range tci:TCI .
+              rdfs:label "is counting"@en , "tæller"@da ;
+              rdfs:comment "Specifies the a specific TCI-class the property is counting"@en ;
+              schema:rangeIncludes tci:TCI .
 
 
 ###  http://test/tci/pciType
 tci:pciType rdf:type owl:ObjectProperty ;
-            rdfs:domain bot:Element ,
-                        product:Product ;
-            rdfs:range tci:PCI .
+            rdfs:label "permanent construction item type"@en , "permanent bygnings element type"@da ;
+            rdfs:comment "Specifies the type of a PCI"@en ;  
+            schema:domainIncludes bot:Element ,
+                        ifc:IfcProduct ;
+            schema:rangeIncludes tci:PCI .
 
 
 ###  http://test/tci/supportsPCIType
-tci:supportsPCIType rdf:type owl:ObjectProperty ;
-                    rdfs:domain tci:TCI ;
-                    rdfs:range bot:Element ,
-                               product:Product .
+tci:supportsPCIType rdf:type owl:ObjectProperty ;       
+                    rdfs:label "supports PCI type"@en , "understøtter PCI type"@da ;
+                    rdfs:comment "Used to relate a TCI to the PCI it is supporting"@en ;  
+                    schema:domainIncludes tci:TCI ;
+                    schema:rangeIncludes bot:Element ,
+                               ifc:IfcProduct .
 
 
 ###  http://test/tci/supportsTCI
 tci:supportsTCI rdf:type owl:ObjectProperty ;
-                rdfs:domain tci:DefaultSecTCI ,
+                rdfs:label "supports TCI"@en , "understøtter TCI"@da ;
+                rdfs:comment "Used to relate a PCI to its supported TCI"@en ;  
+                schema:domainIncludes tci:DefaultSecTCI ,
                             tci:SecondaryTCI ;
-                rdfs:range tci:DefaultPrimTCI ,
+                schema:rangeIncludes tci:DefaultPrimTCI ,
                            tci:PrimaryTCI .
 
 
 ###  http://test/tci/tciType
 tci:tciType rdf:type owl:ObjectProperty ;
-            rdfs:domain bot:Element ,
-                        product:Product ;
-            rdfs:range tci:TCI .
+            rdfs:label "temporary construction item type"@en , "temporary bygnings element type"@da ;
+            rdfs:comment "Specifies the type of a TCI"@en ; 
+            schema:domainIncludes bot:Element ,
+                        ifc:IfcProduct ;
+            schema:rangeIncludes tci:TCI .
 
 
-###  http://w3id.org/lindt/custom_datatypes#hasTCIsIn
-<http://w3id.org/lindt/custom_datatypes#hasTCIsIn> rdf:type owl:ObjectProperty ;
-                                                   rdfs:range tci:FormworkVertical .
+###  http://test/tci/hasTCIsIn
+tci:hasTCIsIn rdf:type owl:ObjectProperty ;
+                rdfs:label "has TCIs inside"@en , "har TCIs indenfor"@da ;
+                rdfs:comment "Specifies the TCIs on the inner side of the PCI they support"@en ; 
+                schema:rangeIncludes tci:FormworkVertical .
 
 
-###  http://w3id.org/lindt/custom_datatypes#hasTCIsOut
-<http://w3id.org/lindt/custom_datatypes#hasTCIsOut> rdf:type owl:ObjectProperty ;
-                                                    rdfs:range tci:FormworkVertical .
+###  http://test/tci/hasTCIsOut
+tci:hasTCIsOut rdf:type owl:ObjectProperty ;
+                rdfs:label "has TCIs outside"@en , "har TCIs udenfor"@da ;
+                rdfs:comment "Specifies the TCIs on the outer side of the PCI they support"@en ; 
+                schema:rangeIncludes tci:FormworkVertical .
 
 
-###  http://w3id.org/lindt/custom_datatypes#hassecTCIs
-<http://w3id.org/lindt/custom_datatypes#hassecTCIs> rdf:type owl:ObjectProperty ;
-                                                    rdfs:range tci:SecondaryTCI .
+###  http://test/tci/hassecTCIs
+tci:hassecTCIs rdf:type owl:ObjectProperty ;
+                rdfs:label "has secondary TCIs"@en , "har sekundære TCIs"@da ;
+                rdfs:comment "Specifies all secondary TCIs of a PCI"@en ; 
+                schema:rangeIncludes tci:SecondaryTCI .
 
 
-###  https://w3id.org/product#hasScaffoldingParts
-product:hasScaffoldingParts rdf:type owl:ObjectProperty ;
-                            rdfs:subPropertyOf tci:consistsOf ;
-                            rdfs:domain tci:Scaffolding ;
-                            rdfs:range <https://test/tci/ScaffoldingParts> .
+###  http://test/tci/tciType
+tci:hasScaffoldingParts rdf:type owl:ObjectProperty ;
+                        rdfs:label "has scaffolding parts"@en , "har stilladserkompoenter"@da ;
+                        rdfs:comment "Used to relate a scaffolding-type to its components"@en , "Bruges til at relatere en stilladser-type til dens komponenter"@da ;
+                        rdfs:subPropertyOf tci:consistsOf ;
+                        schema:domainIncludes tci:Scaffolding ;
+                        schema:rangeIncludes tci:ScaffoldingParts .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://test/tci/connectionType1
-tci:connectionType1 rdf:type owl:DatatypeProperty ;
-                    rdfs:domain product:Wall .
+###  http://test/tci/connectionType
+tci:connectionType rdf:type owl:DatatypeProperty ;
+                    rdfs:label "connection type"@en , "forbindelsestype"@da ;
+                    rdfs:comment "The connection type of two element, e.g. Walls"@en ; 
+                    schema:domainIncludes ifc:IfcWall .
 
 
-###  http://test/tci/connectionType2
-tci:connectionType2 rdf:type owl:DatatypeProperty ;
-                    rdfs:domain product:Wall .
+###  http://test/tci/cornerAngle
+tci:cornerAngle rdf:type owl:DatatypeProperty ;
+                 rdfs:label "corner angle"@en , "hjørnevinkel"@da ;
+                 rdfs:comment "Specifies the angle of a corner connection"@en ; 
+                 schema:domainIncludes ifc:IfcWall ;
+                 schema:rangeIncludes xsd:decimal .
 
 
-###  http://test/tci/cornerAngle1
-tci:cornerAngle1 rdf:type owl:DatatypeProperty ;
-                 rdfs:domain product:Wall ;
-                 rdfs:range xsd:decimal .
 
-
-###  http://test/tci/cornerAngle2
-tci:cornerAngle2 rdf:type owl:DatatypeProperty ;
-                 rdfs:domain product:Wall ;
-                 rdfs:range xsd:decimal .
-
-
-###  http://test/tci/countDefaultCoupler
-tci:countDefaultCoupler rdf:type owl:DatatypeProperty ;
+###  http://test/tci/countCoupler
+tci:countCoupler rdf:type owl:DatatypeProperty ;
+                        rdfs:label "count coupler"@en , "tælle kobling"@da ;
+                        rdfs:comment "property that counts the number of couplers, a PCI will equip during its construction"@en ; 
                         rdfs:subPropertyOf tci:countTCIs ;
-                        rdfs:range xsd:nonNegativeInteger .
+                        schema:rangeIncludes xsd:nonNegativeInteger .
 
 
-###  http://test/tci/countDefaultInsideCorner330x20
-tci:countDefaultInsideCorner330x20 rdf:type owl:DatatypeProperty ;
+###  http://test/tci/countInsideCorner
+tci:countInsideCorner rdf:type owl:DatatypeProperty ;
+                                   rdfs:label "count inside corner"@en , "tælle indvendigt hjørne"@da ;
+                                   rdfs:comment "property that counts the number of inside corners, a PCI will equip during its construction"@en ; 
                                    rdfs:subPropertyOf tci:countTCIs ;
-                                   rdfs:range xsd:nonNegativeInteger .
+                                   schema:rangeIncludes xsd:nonNegativeInteger .
 
 
-###  http://test/tci/countDefaultOutsideCorner330x60
-tci:countDefaultOutsideCorner330x60 rdf:type owl:DatatypeProperty ;
+###  http://test/tci/countOutsideCorner
+tci:countOutsideCorner rdf:type owl:DatatypeProperty ;
+                                    rdfs:label "count outside corner"@en , "tælle udvendigt hjørne"@da ;
+                                    rdfs:comment "property that counts the number of outside corners, a PCI will equip during its construction"@en ; 
                                     rdfs:subPropertyOf tci:countTCIs ;
-                                    rdfs:range xsd:nonNegativeInteger .
+                                    schema:rangeIncludes xsd:nonNegativeInteger .
 
 
-###  http://test/tci/countDefaultPanel330x120
-tci:countDefaultPanel330x120 rdf:type owl:DatatypeProperty ;
+###  http://test/tci/countPanel
+tci:countPanel rdf:type owl:DatatypeProperty ;
+                             rdfs:label "count panel"@en , "tælle panel"@da ;
+                             rdfs:comment "property that counts the number of panels, a PCI will equip during its construction"@en ; 
                              rdfs:subPropertyOf tci:countTCIs ;
-                             rdfs:range xsd:nonNegativeInteger .
+                             schema:rangeIncludes xsd:nonNegativeInteger .
 
 
-###  http://test/tci/countDefaultPanel330x240
-tci:countDefaultPanel330x240 rdf:type owl:DatatypeProperty ;
+###  http://test/tci/countPushPullProp
+tci:countPushPullProp rdf:type owl:DatatypeProperty ;
+                             rdfs:label "counts push-pull prop"@en , "tælle skubbe-trække støtte"@da ;
+                             rdfs:comment "property that counts the number of push-pull prop, a PCI will equip during its construction"@en ;
                              rdfs:subPropertyOf tci:countTCIs ;
-                             rdfs:range xsd:nonNegativeInteger .
+                             schema:rangeIncludes xsd:nonNegativeInteger .
 
 
-###  http://test/tci/countDefaultPanel330x30
-tci:countDefaultPanel330x30 rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf tci:countTCIs ;
-                            rdfs:range xsd:nonNegativeInteger .
-
-
-###  http://test/tci/countDefaultPanel330x45
-tci:countDefaultPanel330x45 rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf tci:countTCIs ;
-                            rdfs:range xsd:nonNegativeInteger .
-
-
-###  http://test/tci/countDefaultPanel330x60
-tci:countDefaultPanel330x60 rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf tci:countTCIs ;
-                            rdfs:range xsd:nonNegativeInteger .
-
-
-###  http://test/tci/countDefaultPanel330x90
-tci:countDefaultPanel330x90 rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf tci:countTCIs ;
-                            rdfs:range xsd:nonNegativeInteger .
-
-
-###  http://test/tci/countDefaultPushPullProp
-tci:countDefaultPushPullProp rdf:type owl:DatatypeProperty ;
-                             rdfs:subPropertyOf tci:countTCIs ;
-                             rdfs:range xsd:nonNegativeInteger .
-
-
-###  http://test/tci/countDefaultTieRod
-tci:countDefaultTieRod rdf:type owl:DatatypeProperty ;
+###  http://test/tci/countTieRod
+tci:countTieRod rdf:type owl:DatatypeProperty ;
+                       rdfs:label "count tie rod"@en , "tælle trækstang"@da ;
+                       rdfs:comment "property that counts the number of tie rods, a PCI will equip during its construction"@en ;
                        rdfs:subPropertyOf tci:countTCIs ;
-                       rdfs:range xsd:nonNegativeInteger .
+                       schema:rangeIncludes xsd:nonNegativeInteger .
 
 
-###  http://test/tci/countDefaultWaler
-tci:countDefaultWaler rdf:type owl:DatatypeProperty ;
+###  http://test/tci/countWaler
+tci:countWaler rdf:type owl:DatatypeProperty ;
+                      rdfs:label "count waler"@en , "tælle waler"@da ;
+                      rdfs:comment "property that counts the number of walers, a PCI will equip during its construction"@en ;
                       rdfs:subPropertyOf tci:countTCIs ;
-                      rdfs:range xsd:nonNegativeInteger .
+                      schema:rangeIncludes xsd:nonNegativeInteger .
 
 
-###  http://test/tci/countDefaultWingnut
-tci:countDefaultWingnut rdf:type owl:DatatypeProperty ;
+###  http://test/tci/countWingnut
+tci:countWingnut rdf:type owl:DatatypeProperty ;
+                        rdfs:label "count wingnut"@en , "tælle vingemøtrik "@da ;
+                        rdfs:comment "property that counts the number of wingnuts, a PCI will equip during its construction"@en ;
                         rdfs:subPropertyOf tci:countTCIs ;
-                        rdfs:range xsd:nonNegativeInteger .
+                        schema:rangeIncludes xsd:nonNegativeInteger .
 
 
 ###  http://test/tci/countTCIs
-tci:countTCIs rdf:type owl:DatatypeProperty .
+tci:countTCIs rdf:type owl:DatatypeProperty ;
+                rdfs:label "count TCIs"@en , "tælle TCIs"@da ;
+                rdfs:comment "property that counts the number of TCIs, a PCI will equip during its construction"@en .
 
 
 ###  http://test/tci/countTimberFilling
 tci:countTimberFilling rdf:type owl:DatatypeProperty ;
+                       rdfs:label "count timber filling"@en , "tælle træfyldning"@da ;
+                       rdfs:comment "property that counts the number of timber filling, a PCI will equip during its construction"@en ;
                        rdfs:subPropertyOf tci:countTCIs ;
-                       rdfs:range xsd:nonNegativeInteger .
+                       schema:rangeIncludes xsd:nonNegativeInteger .
 
 
 ###  http://test/tci/hasTimberFillinglength
 tci:hasTimberFillinglength rdf:type owl:DatatypeProperty ;
-                           rdfs:range xsd:decimal .
-
-
-###  https://w3id.org/props#height
-props:height rdf:type owl:DatatypeProperty ;
-             rdfs:domain bot:Element ;
-             rdfs:range xsd:decimal .
-
-
-###  https://w3id.org/props#length
-props:length rdf:type owl:DatatypeProperty ;
-             rdfs:domain bot:Element ;
-             rdfs:range xsd:decimal .
-
-
-###  https://w3id.org/props#weight
-props:weight rdf:type owl:DatatypeProperty ;
-             rdfs:domain bot:Element ;
-             rdfs:range xsd:decimal .
-
-
-###  https://w3id.org/props#width
-props:width rdf:type owl:DatatypeProperty ;
-            rdfs:domain bot:Element ;
-            rdfs:range xsd:decimal .
+                           rdfs:label "has timber filling length"@en , "har træfyldningslængde"@da ;
+                           rdfs:comment "Specifies the length of the timber filling that is used to close a formwork panel sequence"@en ;
+                           schema:rangeIncludes xsd:decimal .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://test/peri/MAXIMO_MX15
-peri:MAXIMO_MX15 rdf:type owl:Class ;
-                 rdfs:subClassOf peri:PERIProduct .
-
-
-###  http://test/peri/PERIProduct
-peri:PERIProduct rdf:type owl:Class ;
-                 rdfs:subClassOf tci:ConfirmedProduct .
-
-
-###  http://test/peri/WallThicknessCompensation
-peri:WallThicknessCompensation rdf:type owl:Class ;
-                               rdfs:subClassOf tci:FormworkParts .
-
-
 ###  http://test/tci/ConfirmedProduct
 tci:ConfirmedProduct rdf:type owl:Class ;
+                     rdfs:label "Confirmed Product"@en , "Bekræftet Produkt"@da ;
+                     rdfs:comment "Specified a confirmed product that comes from a producer and is retrieved e.g. from a product catalogue"@en ;
                      rdfs:subClassOf tci:TCI ;
                      owl:disjointWith tci:DefaultProduct .
 
 
 ###  http://test/tci/CornerPanel
 tci:CornerPanel rdf:type owl:Class ;
-                rdfs:subClassOf [ owl:intersectionOf ( tci:FormworkParts
-                                                       tci:PrimaryTCI
-                                                     ) ;
-                                  rdf:type owl:Class
-                                ] .
+                rdfs:label "Corner panel"@en , "Hjørnepanel"@da ;
+                rdfs:comment "A formwork corner panel"@en ;
+                rdfs:subClassOf tci:FormworkParts, tci:PrimaryTCI .
 
 
 ###  http://test/tci/Coupler
 tci:Coupler rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( tci:FormworkParts
-                                                   tci:SecondaryTCI
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] .
+            rdfs:label "Coupler"@en , "Kobling"@da ;
+            rdfs:comment "A formwork coupler"@en ;
+            rdfs:subClassOf tci:FormworkParts, tci:SecondaryTCI .
 
 
 ###  http://test/tci/DefaultFormwork
 tci:DefaultFormwork rdf:type owl:Class ;
+                    rdfs:label "Default Formwork"@en , "Standardforskalling"@da ;
+                    rdfs:comment "the default set of formwork that is used when no tci:ConfirmedProduct is available"@en ;
                     rdfs:subClassOf tci:DefaultProduct .
 
 
 ###  http://test/tci/DefaultPrimTCI
 tci:DefaultPrimTCI rdf:type owl:Class ;
+                   rdfs:label "Default Primary TCI"@en , "Standard Primær TCI"@da ;
+                   rdfs:comment "Specifies the primary elements of a default set of formwork"@en ;
                    rdfs:subClassOf tci:DefaultFormwork ,
                                    tci:PrimaryTCI .
 
 
 ###  http://test/tci/DefaultProduct
 tci:DefaultProduct rdf:type owl:Class ;
+                   rdfs:label "Default Product"@en , "Standard Product"@da ;
+                   rdfs:comment "the default set of TCIs that is used when no tci:ConfirmedProduct is available"@en ;
                    rdfs:subClassOf tci:TCI .
 
 
 ###  http://test/tci/DefaultSecTCI
 tci:DefaultSecTCI rdf:type owl:Class ;
+                  rdfs:label "Default Secondary TCI"@en , "Standard Sekundær TCI"@da ;
+                  rdfs:comment "Specifies the secondary elements of a default set of formwork"@en ;
                   rdfs:subClassOf tci:DefaultFormwork ,
                                   tci:SecondaryTCI .
 
 
 ###  http://test/tci/Formwork
 tci:Formwork rdf:type owl:Class ;
+             rdfs:label "Formwork"@en , "Forskalling"@da ;
+             rdfs:comment "The elements that are used to creating a temporary mould into which concrete is poured and formed"@en ;
              rdfs:subClassOf tci:TCI ;
              owl:disjointWith tci:Scaffolding .
 
 
 ###  http://test/tci/FormworkHorizontal
 tci:FormworkHorizontal rdf:type owl:Class ;
+                       rdfs:label "Formwork Horizontal"@en , "Forskalling Vandret"@da ;
+                       rdfs:comment "Specifies the formwork type as horizontal formwork"@en ;
                        rdfs:subClassOf tci:Formwork ;
                        owl:disjointWith tci:FormworkVertical .
 
 
 ###  http://test/tci/FormworkParts
 tci:FormworkParts rdf:type owl:Class ;
+                  rdfs:label "Formwork Parts"@en , "Forskalling Elements"@da ;
+                  rdfs:comment "The components of a formwork"@en ;
                   rdfs:subClassOf tci:Formwork .
 
 
 ###  http://test/tci/FormworkVertical
 tci:FormworkVertical rdf:type owl:Class ;
+                     rdfs:label "Formwork Vertical"@en , "Forskalling Lodret"@da ;
+                     rdfs:comment "Specifies the formwork type as vertical formwork"@en ;
                      rdfs:subClassOf tci:Formwork .
 
 
 ###  http://test/tci/InsideCorner
 tci:InsideCorner rdf:type owl:Class ;
+                 rdfs:label "Inside Corner"@en , "Indvendigt Hjørne"@da ;
+                 rdfs:comment "The inside corner of a formwork corner panel"@en ;
                  rdfs:subClassOf tci:CornerPanel .
 
 
 ###  http://test/tci/OutsideCorner
 tci:OutsideCorner rdf:type owl:Class ;
+                  rdfs:label "Outside Corner"@en , "Udvendigt Hjørne"@da ;
+                  rdfs:comment "The outside corner of a formwork corner panel"@en ;
                   rdfs:subClassOf tci:CornerPanel .
 
 
 ###  http://test/tci/PCI
 tci:PCI rdf:type owl:Class ;
-        rdfs:subClassOf [ owl:intersectionOf ( bot:Element
-                                               product:Product
-                                             ) ;
-                          rdf:type owl:Class
-                        ] ;
-        rdfs:comment "\"Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.\"@en" .
+        rdfs:label "PCI"@en , "PCI"@da ;
+        rdfs:subClassOf bot:Element, ifc:IfcProduct ;
+        rdfs:comment "Permanent Construction Item is produced on or deliveed to a construction site and forms part of the building.\"@en" .
 
 
 ###  http://test/tci/Panel
 tci:Panel rdf:type owl:Class ;
-          rdfs:subClassOf [ owl:intersectionOf ( tci:FormworkParts
-                                                 tci:PrimaryTCI
-                                               ) ;
-                            rdf:type owl:Class
-                          ] .
+          rdfs:label "Panel"@en , "Panel"@da ;
+          rdfs:comment "the panel of a formwork"@en ;
+          rdfs:subClassOf tci:FormworkParts, tci:PrimaryTCI .
 
 
 ###  http://test/tci/PrimaryTCI
 tci:PrimaryTCI rdf:type owl:Class ;
+               rdfs:label "Primary TCI"@en , "Primær TCI"@da ;
+               rdfs:comment "The main components of a TCI type that directly relate to the PCI"@en ;
                rdfs:subClassOf tci:TCI ;
                owl:disjointWith tci:SecondaryTCI .
 
 
 ###  http://test/tci/Producer
-tci:Producer rdf:type owl:Class .
+tci:Producer rdf:type owl:Class ;
+                rdfs:label "Producer"@en , "Producent"@da ;
+                rdfs:comment "the producer of a product"@en .
 
 
 ###  http://test/tci/ProductCatalogue
-tci:ProductCatalogue rdf:type owl:Class .
+tci:ProductCatalogue rdf:type owl:Class  ;
+                rdfs:label "Product Catalogue"@en , "Produktkatalog"@da ;
+                rdfs:comment "the product catalogue, where components of a product are specified"@en .
 
 
 ###  http://test/tci/PushPullProp
 tci:PushPullProp rdf:type owl:Class ;
-                 rdfs:subClassOf [ owl:intersectionOf ( tci:FormworkParts
-                                                        tci:SecondaryTCI
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] .
+                 rdfs:label "Push-Pull Prop"@en , "Skubbe-Trække Støtte"@da ;
+                 rdfs:comment "Components for the stabilisation of wall and column formwork systems thta align and support panel gangs"@en ;
+                 rdfs:subClassOf tci:FormworkParts, tci:SecondaryTCI .
 
 
 ###  http://test/tci/Scaffolding
 tci:Scaffolding rdf:type owl:Class ;
+                rdfs:label "Scaffolding"@en , "stilladser"@da ;
+                rdfs:comment "Temporary platform used to elevate and support workers and materials during the construction"@en ;
                 rdfs:subClassOf tci:SecondaryTCI .
 
 
 ###  http://test/tci/SecondaryTCI
 tci:SecondaryTCI rdf:type owl:Class ;
+                 rdfs:label "Secondary TCI"@en , "Sekundær TCI"@da ;
+                 rdfs:comment "Supports the main components of a TCI-system and has no direct relation to the PCI it supports"@en ;
                  rdfs:subClassOf tci:TCI .
 
 
 ###  http://test/tci/TCI
 tci:TCI rdf:type owl:Class ;
-        rdfs:subClassOf [ owl:intersectionOf ( bot:Element
-                                               product:Product
-                                             ) ;
-                          rdf:type owl:Class
-                        ] .
+        rdfs:label "TCI"@en , "TCI"@da ;
+        rdfs:comment "components that support the construction of building elements and are only used temporarily"@en ;
+        rdfs:subClassOf ifc:IfcProduct .
 
 
 ###  http://test/tci/TieRod
 tci:TieRod rdf:type owl:Class ;
-           rdfs:subClassOf [ owl:intersectionOf ( tci:FormworkParts
-                                                  tci:SecondaryTCI
-                                                ) ;
-                             rdf:type owl:Class
-                           ] .
+           rdfs:label "Tie Rod"@en , "Trækstang"@da ;
+           rdfs:comment "used to hold the concrete wall forms firmly against the lateral pressure"@en ;
+           rdfs:subClassOf tci:FormworkParts, tci:SecondaryTCI .
 
 
 ###  http://test/tci/TimberFilling
 tci:TimberFilling rdf:type owl:Class ;
-                  rdfs:subClassOf [ owl:intersectionOf ( tci:FormworkParts
-                                                         tci:PrimaryTCI
-                                                       ) ;
-                                    rdf:type owl:Class
-                                  ] .
+                  rdfs:label "Timber Filling"@en , "Træfyldning"@da ;
+                  rdfs:comment "is used to fill the gap of a formwork sequence"@en ;
+                  rdfs:subClassOf tci:FormworkParts, tci:PrimaryTCI .
 
 
 ###  http://test/tci/Waler
 tci:Waler rdf:type owl:Class ;
-          rdfs:subClassOf [ owl:intersectionOf ( tci:FormworkParts
-                                                 tci:SecondaryTCI
-                                               ) ;
-                            rdf:type owl:Class
-                          ] .
+          rdfs:label "Waler"@en , "Waler"@da ;
+          rdfs:comment "holds formwork panels together when the distance is too big for a coupler"@en ;
+          rdfs:subClassOf tci:FormworkParts, tci:SecondaryTCI .
 
 
 ###  http://test/tci/Wingnut
 tci:Wingnut rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( tci:FormworkParts
-                                                   tci:SecondaryTCI
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] .
+            rdfs:label "Wingnut"@en , "Vingemøtrik"@da ;
+            rdfs:comment "holds together tie rods"@en ;
+            rdfs:subClassOf tci:FormworkParts, tci:SecondaryTCI .
 
 
 ###  https://test/tci/ScaffoldingParts
-<https://test/tci/ScaffoldingParts> rdf:type owl:Class ;
-                                    rdfs:subClassOf tci:Scaffolding .
-
-
-###  https://w3id.org/bot#Element
-bot:Element rdf:type owl:Class ;
-            owl:equivalentClass product:Product .
-
-
-###  https://w3id.org/product#Floor
-product:Floor rdf:type owl:Class ;
-              rdfs:subClassOf tci:PCI ;
-              owl:disjointWith product:Wall .
-
-
-###  https://w3id.org/product#Product
-product:Product rdf:type owl:Class .
-
-
-###  https://w3id.org/product#Slab
-product:Slab rdf:type owl:Class ;
-             rdfs:subClassOf tci:PCI ;
-             owl:disjointWith product:Wall .
-
-
-###  https://w3id.org/product#Wall
-product:Wall rdf:type owl:Class ;
-             rdfs:subClassOf tci:PCI .
+tci:ScaffoldingParts rdf:type owl:Class ;
+            rdfs:label "Scaffolding Parts"@en , "Stilladser Komponenter"@da ;
+            rdfs:comment "the components of a scaffolding"@en ;
+            rdfs:subClassOf tci:Scaffolding .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://test/peri/PERI_AlignmentCouplerBFD
-peri:PERI_AlignmentCouplerBFD rdf:type owl:NamedIndividual ,
-                                       [ owl:intersectionOf ( peri:PERIProduct
-                                                              tci:Coupler
-                                                            ) ;
-                                         rdf:type owl:Class
-                                       ] .
-
-
-###  http://test/peri/PERI_MX330x120
-peri:PERI_MX330x120 rdf:type owl:NamedIndividual ,
-                             [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                    tci:Panel
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] .
-
-
-###  http://test/peri/PERI_MX330x240
-peri:PERI_MX330x240 rdf:type owl:NamedIndividual ,
-                             [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                    tci:Panel
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] .
-
-
-###  http://test/peri/PERI_MX330x30
-peri:PERI_MX330x30 rdf:type owl:NamedIndividual ,
-                            [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                   tci:Panel
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] .
-
-
-###  http://test/peri/PERI_MX330x45
-peri:PERI_MX330x45 rdf:type owl:NamedIndividual ,
-                            [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                   tci:Panel
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] .
-
-
-###  http://test/peri/PERI_MX330x60
-peri:PERI_MX330x60 rdf:type owl:NamedIndividual ,
-                            [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                   tci:Panel
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] .
-
-
-###  http://test/peri/PERI_MX330x90
-peri:PERI_MX330x90 rdf:type owl:NamedIndividual ,
-                            [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                   tci:Panel
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] .
-
-
-###  http://test/peri/PERI_MXA330x35
-peri:PERI_MXA330x35 rdf:type owl:NamedIndividual ,
-                             [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                    tci:OutsideCorner
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] .
-
-
-###  http://test/peri/PERI_MXA330x45
-peri:PERI_MXA330x45 rdf:type owl:NamedIndividual ,
-                             [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                    tci:OutsideCorner
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] .
-
-
-###  http://test/peri/PERI_MXI330x50x20
-peri:PERI_MXI330x50x20 rdf:type owl:NamedIndividual ,
-                                [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                       tci:InsideCorner
-                                                     ) ;
-                                  rdf:type owl:Class
-                                ] .
-
-
-###  http://test/peri/PERI_MXI330x60
-peri:PERI_MXI330x60 rdf:type owl:NamedIndividual ,
-                             [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                    tci:InsideCorner
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] .
-
-
-###  http://test/peri/PERI_MXM330x60
-peri:PERI_MXM330x60 rdf:type owl:NamedIndividual ,
-                             [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                    tci:Panel
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] .
-
-
-###  http://test/peri/PERI_TieMX15_30-40
-peri:PERI_TieMX15_30-40 rdf:type owl:NamedIndividual ,
-                                 [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                        tci:TieRod
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] .
-
-
-###  http://test/peri/PERI_TieTS_TrioBulkhead
-peri:PERI_TieTS_TrioBulkhead rdf:type owl:NamedIndividual ,
-                                      [ owl:intersectionOf ( peri:PERIProduct
-                                                             tci:TieRod
-                                                           ) ;
-                                        rdf:type owl:Class
-                                      ] .
-
-
-###  http://test/peri/PERI_Waler85
-peri:PERI_Waler85 rdf:type owl:NamedIndividual ,
-                           [ owl:intersectionOf ( peri:PERIProduct
-                                                  tci:Waler
-                                                ) ;
-                             rdf:type owl:Class
-                           ] .
-
-
-###  http://test/peri/PERI_WalerMAR853
-peri:PERI_WalerMAR853 rdf:type owl:NamedIndividual ,
-                               [ owl:intersectionOf ( peri:PERIProduct
-                                                      tci:Waler
-                                                    ) ;
-                                 rdf:type owl:Class
-                               ] .
-
-
-###  http://test/peri/PERI_WingnutDW15_Pivot
-peri:PERI_WingnutDW15_Pivot rdf:type owl:NamedIndividual ,
-                                     [ owl:intersectionOf ( peri:PERIProduct
-                                                            tci:Wingnut
-                                                          ) ;
-                                       rdf:type owl:Class
-                                     ] .
-
-
-###  http://test/peri/PERI_WingnutMX15
-peri:PERI_WingnutMX15 rdf:type owl:NamedIndividual ,
-                               [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                      tci:Wingnut
-                                                    ) ;
-                                 rdf:type owl:Class
-                               ] .
-
-
-###  http://test/peri/WDAMX330x10
-peri:WDAMX330x10 rdf:type owl:NamedIndividual ,
-                          [ owl:intersectionOf ( peri:MAXIMO_MX15
-                                                 peri:WallThicknessCompensation
-                                               ) ;
-                            rdf:type owl:Class
-                          ] ;
-                 rdfs:comment "\"To adjust the thickness of the wall\"@en" .
-
 
 ###  http://test/tci/DefaultCoupler
-tci:DefaultCoupler rdf:type owl:NamedIndividual ,
+generic:DefaultCoupler rdf:type owl:NamedIndividual ,
                             tci:Coupler ,
                             tci:DefaultFormwork ,
                             tci:DefaultSecTCI .
 
 
 ###  http://test/tci/DefaultInsideCorner330x50x20
-tci:DefaultInsideCorner330x50x20 rdf:type owl:NamedIndividual ,
+generic:DefaultInsideCorner330x50x20 rdf:type owl:NamedIndividual ,
                                           tci:CornerPanel ,
                                           tci:DefaultFormwork ,
                                           tci:DefaultPrimTCI ,
@@ -717,7 +550,7 @@ tci:DefaultInsideCorner330x50x20 rdf:type owl:NamedIndividual ,
 
 
 ###  http://test/tci/DefaultOutsideCorner270x45
-tci:DefaultOutsideCorner270x45 rdf:type owl:NamedIndividual ,
+generic:DefaultOutsideCorner270x45 rdf:type owl:NamedIndividual ,
                                         tci:CornerPanel ,
                                         tci:DefaultFormwork ,
                                         tci:DefaultPrimTCI ,
@@ -725,84 +558,63 @@ tci:DefaultOutsideCorner270x45 rdf:type owl:NamedIndividual ,
 
 
 ###  http://test/tci/DefaultPanel330x120
-tci:DefaultPanel330x120 rdf:type owl:NamedIndividual ,
+generic:DefaultPanel330x120 rdf:type owl:NamedIndividual ,
                                  tci:DefaultFormwork ,
                                  tci:DefaultPrimTCI ,
                                  tci:Panel .
 
 
 ###  http://test/tci/DefaultPanel330x240
-tci:DefaultPanel330x240 rdf:type owl:NamedIndividual ,
+generic:DefaultPanel330x240 rdf:type owl:NamedIndividual ,
                                  tci:DefaultFormwork ,
                                  tci:DefaultPrimTCI ,
                                  tci:Panel .
 
 
 ###  http://test/tci/DefaultPanel330x45
-tci:DefaultPanel330x45 rdf:type owl:NamedIndividual ,
+generic:DefaultPanel330x45 rdf:type owl:NamedIndividual ,
                                 tci:DefaultFormwork ,
                                 tci:DefaultPrimTCI ,
                                 tci:Panel .
 
 
 ###  http://test/tci/DefaultPanel330x60
-tci:DefaultPanel330x60 rdf:type owl:NamedIndividual ,
+generic:DefaultPanel330x60 rdf:type owl:NamedIndividual ,
                                 tci:DefaultFormwork ,
                                 tci:DefaultPrimTCI ,
                                 tci:Panel .
 
 
 ###  http://test/tci/DefaultPanel330x90
-tci:DefaultPanel330x90 rdf:type owl:NamedIndividual ,
+generic:DefaultPanel330x90 rdf:type owl:NamedIndividual ,
                                 tci:DefaultFormwork ,
                                 tci:DefaultPrimTCI ,
                                 tci:Panel .
 
 
 ###  http://test/tci/DefaultPushPullProp
-tci:DefaultPushPullProp rdf:type owl:NamedIndividual ,
+generic:DefaultPushPullProp rdf:type owl:NamedIndividual ,
                                  tci:DefaultFormwork ,
                                  tci:DefaultSecTCI ,
                                  tci:PushPullProp .
 
 
 ###  http://test/tci/DefaultTieRod
-tci:DefaultTieRod rdf:type owl:NamedIndividual ,
+generic:DefaultTieRod rdf:type owl:NamedIndividual ,
                            tci:DefaultFormwork ,
                            tci:DefaultSecTCI ,
                            tci:TieRod .
 
 
 ###  http://test/tci/DefaultWaler
-tci:DefaultWaler rdf:type owl:NamedIndividual ,
+generic:DefaultWaler rdf:type owl:NamedIndividual ,
                           tci:DefaultFormwork ,
                           tci:DefaultSecTCI ,
                           tci:Waler .
 
 
 ###  http://test/tci/DefaultWingnut
-tci:DefaultWingnut rdf:type owl:NamedIndividual ,
+generic:DefaultWingnut rdf:type owl:NamedIndividual ,
                             tci:DefaultFormwork ,
                             tci:DefaultSecTCI ,
                             tci:Wingnut .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( tci:Coupler
-                tci:InsideCorner
-                tci:OutsideCorner
-                tci:Panel
-                tci:PushPullProp
-                tci:TieRod
-                tci:TimberFilling
-                tci:Waler
-                tci:Wingnut
-              )
-] .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
